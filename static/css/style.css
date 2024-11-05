@@ -1,6 +1,58 @@
+/* Global styles -------------------------------------------------- */
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+:root {
+    -–light-purple: rgb(245, 239, 255);
+    -–dusty-purple: rgb(229, 217, 242);
+    -–main-purple: rgb(205, 193, 255);
+    -–dark-purple: rgb(94, 74, 196);
+    }
+
 body {
-    background-color: #E84610;
+    background-color: rgb(245, 239, 255);
 }
+
+/* Nav bar -------------------------------------------------- */
+.bg-main-color {
+    background-color:  rgb(94, 74, 196) !important;
+}
+
+#brand {
+    color: rgb(245, 239, 255);
+    padding: 1%;
+    padding-left: 2%;
+    font-size: 200%;
+    font-family: 'Atma', sans-serif;
+    font-weight: 500;
+}
+
+#brand i {
+    color: rgb(245, 239, 255);
+    padding-left: 1.5%;
+    font-size: 90%;  
+}
+
+#navbar-links {
+    text-align: left;
+}
+
+#navbar-links > a {
+    color: rgb(229, 217, 242);
+    font-size: 110%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
 
 .brand {
     font-family: Lato, sans-serif;
