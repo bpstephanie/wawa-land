@@ -14,14 +14,17 @@
 
 body {
     background-color: rgb(245, 239, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Nav bar -------------------------------------------------- */
-.bg-main-color {
+.bg-dark {
     background-color:  rgb(94, 74, 196) !important;
 }
 
-#brand {
+.brand {
     color: rgb(245, 239, 255);
     padding: 1%;
     padding-left: 2%;
@@ -30,17 +33,17 @@ body {
     font-weight: 500;
 }
 
-#brand i {
+.brand > i {
     color: rgb(245, 239, 255);
-    padding-left: 1.5%;
+    padding-left: 2%;
     font-size: 90%;  
 }
 
-#navbar-links {
-    text-align: left;
-}
 
-#navbar-links > a {
+
+.navbar-nav > a,
+.footer div,
+.footer a {
     color: rgb(229, 217, 242);
     font-size: 110%;
     font-family: 'Roboto', sans-serif;
@@ -48,18 +51,21 @@ body {
 }
 
 
-
-
-
-
-
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+/* Footer -------------------------------------------------- */
+footer .brand > i {
+    padding-left: 0.5%;
 }
+
+.btn-outline-light:hover {
+    color: rgb(94, 74, 196) !important;
+}
+
+.crt > p,
+.crt span {
+    font-size: 95%;
+}
+
+
 
 .red-o {
     color: #E84610;
