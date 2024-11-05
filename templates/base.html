@@ -43,7 +43,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav" id="navbar-links">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link {% if request.path == home_url %}active{% endif %}" href="#">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="#">Sign Up</a>
         <a class="nav-item nav-link" href="#">Login</a>
       </div>
@@ -51,6 +51,7 @@
   </nav>
 
   {% block content %}
+  <!-- Page content goes here-->
   {% endblock content %}
 
   <!-- Footer -->
