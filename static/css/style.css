@@ -1,8 +1,10 @@
 /* Global styles -------------------------------------------------- */
 
 * {
+    padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
   }
 
 :root {
@@ -24,6 +26,10 @@ body {
     background-color:  rgb(94, 74, 196) !important;
 }
 
+.bg-light {
+    background-color: rgb(245, 239, 255) !important;
+}
+
 .brand {
     color: rgb(245, 239, 255);
     padding: 1%;
@@ -38,8 +44,6 @@ body {
     padding-left: 2%;
     font-size: 90%;  
 }
-
-
 
 .navbar-nav > a,
 .footer div,
@@ -65,35 +69,39 @@ footer .brand > i {
     font-size: 95%;
 }
 
-
-
-.red-o {
-    color: #E84610;
+/* Blog Posts -------------------------------------------------- */
+.card-body {
+    border: 2px solid rgb(94, 74, 196);
 }
 
-.thin {
-    font-weight: 300;
+.image-container img {
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
-.light-bg {
-    background-color: #fff;
+.post-link {
+    text-decoration: none;
+    color: #445261;
 }
 
-.dark-bg {
-    background-color: #445261;
+.post-link:hover,
+.page-link {
+    color: rgb(94, 74, 196);
 }
 
+.card-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.author {
+    text-transform: uppercase;
+}
+
+/*
 .main-bg {
     background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
 }
 
 .image-flash {
@@ -107,12 +115,6 @@ footer .brand > i {
 .scale {
     width: 100%;
     height: auto;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
@@ -147,21 +149,6 @@ footer .brand > i {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
 }
 
 .post-subtitle {
@@ -217,3 +204,5 @@ footer .brand > i {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+*/
