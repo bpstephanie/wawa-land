@@ -26,12 +26,19 @@ body {
     background-color:  rgb(94, 74, 196) !important;
 }
 
+.bg-mid {
+    background-color:  rgb(127, 108, 219) !important;
+}
+
 .bg-light {
     background-color: rgb(245, 239, 255) !important;
 }
 
-.brand {
+.light-text {
     color: rgb(245, 239, 255);
+}
+
+.brand {
     padding: 1%;
     padding-left: 2%;
     font-size: 200%;
@@ -40,7 +47,6 @@ body {
 }
 
 .brand > i {
-    color: rgb(245, 239, 255);
     padding-left: 2%;
     font-size: 90%;  
 }
@@ -99,7 +105,9 @@ footer .brand > i {
     text-transform: uppercase;
 }
 
-
+.white-border {
+    border: 2px solid #fff;
+}
 
 /*
 .main-bg {

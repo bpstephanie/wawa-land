@@ -8,7 +8,8 @@ AGES = (
     (3, "4-5 years"), 
     (4, "5-8 years"), 
     (5, "8-12 years"), 
-    (6, "13+")
+    (6, "13+"),
+    (7, "All ages")
 )
 
 # Create your models here.
