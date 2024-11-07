@@ -1,32 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<h1 class="text-center m-5">All events</h1>
-<div class="container">
-    <div class="container">
-        <div class="row bg-dark white-border light-text no-gutters">
-            <div class="col-sm-6">
-                <h3>Name</h3>
-            </div>
-            <div class="col-sm-3">
-                <h3>Age Range</h3>
-            </div>
-            <div class="col-sm-3">
-                <h3>Date</h3>
-            </div>
-        {% for event in event_list %}
-        <div class="row bg-dark white-border light-text no-gutters">
-            <div class="col-sm-6">
-                <h4>{{ event.title }}</h4>
-            </div>
-            <div class="col-sm-3">
-                <h5>{{ event.age_range }}</h5>
-            </div>
-            <div class="col-sm-3">
-                <h5>{{ event.event_date }}</h5>
+<div class="container flex-auto mx-auto pb-8 my-5 box-shadow">
+    <div class="grid grid-cols-12 gap-7 lg:mx-4">
+        <div class="col-span-12  lg:col-span-8">
+            <div class="p-6 mt-4">
+                <aside>
+                    <span class="h3 display-4">Latest</span>
+                    <div class="d-flex pt-6 cursor-pointer">
+                        <a class=" display-8 hover:inferline">Title</a>
+                        <div>
+                            <span class="mt-2 text-sm"> Date</span>
+                        </div>
+                    </div>
+                    {% for event in event_list %}
+                    <div class="">
+                        <div class="d-flex pt-6 cursor-pointer">
+                            <a class=" display-8 hover:inferline" href="{% url 'event_detail' event.slug %}">{{ event.title }}</a>
+                            <div>
+                                <span class="mt-2 text-sm">{{ event.event_date }}</span>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    {% endfor %}
+                </aside>
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 {% endblock content %}

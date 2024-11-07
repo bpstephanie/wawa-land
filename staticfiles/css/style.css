@@ -15,23 +15,39 @@
     }
 
 body {
-    background-color: rgb(245, 239, 255);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Nav bar -------------------------------------------------- */
+.padding-l {
+    padding-left: 0;
+}
+
+.box-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;  
+}
+
 .bg-dark {
     background-color:  rgb(94, 74, 196) !important;
+}
+
+.bg-mid {
+    background-color:  rgb(127, 108, 219) !important;
 }
 
 .bg-light {
     background-color: rgb(245, 239, 255) !important;
 }
 
-.brand {
+.light-text {
     color: rgb(245, 239, 255);
+}
+
+/* Nav bar -------------------------------------------------- */
+
+.brand {
     padding: 1%;
     padding-left: 2%;
     font-size: 200%;
@@ -40,7 +56,6 @@ body {
 }
 
 .brand > i {
-    color: rgb(245, 239, 255);
     padding-left: 2%;
     font-size: 90%;  
 }
@@ -69,6 +84,12 @@ footer .brand > i {
     font-size: 95%;
 }
 
+/* index.html -------------------------------------------------- */
+
+.header-card {
+    border: transparent;
+}
+
 /* Blog Posts -------------------------------------------------- */
 .card-body {
     border: 2px solid rgb(94, 74, 196);
@@ -92,11 +113,19 @@ footer .brand > i {
 
 .card-title {
     margin-top: 10%;
-    margin-left: 5%;
+    #margin-left: 5%;
 }
 
 .author {
     text-transform: uppercase;
+}
+
+.white-border {
+    border: 2px solid #fff;
+}
+
+.black-border {
+    border: 2px solid #fff !important;
 }
 
 /*

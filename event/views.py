@@ -1,3 +1,4 @@
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic import TemplateView
 from .models import Event
@@ -9,16 +10,16 @@ class EventList(generic.ListView):
 
 def event_detail(request, slug):
     """
-    Display an individual :model:`blog.Post`.
+    Display an individual :model:`event.Event`.
 
     **Context**
 
-    ``post``
-        An instance of :model:`blog.Post`.
+    ``event``
+        An instance of :model:`event.Event`.
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`event/event_list.html`
     """
 
     queryset = Event.objects.all()
@@ -27,6 +28,5 @@ def event_detail(request, slug):
     return render(
         request,
         "event/event_detail.html",
-        {"event": event},
+        {"event": post},
     )
-
