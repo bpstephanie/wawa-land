@@ -18,6 +18,7 @@
                         <div class="d-flex pt-6 cursor-pointer">
                             <a class=" display-8 hover:inferline" href="{% url 'event_detail' event.slug %}">{{ event.title }}</a>
                             <div>
+                                <span>{{ event.get_age_range_display}}</span>
                                 <span class="mt-2 text-sm">{{ event.event_date }}</span>
                             </div>
                         </div>
