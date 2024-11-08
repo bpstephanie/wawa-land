@@ -23,10 +23,10 @@ def event_detail(request, slug):
     """
 
     queryset = Event.objects.all()
-    post = get_object_or_404(queryset, slug=slug)
+    event = get_object_or_404(queryset, slug=slug)
 
     return render(
         request,
         "event/event_detail.html",
-        {"event": post},
+        {"event": event},
     )
