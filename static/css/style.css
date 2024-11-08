@@ -42,12 +42,12 @@ body {
 }
 
 .light-text {
-    color: rgb(245, 239, 255);
+    color: rgb(245, 239, 255) !important;
 }
 
 /* Nav bar -------------------------------------------------- */
 
-.brand {
+.wawa-brand {
     padding: 1%;
     padding-left: 2%;
     font-size: 200%;
@@ -55,7 +55,7 @@ body {
     font-weight: 500;
 }
 
-.brand > i {
+.wawa-brand > i {
     padding-left: 2%;
     font-size: 90%;  
 }
@@ -68,7 +68,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
-
 
 /* Footer -------------------------------------------------- */
 footer .brand > i {
