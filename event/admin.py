@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event
+from .models import Event, Review
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Event)
@@ -12,3 +12,4 @@ class EventAdmin(SummernoteModelAdmin):
     summernote_fields = ('event_about',)
 
 # Register your models here.
+admin.site.register(Review)
