@@ -13,7 +13,7 @@
         </div>
         <div class="col align-self-center">
             <div class="card header-card">
-                <h1 class="card-title display-4">Welcome to Wawa Land</h1>
+                <h1 class="card-title wawa-brand">Welcome to Wawa Land</h1>
                 <div class="row">
                     <div class="col-md-8">
                         <p class="card-text display-7">Your helping hand when you need to know everything to do with the world of
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="#" class="bg-dark light-text btn">Sign Up</a>
+                        <a href="{% url 'account_signup' %}" class="{% if request.path == signup_url %}active{% endif %} bg-dark light-text btn">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-6">Read our blog articles..</h2>
+                    <h2 class="display-6 playfair wawa-title-large">Read our blog articles..</h2>
                     <p>We have a wealth of knowledge and many answers to those questions you have about all things
                         parenting. Not only do we have articles for parents, but also for aunties, uncles, grandparents,
                         godparents.. You name it! And if we don't then why not trying a post of your own to help those
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="p-5">
-                    <h2 class="display-6">View and attend our events...</h2>
+                    <h2 class="display-6 playfair wawa-title-large">View and attend our events...</h2>
                     <p>We are always adding new events for babies, toddlers, parents, families. Get to know other kind
                         people whilst doing dun activites with your young ones. </p>
                 </div>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-6">Products coming soon...</h2>
+                    <h2 class="display-6 playfair wawa-title-large">Products coming soon...</h2>
                     <p>Our new products section will be ready early next year! We've listened to everything you've said.
                         We will only be listing products that are tried and tested by us or our users. We know it can de
                         difficult when you enter the world of babies and children.</p>

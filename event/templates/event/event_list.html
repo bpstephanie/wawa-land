@@ -7,20 +7,15 @@
             <div class="p-6 mt-4">
                 <aside>
                     <span class="h3 display-4">Latest</span>
-                    <div class="d-flex pt-6 cursor-pointer">
-                        <a class=" display-8 hover:inferline">Title</a>
-                        <div>
-                            <span class="mt-2 text-sm"> Date</span>
-                        </div>
-                    </div>
                     {% for event in event_list %}
                     <div class="">
-                        <div class="d-flex pt-6 cursor-pointer">
-                            <a class=" display-8 hover:inferline" href="{% url 'event_detail' event.slug %}">{{ event.title }}</a>
-                            <div>
-                                <span>{{ event.get_age_range_display}}</span>
-                                <span class="mt-2 text-sm">{{ event.event_date }}</span>
-                            </div>
+                        <div class="row d-flex pt-6 cursor-pointer">
+                            <a class=" col-4 playfair wawa-title-med text-decoration-none"
+                                href="{% url 'event_detail' event.slug %}">{{ event.title }}</a>
+
+                            <span class="col-4 playfair">{{ event.get_age_range_display}}</span>
+                            <span class="col-4 mt-2 text-sm playfair">{{ event.event_date }}</span>
+
                         </div>
                         <hr />
                     </div>
@@ -30,14 +25,4 @@
         </div>
     </div>
 </div>
-<div class="card" style="width: 18rem;">
-    <div class="card-header">
-      Featured
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-  </div>
 {% endblock content %}

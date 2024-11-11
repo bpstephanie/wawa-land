@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+            <div>
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
@@ -33,7 +33,7 @@
 
 <!-- Displaying count of comments -->
 <div class="row">
-    <div class="col-12">
+    <div class="col-8">
         <strong class="text-secondary">
             <i class="far fa-comments"></i> {{ comment_count }}
         </strong>
@@ -46,7 +46,7 @@
 <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
-        <div class="card-body">
+        <div>
             <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
             {% for comment in comments %}
@@ -62,7 +62,7 @@
                     {{ comment.body | linebreaks }}
                 </div>
                 {% if not comment.approved and comment.author == user %}
-                <p class="approval">
+                <p class="approved">
                     This comment is awaiting approval
                 </p>
                 {% endif %}

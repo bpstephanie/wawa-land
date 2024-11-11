@@ -7,13 +7,6 @@
     box-sizing: border-box;
   }
 
-:root {
-    -–light-purple: rgb(245, 239, 255);
-    -–dusty-purple: rgb(229, 217, 242);
-    -–main-purple: rgb(205, 193, 255);
-    -–dark-purple: rgb(94, 74, 196);
-    }
-
 body {
     background-color: #fff;
     display: flex;
@@ -47,7 +40,7 @@ body {
 
 /* Nav bar -------------------------------------------------- */
 
-.brand {
+.wawa-brand {
     padding: 1%;
     padding-left: 2%;
     font-size: 200%;
@@ -91,8 +84,18 @@ footer .brand > i {
 }
 
 /* Blog Posts -------------------------------------------------- */
-.card-body {
-    border: 2px solid rgb(94, 74, 196);
+.playfair {
+    font-family: 'Playfair', sans-serif;
+    font-weight: 700;
+    color:rgb(0, 0, 0)
+}
+
+.wawa-title-med {
+    font-size: 150%;
+}
+
+.wawa-title-large {
+    font-size: 300%;
 }
 
 .image-container img {
@@ -118,6 +121,9 @@ footer .brand > i {
 
 .author {
     text-transform: uppercase;
+    background-color: rgb(213, 194, 243);
+    padding: 1%;
+    border-radius: 15px;
 }
 
 .white-border {
@@ -126,6 +132,14 @@ footer .brand > i {
 
 .black-border {
     border: 2px solid #fff !important;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approved {
+    color: rgb(222, 146, 168);
 }
 
 /*
@@ -224,14 +238,6 @@ footer .brand > i {
     color: #E84610;
     background: transparent;
     border: none;
-}
-
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-.approval {
-    color: rgb(222, 146, 168);
 }
 
 */
