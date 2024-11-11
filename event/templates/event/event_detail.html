@@ -12,20 +12,54 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
-                    {{ event.event_content | safe }}
+                    {{ event.event_about | safe }}
                 </p>
-                <p class="card-text">By: {{ event.price }} | {{ event.event_date }}</p>
+                <p class="card-text">£{{ event.event_price }} | {{ event.event_date }}</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-        
+<!-- Displaying count of comments -->
+<div class="row">
+    <div class="col-12">
+        <strong class="text-secondary">
+            <i class="far fa-comments"></i> {{ comment_count }}
+        </strong>
+    </div>
+    <div class="col-12">
+        <hr>
+    </div>
+</div>
+<!-- Displaying Reviews -->
+<div class="row">
+    <div class="col-md-8 card mb-4  mt-3 ">
+        <h3>Reviews:</h3>
+        <div class="card-body">
+            {% for review in reviews %}
+            <div
+                class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                <p class="font-weight-bold"></p>
+                {{ review.author }}
+                <span class="font-weight-normal">
+                    {{ review.created_on }}
+                </span> wrote:
+                </p>
+                <div id="comment{{ comment.id }}">
+                    {{ review.body | linebreaks }}
+                </div>
+                {% if not review.approved and review.author == user %}
+                <p class="approval">
+                    This comment is awaiting approval
+                </p>
+                {% endif %}
+                {% if user.is_authenticated and review.author == user %}
+                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                {% endif %}
             </div>
+            <!-- Our for loop ends here -->
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -24,9 +24,15 @@ def event_detail(request, slug):
 
     queryset = Event.objects.all()
     event = get_object_or_404(queryset, slug=slug)
+    reviews = event.reviews.all().order_by("-created_on")
+    review_count = event.reviews.filter(approved=True).count()
 
     return render(
         request,
         "event/event_detail.html",
-        {"event": event},
+        {
+            "event": event,
+            "reviews": reviews,
+            "review_count": review_count,
+        },
     )
