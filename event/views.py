@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic import TemplateView
+from django.contrib import messages
 from .models import Event
+from .forms import ReviewForm
 
 class EventList(generic.ListView):
     queryset = Event.objects.all()
@@ -26,6 +28,19 @@ def event_detail(request, slug):
     event = get_object_or_404(queryset, slug=slug)
     reviews = event.reviews.all().order_by("-created_on")
     review_count = event.reviews.filter(approved=True).count()
+    if request.method == "POST":
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.author = request.user
+            review.event = event
+            review.save()
+            messages.add_message(
+            request, messages.SUCCESS,
+            'Review submitted and awaiting approval'
+        )
+
+    review_form=ReviewForm()
 
     return render(
         request,
@@ -34,5 +49,6 @@ def event_detail(request, slug):
             "event": event,
             "reviews": reviews,
             "review_count": review_count,
+            "review_form": review_form,
         },
     )

@@ -33,6 +33,7 @@ class Event(models.Model):
 class Review(models.Model):
     event = models.ForeignKey(
         Event, on_delete=models.CASCADE, related_name="reviews")
+    title = models.CharField(max_length=200, default="my_review")
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer")
     body = models.TextField()
