@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.views.generic import TemplateView
 from django.contrib import messages
-from .models import Event
+from django.http import HttpResponseRedirect
+from .models import Event, Review
 from .forms import ReviewForm
 
 class EventList(generic.ListView):
@@ -52,3 +53,43 @@ def event_detail(request, slug):
             "review_form": review_form,
         },
     )
+
+
+def review_edit(request, slug, review_id):
+    """
+    view to edit reviews
+    """
+    if request.method == "POST":
+
+        queryset = Event.objects.all()
+        event = get_object_or_404(queryset, slug=slug)
+        review = get_object_or_404(Review, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.author == request.user:
+            review = review_form.save(commit=False)
+            review.event = event
+            review.approved = False
+            review.save()
+            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating review!')
+
+    return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+
+def review_delete(request, slug, review_id):
+    """
+    view to delete review
+    """
+    queryset = Event.objects.all()
+    event = get_object_or_404(queryset, slug=slug)
+    review = get_object_or_404(Review, pk=review_id)
+
+    if review.author == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, 'Review deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
+
+    return HttpResponseRedirect(reverse('event_detail', args=[slug]))

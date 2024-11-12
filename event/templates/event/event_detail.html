@@ -22,11 +22,11 @@
 </div>
 </div>
 
-<!-- Displaying count of comments -->
+<!-- Displaying count of reviews -->
 <div class="row">
     <div class="col-12">
         <strong class="text-secondary">
-            <i class="far fa-comments"></i> {{ comment_count }}
+            <i class="far fa-comments"></i> {{ review_count }}
         </strong>
     </div>
     <div class="col-12">
@@ -40,24 +40,25 @@
         <div>
             {% for review in reviews %}
             <div
-                class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                class="p-2 reviews {% if not review.approved and review.author == user %} faded{% elif not review.approved %} d-none{% endif %}">
                 <p class="font-weight-bold"></p>
                 {{ review.author }}
-                <span class="font-weight-normal">
-                    {{ review.created_on }}
-                </span> wrote:
                 </p>
-                <div id="comment{{ comment.id }}">
+                <div id="review{{ review.id }}">
+                    {{ review.title | linebreaks }}
                     {{ review.body | linebreaks }}
                 </div>
+                <span class="font-weight-normal"></span>
+                    {{ review.created_on }}
+                </span>
                 {% if not review.approved and review.author == user %}
                 <p class="approved">
-                    This comment is awaiting approval
+                    This review is awaiting approval
                 </p>
                 {% endif %}
                 {% if user.is_authenticated and review.author == user %}
-                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
+                <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
                 {% endif %}
             </div>
             <!-- Our for loop ends here -->
@@ -82,4 +83,27 @@
         </div>
     </div>
 </div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete review?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your review?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/reviews.js' %}"></script>
 {% endblock %}
