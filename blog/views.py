@@ -26,6 +26,17 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
 
     if request.method == "POST":
+
+        if request.user.is_authenticated:
+            user = request.user
+
+            if post.likes.filter(id=user.id).exists():
+                post.likes.remove(user)
+            else:
+                post.likes.add(user)
+
+
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -89,4 +100,20 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+"""
+class LikePost(View):
+    
+    Toggles like status on submission of like button on posts.
+    
+    def like(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
 
+        if request.method == 'POST':
+            post.likes.filter(id=request.user.id).exists()
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse(
+            'post_detail', args=[slug]))
+"""

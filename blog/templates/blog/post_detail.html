@@ -30,7 +30,11 @@
         </div>
     </div>
 </div>
-
+<!-- Displaying likes -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-primary btn-sm">Like</button>
+</form>
 <!-- Displaying count of comments -->
 <div class="row">
     <div class="col-8">
