@@ -116,7 +116,7 @@ footer .brand > i {
 
 .card-title {
     margin-top: 10%;
-    #margin-left: 5%;
+    margin-left: 5%;
 }
 
 .author {
@@ -140,6 +140,21 @@ footer .brand > i {
 
 .approved {
     color: rgb(222, 146, 168);
+}
+
+.btn-edit {
+    background-color: #24a408;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    border: #24a408;
+    color: #24a408;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #e80707;
 }
 
 /*
@@ -199,12 +214,6 @@ footer .brand > i {
     color: lightgray;
 }
 
-.btn-signup,
-.btn-edit {
-    background-color: #188181;
-    color: #fff;
-}
-
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
@@ -226,11 +235,6 @@ footer .brand > i {
     color: #E84610;
     border: none;
     background: transparent;
-}
-
-.btn-delete {
-    color: #fff;
-    background: #E84610;
 }
 
 .btn-like:hover,

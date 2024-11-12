@@ -10,7 +10,7 @@
     </div>
     <div class="col">
         <div class="card-block px-2">
-            <h4 class="card-title">{{ post.title }}</h4>
+            <h4 class="card-title wawa-title-large playfair">{{ post.title }}</h4>
             <p class="card-text">By: {{ post.author }} | {{ post.created_on }}</p>
         </div>
     </div>
@@ -67,8 +67,8 @@
                 </p>
                 {% endif %}
                 {% if user.is_authenticated and comment.author == user %}
-                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                 <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                 {% endif %}
             </div>
             <!-- Our for loop ends here -->
@@ -78,21 +78,22 @@
     <!-- Creating New Comments -->
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
-          {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
-          <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
-            style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">Submit</button>
-          </form>
-          {% else %}
-          <p>Log in to leave a comment</p>
-          {% endif %}
+            {% if user.is_authenticated %}
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% else %}
+            <p>Log in to leave a comment</p>
+            {% endif %}
         </div>
-      </div>
+    </div>
 </div>
 
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
