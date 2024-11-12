@@ -24,6 +24,11 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    liked = False
+    if request.user.is_authenticated:
+        user = request.user
+        if post.likes.filter(id=user.id).exists():
+            liked = True
 
     if request.method == "POST":
 
@@ -32,8 +37,17 @@ def post_detail(request, slug):
 
             if post.likes.filter(id=user.id).exists():
                 post.likes.remove(user)
+                messages.add_message(
+                    request, messages.ERROR,
+                    'You just unliked this post'
+                )
             else:
                 post.likes.add(user)
+                liked = True
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'You just liked this post'
+                )
 
 
 
@@ -59,6 +73,7 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "liked": liked,
         },
     )
 
