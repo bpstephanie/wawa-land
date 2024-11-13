@@ -4,6 +4,7 @@
     <div class="grid grid-cols-12 gap-7 lg:mx-4">
         <div class="col-span-12  lg:col-span-8">
             <div class="p-6 mt-4">
+                {% if user.is_authenticated and post.author == user %}
                 <span>
                     <h3>AWAITING APPROVAL</h3>
                 </span>
@@ -48,6 +49,11 @@
             {% endif %}
         </ul>
     </nav>
+    {% endif %}
+    {% elif user.is_authenticated %}
+    <h2>You have no blog posts waiting for approval</h2>
+    {% else %}
+    <h2>Please log in to see your posts awaiting approval</h2>
     {% endif %}
 </div>
 
