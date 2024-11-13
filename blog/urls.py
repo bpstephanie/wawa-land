@@ -9,6 +9,6 @@ urlpatterns = [
           views.comment_edit, name='comment_edit'),
      path('blog/<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
-     #path('like/<slug:slug>', views.LikePost.as_view(), name='post_like'),
+     path('add_post/', views.add_post, name='add_post'),
 
 ]

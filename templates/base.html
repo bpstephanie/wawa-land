@@ -36,17 +36,17 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../static/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
 </head>
 
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand wawa-brand light-text" href="#">Wawa Land<i
+      <a class="navbar-brand wawa-brand light-text" href="{% url 'home' %}">Wawa Land<i
           class="fa-solid fa-hands-holding-child light-text"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.urls import reverse_lazy
 from django.views import generic
-from django.views.generic import TemplateView, ListView, View
+from django.views.generic import TemplateView, ListView, View, CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from slugify import slugify
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 # Create your views here.
 class Home(TemplateView):
@@ -115,20 +117,37 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-"""
-class LikePost(View):
-    
-    Toggles like status on submission of like button on posts.
-    
-    def like(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
 
-        if request.method == 'POST':
-            post.likes.filter(id=request.user.id).exists()
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-
-        return HttpResponseRedirect(reverse(
-            'post_detail', args=[slug]))
 """
+class AddNewPost(CreateView):
+    
+    View to add a new blog post.
+    
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+    success_url = reverse_lazy('blog')
+
+    def form_valid(self, form):
+        
+        Set the author of the post to the current user before saving.
+        
+        form.instance.author = self.request.user
+        return super().form_valid(form)"""
+
+def add_post(request):
+    if request.method == 'POST':
+        #a post was added
+        post_form = PostForm(data=request.POST)
+        if post_form.is_valid():
+            #create a post object but don't save to database yet
+            new_post = post_form.save(commit=False)
+            #assign the current slug and user to the post
+            new_post.author = request.user
+            new_post.slug = slugify(new_post.title)
+            #save post to database
+            new_post.save()
+            return HttpResponsePermanentRedirect(reverse('blog'))
+    else:
+        post_form = PostForm()
+        return render(request, 'add_post.html', {'post_form': post_form})
