@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import TemplateView, ListView, View, CreateView
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
 from slugify import slugify
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
@@ -12,10 +12,18 @@ from .forms import CommentForm, PostForm
 class Home(TemplateView):
     template_name = 'index.html'
 
+
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog.html"
     paginate_by = 6
+
+
+class DraftList(generic.ListView):
+    queryset = Post.objects.filter(status=0)
+    template_name = "drafts.html"
+    paginate_by = 6
+
 
 def post_detail(request, slug):
     """
@@ -118,23 +126,6 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-"""
-class AddNewPost(CreateView):
-    
-    View to add a new blog post.
-    
-    model = Post
-    form_class = PostForm
-    template_name = 'add_post.html'
-    success_url = reverse_lazy('blog')
-
-    def form_valid(self, form):
-        
-        Set the author of the post to the current user before saving.
-        
-        form.instance.author = self.request.user
-        return super().form_valid(form)"""
-
 def add_post(request):
     if request.method == 'POST':
         #a post was added
@@ -151,3 +142,47 @@ def add_post(request):
     else:
         post_form = PostForm()
         return render(request, 'add_post.html', {'post_form': post_form})
+
+"""
+def draft_detail(request, slug):
+    
+    Display an individual :model:`.Post`.
+    
+
+    queryset = Post.objects.filter(status=0)
+    draft = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "blog/drafts/draft_detail.html",
+        {
+            "draft": draft,
+        },
+    )
+    """
+    
+
+"""
+def post_edit(request, slug, post_id):
+    """"""
+    view to edit posts written by user
+    """"""
+    if request.method == "POST":
+
+        queryset = Post.objects.filter(status=0)
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+"""

@@ -1,28 +1,31 @@
 {% extends "base.html" %}
-
 {% block content %}
-<a class="" href="{% url 'add_post' %}">Add new post</a>
-<a class="" href="{% url 'drafts' %}">See drafts</a>
 <div class="container flex-auto mx-auto pb-8 my-5 box-shadow">
     <div class="grid grid-cols-12 gap-7 lg:mx-4">
         <div class="col-span-12  lg:col-span-8">
             <div class="p-6 mt-4">
-
-                <span><h3>LATEST</h3></span>
+                <span>
+                    <h3>AWAITING APPROVAL</h3>
+                </span>
                 {% for post in post_list %}
-                <div>
+                <div class="faded">
                     <div class="d-flex pt-6 cursor-pointer">
                         <div class="w-25 h-25 mr-5">
                             <img src="../static/images/children-playing-grass-min.webp" class="img-thumbnail" alt="">
                         </div>
                         <div class="ps-2 pt-5">
-                            <a class="wawa-title-large playfair text-decoration-none dark-text"
-                                href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+                            <h3 class="wawa-title-large playfair text-decoration-none dark-text">{{ post.title }}</h3>
                             <div>
                                 <span class="mt-2 text-sm author">{{ post.author }}</span>
                                 <span class="mt-2 text-sm">{{ post.created_on}}</span>
                             </div>
+                            <div>
+                                {% if user.is_authenticated and post.author == user %}
+                                <button class="btn btn-delete" post_id="{{ post.id }}">Delete</button>
+                                {% endif %}
+                            </div>
                         </div>
+
                     </div>
                     <hr />
                 </div>
