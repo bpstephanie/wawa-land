@@ -127,40 +127,22 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 def add_post(request):
+    """
+    view to add new post
+    """
     if request.method == 'POST':
-        #a post was added
+        
         post_form = PostForm(data=request.POST)
         if post_form.is_valid():
-            #create a post object but don't save to database yet
+            
             new_post = post_form.save(commit=False)
-            #assign the current slug and user to the post
             new_post.author = request.user
             new_post.slug = slugify(new_post.title)
-            #save post to database
             new_post.save()
             return HttpResponsePermanentRedirect(reverse('blog'))
     else:
         post_form = PostForm()
         return render(request, 'add_post.html', {'post_form': post_form})
-
-"""
-def draft_detail(request, slug):
-    
-    Display an individual :model:`.Post`.
-    
-
-    queryset = Post.objects.filter(status=0)
-    draft = get_object_or_404(queryset, slug=slug)
-
-    return render(
-        request,
-        "blog/drafts/draft_detail.html",
-        {
-            "draft": draft,
-        },
-    )
-    """
-    
 
 """
 def post_edit(request, slug, post_id):

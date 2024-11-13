@@ -10,7 +10,6 @@ urlpatterns = [
      path('blog/<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
      path('drafts/', views.DraftList.as_view(), name='drafts'),
-     #path('drafts/<slug:slug>/', views.draft_detail, name='draft_detail'),
      path('', views.Home.as_view(), name='home'),
 
 ]
