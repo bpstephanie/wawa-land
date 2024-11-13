@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container flex-auto mx-auto pb-8 my-5 box-shadow">
+{% load static %}
+{% load crispy_forms_tags %}
+<div class="container flex-auto mx-auto pb-8 my-5 box-shadow">   
     <div class="grid grid-cols-12 gap-7 lg:mx-4">
         <div class="col-span-12  lg:col-span-8">
             <div class="p-6 mt-4">
-                {% if user.is_authenticated and post.author == user %}
                 <span>
                     <h3>AWAITING APPROVAL</h3>
                 </span>
@@ -33,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+                <button class="btn btn-delete" post_id="{{ post.id }}">Delete</button>
                 {% endfor %}
 
             </div>
@@ -50,11 +52,29 @@
         </ul>
     </nav>
     {% endif %}
-    {% elif user.is_authenticated %}
-    <h2>You have no blog posts waiting for approval</h2>
-    {% else %}
-    <h2>Please log in to see your posts awaiting approval</h2>
-    {% endif %}
+</div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deletePostModalLabel">Delete post?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your post?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
 
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/posts.js' %}"></script>
 {% endblock %}
