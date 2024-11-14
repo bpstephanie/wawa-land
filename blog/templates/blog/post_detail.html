@@ -8,7 +8,7 @@
     <div class="col-auto w-50">
         <div class="image-container">
             {% if "placeholder" in post.featured_image.url %}
-            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+            <img class="card-img-top" src="{% static 'images/circle-children.jpg' %}" alt="placeholder image">
             {% else %}
             <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
             {% endif %}
