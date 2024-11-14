@@ -2,16 +2,17 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('add_post/', views.add_post, name='add_post'),
-    path('blog/', views.PostList.as_view(), name='blog'),
-    path('blog/<slug:slug>/', views.post_detail, name='post_detail'),
-    path('blog/<slug:slug>/edit_comment/<int:comment_id>',
+     path('add_post/', views.add_post, name='add_post'),
+     path('blog/', views.PostList.as_view(), name='blog'),
+     path('blog/<slug:slug>/', views.post_detail, name='post_detail'),
+     path('blog/<slug:slug>/edit_comment/<int:comment_id>',
           views.comment_edit, name='comment_edit'),
-    path('blog/<slug:slug>/delete_comment/<int:comment_id>',
+     path('blog/<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
-    path('drafts/', views.DraftList.as_view(), name='drafts'),
-    path('drafts/delete_post/<int:post_id>',
+     path('drafts/', views.DraftList.as_view(), name='drafts'),
+     path('drafts/delete_post/<int:post_id>',
          views.post_delete, name='post_delete'),
-    path('', views.Home.as_view(), name='home'),
+     path('profile/<str:username>/', views.user_profile, name='user_profile'),
+     path('', views.Home.as_view(), name='home'),
 
 ]

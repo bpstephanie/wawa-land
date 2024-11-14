@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.views.generic import TemplateView, ListView, CreateView
 from django.contrib import messages
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
 from slugify import slugify
 from .models import Post, Comment
+from event.models import Review
 from .forms import CommentForm, LikeForm, PostForm
 
 # Create your views here.
@@ -43,15 +45,15 @@ def post_detail(request, slug):
     if request.method == "POST":
         if 'like_button' in request.POST:
             if user:
-                if post.likes.filter(id=user.id).exists():
-                    post.likes.remove(user)
+                if post.likes_received.filter(user=user).exists():
+                    post.likes_received.filter(user=user).delete()
                     liked = False
                     messages.add_message(
                         request, messages.ERROR,
                         'You just unliked this post'
                     )
                 else:
-                    post.likes.add(user)
+                    Like.objects.create(user=user, post=post)
                     liked = True
                     messages.add_message(
                         request, messages.SUCCESS,
@@ -164,3 +166,24 @@ def post_delete(request, post_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own posts!')
 
     return HttpResponseRedirect(reverse('drafts'))
+
+def user_profile(request, username):
+    user = get_object_or_404(User, username=username)
+    posts = user.blog_posts.all()
+    comments = user.commenter.all()
+    likes = user.liked_posts.all()
+    reviews = user.reviewer.all()
+
+    context = {
+        'profile_user': user,
+        'posts': posts,
+        'comments': comments,
+        'likes': likes,
+        'reviews': reviews
+    }
+
+    return render(
+        request,
+        'profile.html',
+        context
+    )

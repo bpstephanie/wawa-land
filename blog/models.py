@@ -19,6 +19,9 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+
+    def total_likes(self):
+        return self.liked_posts.count()
     
     def __str__(self):
         return f"T{self.title} | written by {self.author}"
@@ -37,3 +40,16 @@ class Comment(models.Model):
     
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+class Like(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="liked_posts")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="likes_received")
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta: 
+        unique_together = ('user', 'post') # Ensures a user can like a post only once
+    
+    def __str__(self): 
+        return

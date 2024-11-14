@@ -41,6 +41,7 @@
     <p class="num-of-likes">{{ post.likes.count }}</p>
     <form action="" method="POST" id="likesForm">
         {% csrf_token %}
+        {{ like_form.as_p }}
         <button type="submit" name="like_button" class="border-0 bg-transparent">
             {% if liked %}
             
