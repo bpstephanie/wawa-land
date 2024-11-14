@@ -12,8 +12,6 @@ urlpatterns = [
     path('drafts/', views.DraftList.as_view(), name='drafts'),
     path('drafts/delete_post/<int:post_id>',
          views.post_delete, name='post_delete'),
-    #path('drafts/edit_post/<int:post_id>',
-    #     views.post_edit, name='post_edit'),
     path('', views.Home.as_view(), name='home'),
 
 ]

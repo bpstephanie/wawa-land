@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.urls import reverse_lazy
 from django.views import generic
-from django.views.generic import TemplateView, ListView, View, CreateView
+from django.views.generic import TemplateView, ListView, CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
 from slugify import slugify
@@ -35,40 +34,36 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     liked = False
-    if request.user.is_authenticated:
-        user = request.user
-        if post.likes.filter(id=user.id).exists():
-            liked = True
+    user = request.user if request.user.is_authenticated else None
+    if post.likes.filter(id=user.id).exists():
+        liked = True
 
     if request.method == "POST":
 
-        if request.user.is_authenticated:
-            user = request.user
-
-            if post.likes.filter(id=user.id).exists():
-                post.likes.remove(user)
-                messages.add_message(
-                    request, messages.ERROR,
-                    'You just unliked this post'
-                )
-            else:
-                post.likes.add(user)
-                liked = True
-                messages.add_message(
-                    request, messages.SUCCESS,
-                    'You just liked this post'
-                )
-
-
-
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.post = post
-            comment.save()
+        if post.likes.filter(id=user.id).exists():
+            post.likes.remove(user)
             messages.add_message(
-            request, messages.SUCCESS,
+                request, messages.ERROR,
+                'You just unliked this post'
+            )
+        else:
+            post.likes.add(user)
+            liked = True
+            messages.add_message(
+                request, messages.SUCCESS,
+                'You just liked this post'
+            )
+
+
+
+    comment_form = CommentForm(data=request.POST)
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
+        comment.author = request.user
+        comment.post = post
+        comment.save()
+        messages.add_message(
+        request, messages.SUCCESS,
             'Comment submitted and awaiting approval'
         )
 
@@ -140,41 +135,21 @@ def add_post(request):
             new_post.author = request.user
             new_post.slug = slugify(new_post.title)
             new_post.save()
+            messages.add_message(request, messages.SUCCESS, 'Thank you for your post! Please wait for it to be approved to see it on our community blog.')
             return HttpResponsePermanentRedirect(reverse('blog'))
+        else:
+           messages.add_message(request, messages.ERROR, 'Error: Please fill in all the required fields.') 
+
     else:
         post_form = PostForm()
         return render(request, 'add_post.html', {'post_form': post_form})
 
-"""
-def post_edit(request, post_id):
-    """"""
-    view to edit posts written by user
-    """"""
-    if request.method == "POST":
-
-        queryset = Post.objects.filter(status=0)
-        #post = get_object_or_404(queryset, slug=slug)
-        post = get_object_or_404(POST, pk=comment_id)
-        post_form = PostForm(data=request.POST, instance=post)
-
-        if post_form.is_valid() and post.author == request.user:
-            new_post = post_form.save(commit=False)
-            new_post.author = request.user
-            new_post.slug = slugify(new_post.title)
-            new_post.save()
-            messages.add_message(request, messages.SUCCESS, 'Post Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating post!')
-
-    return HttpResponseRedirect(reverse('drafts'))
-"""
 
 def post_delete(request, post_id):
     """
-    view to delete comment
+    view to delete post
     """
     queryset = Post.objects.filter(status=0)
-    #draft = get_object_or_404(queryset, slug=slug)
     post = get_object_or_404(Post, pk=post_id)
 
     if post.author == request.user:
