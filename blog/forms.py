@@ -9,7 +9,7 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'post_content')
+        fields = ('title', 'post_content', 'featured_image')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'post_content': forms.Textarea(
@@ -18,4 +18,5 @@ class PostForm(forms.ModelForm):
                     'placeholder': 'Enter post text here...'
                 }
             ),
+            'featured_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
             }

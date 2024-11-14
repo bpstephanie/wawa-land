@@ -128,7 +128,7 @@ def add_post(request):
     """
     if request.method == 'POST':
         
-        post_form = PostForm(data=request.POST)
+        post_form = PostForm(data=request.POST, files=request.FILES)
         if post_form.is_valid():
             
             new_post = post_form.save(commit=False)
