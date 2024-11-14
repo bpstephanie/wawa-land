@@ -110,6 +110,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 def comment_delete(request, slug, comment_id):
     """
     view to delete comment
@@ -145,28 +146,27 @@ def add_post(request):
         return render(request, 'add_post.html', {'post_form': post_form})
 
 """
-def post_edit(request, slug, post_id):
+def post_edit(request, post_id):
     """"""
     view to edit posts written by user
     """"""
     if request.method == "POST":
 
         queryset = Post.objects.filter(status=0)
-        post = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
+        #post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(POST, pk=comment_id)
+        post_form = PostForm(data=request.POST, instance=post)
 
-        if comment_form.is_valid() and comment.author == request.user:
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.approved = False
-            comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        if post_form.is_valid() and post.author == request.user:
+            new_post = post_form.save(commit=False)
+            new_post.author = request.user
+            new_post.slug = slugify(new_post.title)
+            new_post.save()
+            messages.add_message(request, messages.SUCCESS, 'Post Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR, 'Error updating post!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
+    return HttpResponseRedirect(reverse('drafts'))
 """
 
 def post_delete(request, post_id):
