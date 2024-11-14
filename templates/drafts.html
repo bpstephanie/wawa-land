@@ -14,6 +14,9 @@
                     <div class="row no-gutters">
                         <div class="col">
                             <div class="card-block px-2">
+                                <div class="w-25 h-25 mr-5 image-container">
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                </div>
                                 <h4 class="card-title wawa-title-large playfair">{{ post.title }}</h4>
                                 <p class="card-text">By: {{ post.author }} | {{ post.created_on }}</p>
                             </div>

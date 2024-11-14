@@ -17,4 +17,5 @@ class PostForm(forms.ModelForm):
                     'class': 'form-control',
                     'placeholder': 'Enter post text here...'
                 }
-            ),}
+            ),
+            }
