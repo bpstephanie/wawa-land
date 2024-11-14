@@ -6,6 +6,9 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+class LikeForm(forms.Form):
+    pass
+
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post

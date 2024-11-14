@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
 from slugify import slugify
 from .models import Post, Comment
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, LikeForm, PostForm
 
 # Create your views here.
 class Home(TemplateView):
@@ -28,47 +28,49 @@ def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
     """
-
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     liked = False
     user = request.user if request.user.is_authenticated else None
-    if post.likes.filter(id=user.id).exists():
+    if user and post.likes.filter(id=user.id).exists():
         liked = True
 
-    if request.method == "POST":
-
-        if post.likes.filter(id=user.id).exists():
-            post.likes.remove(user)
-            messages.add_message(
-                request, messages.ERROR,
-                'You just unliked this post'
-            )
-        else:
-            post.likes.add(user)
-            liked = True
-            messages.add_message(
-                request, messages.SUCCESS,
-                'You just liked this post'
-            )
-
-
-
-    comment_form = CommentForm(data=request.POST)
-    if comment_form.is_valid():
-        comment = comment_form.save(commit=False)
-        comment.author = request.user
-        comment.post = post
-        comment.save()
-        messages.add_message(
-        request, messages.SUCCESS,
-            'Comment submitted and awaiting approval'
-        )
-
     comment_form = CommentForm()
+    like_form = LikeForm()
 
+    if request.method == "POST":
+        if 'like_button' in request.POST:
+            if user:
+                if post.likes.filter(id=user.id).exists():
+                    post.likes.remove(user)
+                    liked = False
+                    messages.add_message(
+                        request, messages.ERROR,
+                        'You just unliked this post'
+                    )
+                else:
+                    post.likes.add(user)
+                    liked = True
+                    messages.add_message(
+                        request, messages.SUCCESS,
+                        'You just liked this post'
+                    )
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        
+        elif 'comment_button' in request.POST:
+            comment_form = CommentForm(request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.post = post
+                comment.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Comment submitted and awaiting approval'
+                )
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
     return render(
         request,
@@ -79,8 +81,11 @@ def post_detail(request, slug):
             "comment_count": comment_count,
             "comment_form": comment_form,
             "liked": liked,
+            "like_form": like_form,
         },
     )
+
+
 
 
 def comment_edit(request, slug, comment_id):
