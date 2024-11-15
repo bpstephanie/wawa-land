@@ -1,5 +1,6 @@
-from .models import Post, Comment
 from django import forms
+from django_summernote.widgets import SummernoteWidget
+from .models import Post, Comment
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -15,7 +16,7 @@ class PostForm(forms.ModelForm):
         fields = ('title', 'post_content', 'featured_image')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'post_content': forms.Textarea(
+            'post_content': SummernoteWidget(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Enter post text here...'
