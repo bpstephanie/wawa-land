@@ -1,65 +1,112 @@
 {% extends 'base.html' %}
-
 {% block content %}
+
 <div class="container">
     <h1>{{ profile_user.username }}'s Profile</h1>
 
-    <h2>Posts</h2>
-    {% if posts %}
-        <ul>
-            {% for post in posts %}
-                <li>
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.content }}</p>
-                    <p><small>Created on: {{ post.created_on }}</small></p>
-                </li>
-            {% endfor %}
-        </ul>
+    <!-- Posts section -->
+    <h2>Published Posts</h2>
+    {% if published_posts %}
+    <ul>
+        {% for post in published_posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <p><small>Created on: {{ post.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
     {% else %}
-        <p>No posts yet.</p>
+    <p>No published posts yet.</p>
     {% endif %}
 
-    <h2>Comments</h2>
-    {% if comments %}
-        <ul>
-            {% for comment in comments %}
-                <li>
-                    <p>{{ comment.content }}</p>
-                    <p><small>Commented on: {{ comment.created_on }} (Post: {{ comment.post.title }})</small></p>
-                </li>
-            {% endfor %}
-        </ul>
+    <h2>Unpublished Posts</h2>
+    {% if unpublished_posts %}
+    <ul>
+        {% for post in unpublished_posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <p><small>Created on: {{ post.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
     {% else %}
-        <p>No comments yet.</p>
+    <p>No unpublished posts yet.</p>
     {% endif %}
-    
-    <h2>Reviews</h2>
-    {% if reviews %}
-        <ul>
-            {% for review in reviews %}
-                <li>
-                    <h3>{{ reviews.title }}</h3>
-                    <p>{{ reviews.content }}</p>
-                    <p><small>Reviewed on: {{ review.created_on }} (Event: {{ review.event.title }})</small></p>
-                </li>
-            {% endfor %}
-        </ul>
+
+    <!-- Comments section -->
+    <h2>Approved Comments</h2>
+    {% if published_comments %}
+    <ul>
+        {% for comment in published_comments %}
+        <li>
+            <p>{{ comment.body }}</p>
+            <p><small>Created on: {{ comment.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
     {% else %}
-        <p>No reviews yet.</p>
+    <p>No approved comments yet.</p>
+    {% endif %}
+
+    <h2>Comments Awaiting Approval</h2>
+    {% if unpublished_comments %}
+    <ul>
+        {% for comment in unpublished_comments %}
+        <li>
+            <h3>{{ comment.title }}</h3>
+            <p>{{ comment.body }}</p>
+            <p><small>Created on: {{ comment.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No comments awaiting approval.</p>
+    {% endif %}
+
+    <!-- Reviews section -->
+    <h2>Approved Reviews</h2>
+    {% if published_review %}
+    <ul>
+        {% for review in published_review %}
+        <li>
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.body }}</p>
+            <p><small>Created on: {{ review.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No approved reviews yet.</p>
+    {% endif %}
+
+    <h2>Reviews Awaiting Approval</h2>
+    {% if unpublished_review %}
+    <ul>
+        {% for review in unpublished_review %}
+        <li>
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.body }}</p>
+            <p><small>Created on: {{ review.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No reviews awaiting approval.</p>
     {% endif %}
 
     <h2>Likes on Posts</h2>
     {% if likes %}
-        <ul>
-            {% for like in likes %}
-                <li>
-                    <p>Liked post: {{ like.post.title }}</p>
-                    <p><small>Liked on: {{ like.created_on }}</small></p>
-                </li>
-            {% endfor %}
-        </ul>
+    <ul>
+        {% for like in likes %}
+        <li>
+            <p>Liked post: {{ like.post.title }}</p>
+            <p><small>Liked on: {{ like.created_on }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
     {% else %}
-        <p>No likes yet.</p>
+    <p>No likes yet.</p>
     {% endif %}
 </div>
 {% endblock %}

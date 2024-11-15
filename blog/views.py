@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect
 from slugify import slugify
-from .models import Post, Comment
+from .models import Post, Comment, Like
 from event.models import Review
 from .forms import CommentForm, LikeForm, PostForm
 
@@ -36,7 +36,7 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
     liked = False
     user = request.user if request.user.is_authenticated else None
-    if user and post.likes.filter(id=user.id).exists():
+    if user and post.likes_received.filter(user=user).exists():
         liked = True
 
     comment_form = CommentForm()
@@ -83,6 +83,7 @@ def post_detail(request, slug):
             "comment_count": comment_count,
             "comment_form": comment_form,
             "liked": liked,
+            "total_likes": post.total_likes(),
             "like_form": like_form,
         },
     )
@@ -169,17 +170,23 @@ def post_delete(request, post_id):
 
 def user_profile(request, username):
     user = get_object_or_404(User, username=username)
-    posts = user.blog_posts.all()
-    comments = user.commenter.all()
+    published_posts = user.blog_posts.filter(status=1)
+    unpublished_posts = user.blog_posts.filter(status=0)
+    published_comments = user.commenter.filter(approved=True)
+    unpublished_comments = user.commenter.filter(approved=False)
+    published_reviews = user.reviewer.filter(approved=True)
+    unpublished_reviews = user.reviewer.filter(approved=False)
     likes = user.liked_posts.all()
-    reviews = user.reviewer.all()
 
     context = {
         'profile_user': user,
-        'posts': posts,
-        'comments': comments,
+        'published_posts': published_posts,
+        'unpublished_posts': unpublished_posts,
+        'published_comments': published_comments,
+        'unpublished_comments': unpublished_comments,
+        'published_reviews': published_reviews,
+        'unpublished_reviews': unpublished_reviews,
         'likes': likes,
-        'reviews': reviews
     }
 
     return render(

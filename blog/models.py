@@ -21,7 +21,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def total_likes(self):
-        return self.liked_posts.count()
+        return self.likes_received.count()
     
     def __str__(self):
         return f"T{self.title} | written by {self.author}"
