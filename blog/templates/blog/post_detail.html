@@ -2,30 +2,33 @@
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
-
-<div class="card"></div>
-<div class="row no-gutters">
-    <div class="col-auto w-50">
-        <div class="image-container">
-            {% if "placeholder" in post.featured_image.url %}
-            <img class="card-img-top" src="{% static 'images/circle-children.jpg' %}" alt="placeholder image">
-            {% else %}
-            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-            {% endif %}
+<!-- Header -->
+<div class="container px-2 box-shadow mt-3 py-3">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <div class="image-container">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="{% static 'images/circle-children.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% endif %}
+            </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card-block px-2">
-            <h4 class="card-title wawa-title-large playfair">{{ post.title }}</h4>
-            <p class="card-text">By: {{ post.author }} | {{ post.created_on }}</p>
+        <div class="col-sm-12 col-lg-6 align-self-center">
+            <div class="card header-card">
+                <h4 class="card-title wawa-title-large playfair">{{ post.title }}</h4>
+                <div class="row">
+                    <div class="col-md">
+                        <p class="card-text">By: {{ post.author }} | {{ post.created_on }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
-
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3 border-0">
             <div>
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -36,89 +39,85 @@
         </div>
     </div>
 </div>
-<!-- Displaying likes -->
-<div class="like-container">
-    <p class="num-of-likes">{{ total_likes }}</p>
+<!-- Displaying likes and comment count -->
+<div class="like-container px-2 mt-3 py-3 d-flex">
     <form action="" method="POST" id="likesForm">
         {% csrf_token %}
         {{ like_form.as_p }}
         <button type="submit" name="like_button" class="border-0 bg-transparent">
             {% if liked %}
-            
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-heart-fill"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-                </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgb(127, 108, 219)"
+                class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+            </svg>
             {% else %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-heart"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgb(127, 108, 219)" class="bi bi-heart"
+                viewBox="0 0 16 16">
+                <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+            </svg>
             {% endif %}
         </button>
     </form>
+    <h3 class="num-of-likes">
+        <strong>{{ total_likes }}</strong>
+    </h3>
+    <strong class="comment-count">
+        <i class="far fa-comments"></i>
+        {{ comment_count }}
+    </strong>
 </div>
-<!-- Displaying count of comments -->
-<div class="row">
-    <div class="col-8">
-        <strong class="text-secondary">
-            <i class="far fa-comments"></i> {{ comment_count }}
-        </strong>
-    </div>
-    <div class="col-12">
-        <hr>
-    </div>
-</div>
+
 <!-- Displaying Comments -->
-<div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
-        <h3>Comments:</h3>
-        <div>
-            <!-- We want a for loop inside the empty control tags
+<div class="container px-2">
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3  border-0">
+            <h3>Comments:</h3>
+            <div>
+                <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
-            {% for comment in comments %}
-            <div
-                class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                <p class="font-weight-bold"></p>
-                {{ comment.author }}
-                <span class="font-weight-normal">
-                    {{ comment.created_on }}
-                </span> wrote:
-                </p>
-                <div id="comment{{ comment.id }}">
-                    {{ comment.body | linebreaks }}
+                {% for comment in comments %}
+                <div
+                    class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="font-weight-bold"></p>
+                    {{ comment.author }}
+                    <span class="font-weight-normal">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approved">
+                        This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
                 </div>
-                {% if not comment.approved and comment.author == user %}
-                <p class="approved">
-                    This comment is awaiting approval
-                </p>
-                {% endif %}
-                {% if user.is_authenticated and comment.author == user %}
-                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Creating New Comments -->
+        <div class="col-md-4 card mb-4 mt-3 border-0">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" name="comment_button"
+                        class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a comment</p>
                 {% endif %}
             </div>
-            <!-- Our for loop ends here -->
-            {% endfor %}
-        </div>
-    </div>
-    <!-- Creating New Comments -->
-    <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit" name="comment_button"
-                    class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% else %}
-            <p>Log in to leave a comment</p>
-            {% endif %}
         </div>
     </div>
 </div>

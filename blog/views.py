@@ -23,7 +23,7 @@ class PostList(generic.ListView):
 class DraftList(generic.ListView):
     queryset = Post.objects.filter(status=0)
     template_name = "drafts.html"
-    paginate_by = 1
+    paginate_by = 6
 
 
 def post_detail(request, slug):
