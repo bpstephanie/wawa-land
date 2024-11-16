@@ -197,7 +197,7 @@ def user_profile(request, username):
     unpublished_posts = user.blog_posts.filter(status=0)
     published_comments = user.commenter.filter(approved=True)
     unpublished_comments = user.commenter.filter(approved=False)
-    published_reviews = user.reviewer.filter(approved=True)
+    published_reviews = Review.objects.filter(author=user, approved=True)
     unpublished_reviews = user.reviewer.filter(approved=False)
     likes = user.liked_posts.all()
 

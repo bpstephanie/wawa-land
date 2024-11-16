@@ -12,11 +12,6 @@
             <p>Please log in to write a post</p>
             {% endif %}
         </div>
-        {% if user.is_authenticated %}
-        <div class="col-md-6">
-            <a class="" href="{% url 'drafts' %}">See drafts</a>
-        </div>
-        {% endif %}
     </div>
 </div>
 
