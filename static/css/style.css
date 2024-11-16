@@ -7,13 +7,6 @@
     box-sizing: border-box;
   }
 
-:root {
-    -–light-purple: rgb(245, 239, 255);
-    -–dusty-purple: rgb(229, 217, 242);
-    -–main-purple: rgb(205, 193, 255);
-    -–dark-purple: rgb(94, 74, 196);
-    }
-
 body {
     background-color: #fff;
     display: flex;
@@ -42,11 +35,11 @@ body {
 }
 
 .light-text {
-    color: rgb(245, 239, 255) !important;
+    color: rgb(245, 239, 255);
 }
 
 .dark-text {
-    color:  rgb(94, 74, 196) !important;
+    color: rgb(94, 74, 196);
 }
 
 /* Nav bar -------------------------------------------------- */
@@ -59,19 +52,20 @@ body {
     font-weight: 500;
 }
 
-.wawa-brand > i {
+.brand > i {
     padding-left: 2%;
     font-size: 90%;  
 }
 
 .navbar-nav > a,
 .footer div,
-.footer a,
-nav li {
+.footer a {
+    color: rgb(229, 217, 242);
     font-size: 110%;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
+
 
 /* Footer -------------------------------------------------- */
 footer .brand > i {
@@ -94,8 +88,18 @@ footer .brand > i {
 }
 
 /* Blog Posts -------------------------------------------------- */
-.card-body {
-    border: 2px solid rgb(94, 74, 196);
+.playfair {
+    font-family: 'Playfair', sans-serif;
+    font-weight: 700;
+    color:rgb(0, 0, 0)
+}
+
+.wawa-title-med {
+    font-size: 150%;
+}
+
+.wawa-title-large {
+    font-size: 300%;
 }
 
 .image-container img {
@@ -121,6 +125,9 @@ footer .brand > i {
 
 .author {
     text-transform: uppercase;
+    background-color: rgb(213, 194, 243);
+    padding: 1%;
+    border-radius: 15px;
 }
 
 .white-border {
@@ -131,15 +138,94 @@ footer .brand > i {
     border: 2px solid #fff !important;
 }
 
-/* Sign up -------------------------------------------------- */
-.user-card {
-    margin: 20px 100px 20px 100px;
+.faded {
+    color: rgb(172, 175, 175);
 }
 
-.btn-signup,
+.approved {
+    color: rgb(222, 146, 168);
+}
+
 .btn-edit {
-    background-color: rgb(94, 74, 196);
+    background-color: #24a408;
     color: #fff;
+}
+
+.btn-edit:hover {
+    border: #24a408;
+    color: #24a408;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #e80707;
+}
+
+.btn-wawa {
+    border: 1px solid rgb(127, 108, 219);
+    background-color: #fff;
+}
+
+.btn-wawa:hover {
+    background-color: rgb(127, 108, 219);
+    color:#fff;
+}
+
+/*
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
 }
 
 .btn-signup:hover,
@@ -165,24 +251,11 @@ footer .brand > i {
     background: transparent;
 }
 
-.btn-delete {
-    color: #fff;
-    background: #E84610;
-}
-
 .btn-like:hover,
 .btn-like:active {
     color: #E84610;
     background: transparent;
     border: none;
-}
-
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-.approval {
-    color: rgb(222, 146, 168);
 }
 
 */

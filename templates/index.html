@@ -4,25 +4,25 @@
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% block content %}
 <!-- Header -->
-<div class="container mt-3 box-shadow padding-l">
+<div class="container px-2 box-shadow mt-3 py-3">
     <div class="row">
-        <div class="col">
+        <div class="col-sm-12 col-lg-6">
             <div class="jumbotron">
                 <img src="../static/images/children-playing-grass-min.webp" class="img-fluid" alt="">
             </div>
         </div>
-        <div class="col align-self-center">
+        <div class="col-sm-12 col-lg-6 align-self-center">
             <div class="card header-card">
-                <h1 class="card-title wawa-brand">Welcome to Wawa Land</h1>
+                <h1 class="card-title wawa-brand text-center">Welcome to Wawa Land</h1>
                 <div class="row">
-                    <div class="col-md-8">
-                        <p class="card-text display-7">Your helping hand when you need to know everything to do with the world of
+                    <div class="col-md">
+                        <p class="card-text display-7 text-center">Your helping hand when you need to know everything to do with the world of
                             babies, toddlers, children and parenting.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <a href="{% url 'account_signup' %}" class="{% if request.path == signup_url %}active{% endif %} bg-dark light-text btn">Sign Up</a>
+                    <div class="col-md text-center">
+                        <a href="{% url 'account_signup' %}" class="{% if request.path == signup_url %}active{% endif %} btn btn-wawa">Sign Up</a>
                     </div>
                 </div>
             </div>
