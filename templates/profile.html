@@ -43,7 +43,8 @@
         </div>
 
         <!-- Delete Confirmation Modal for Published Posts -->
-        <div class="modal fade" id="deleteModal{{ post.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ post.id }}" aria-hidden="true">
+        <div class="modal fade" id="deleteModal{{ post.id }}" tabindex="-1"
+            aria-labelledby="deleteModalLabel{{ post.id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -76,7 +77,8 @@
         {% for post in unpublished_posts %}
         <li>
             <h3>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#unpublishedPostModal{{ post.id }}">{{ post.title }}</a>
+                <a href="#" data-bs-toggle="modal"
+                    data-bs-target="#unpublishedPostModal{{ post.id }}">{{ post.title }}</a>
             </h3>
             <p>
                 <small>Created on: {{ post.created_on }}</small>
@@ -87,8 +89,8 @@
         </li>
 
         <!-- Unpublished Post Modal -->
-        <div class="modal fade" id="unpublishedPostModal{{ post.id }}" tabindex="-1" aria-labelledby="unpublishedPostModalLabel{{ post.id }}"
-            aria-hidden="true">
+        <div class="modal fade" id="unpublishedPostModal{{ post.id }}" tabindex="-1"
+            aria-labelledby="unpublishedPostModalLabel{{ post.id }}" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -107,7 +109,8 @@
         </div>
 
         <!-- Delete Confirmation Modal for Unpublished Posts -->
-        <div class="modal fade" id="deleteUnpublishedModal{{ post.id }}" tabindex="-1" aria-labelledby="deleteUnpublishedModalLabel{{ post.id }}" aria-hidden="true">
+        <div class="modal fade" id="deleteUnpublishedModal{{ post.id }}" tabindex="-1"
+            aria-labelledby="deleteUnpublishedModalLabel{{ post.id }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -134,19 +137,70 @@
     {% endif %}
 
     <!-- Comments section -->
+    <!-- Comments section -->
     <h2>Approved Comments</h2>
     {% if published_comments %}
     <ul>
         {% for comment in published_comments %}
+        {% if comment.post %}
         <li>
             <p>{{ comment.body }}</p>
             <p><small>Created on: {{ comment.created_on }}</small></p>
+            <button class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#deleteCommentModal{{ comment.id }}">Delete</button>
+            <button class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#editCommentModal{{ comment.id }}">Edit</button>
+
+            <!-- Edit Comment Modal -->
+            <div class="modal fade" id="editCommentModal{{ comment.id }}" tabindex="-1"
+                aria-labelledby="editCommentModalLabel{{ comment.id }}" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editCommentModalLabel{{ comment.id }}">Edit Comment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="{% url 'comment_edit' comment.post.slug comment.id %}">
+                                {% csrf_token %}
+                                <textarea name="body" class="form-control" rows="5">{{ comment.body }}</textarea>
+                                <button type="submit" class="btn btn-primary mt-3">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Comment Modal -->
+            <div class="modal fade" id="deleteCommentModal{{ comment.id }}" tabindex="-1"
+                aria-labelledby="deleteCommentModalLabel{{ comment.id }}" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteCommentModalLabel{{ comment.id }}">Delete Comment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this comment?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <form method="post" action="{% url 'comment_delete' comment.post.slug comment.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </li>
+        {% endif %}
         {% endfor %}
     </ul>
     {% else %}
     <p>No approved comments yet.</p>
     {% endif %}
+
 
     <h2>Comments Awaiting Approval</h2>
     {% if unpublished_comments %}
