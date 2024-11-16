@@ -1,33 +1,132 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <div class="container">
     <h1>{{ profile_user.username }}'s Profile</h1>
 
-    <!-- Posts section -->
+    <!-- Published Posts section -->
     <h2>Published Posts</h2>
     {% if published_posts %}
     <ul>
         {% for post in published_posts %}
         <li>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.content }}</p>
-            <p><small>Created on: {{ post.created_on }}</small></p>
+            <h3>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#postModal{{ post.id }}">{{ post.title }}</a>
+            </h3>
+            <p>
+                <small>Created on: {{ post.created_on }}</small>
+            </p>
+            <button class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#deleteModal{{ post.id }}">Delete</button>
+            <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Edit Post</a>
         </li>
+
+        <!-- Post Modal -->
+        <div class="modal fade" id="postModal{{ post.id }}" tabindex="-1" aria-labelledby="postModalLabel{{ post.id }}"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="postModalLabel{{ post.id }}">{{ post.title }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ post.post_content | safe }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Edit Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for Published Posts -->
+        <div class="modal fade" id="deleteModal{{ post.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ post.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel{{ post.id }}">Delete Post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete the post titled "{{ post.title }}"?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <form method="post" action="{% url 'post_delete' post.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </ul>
     {% else %}
     <p>No published posts yet.</p>
     {% endif %}
 
+    <!-- Unpublished Posts section -->
     <h2>Unpublished Posts</h2>
     {% if unpublished_posts %}
     <ul>
         {% for post in unpublished_posts %}
         <li>
-            <h3>{{ post.title }}</h3>
-            <p><small>Created on: {{ post.created_on }}</small></p>
+            <h3>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#unpublishedPostModal{{ post.id }}">{{ post.title }}</a>
+            </h3>
+            <p>
+                <small>Created on: {{ post.created_on }}</small>
+            </p>
+            <button class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#deleteUnpublishedModal{{ post.id }}">Delete</button>
+            <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Edit Post</a>
         </li>
+
+        <!-- Unpublished Post Modal -->
+        <div class="modal fade" id="unpublishedPostModal{{ post.id }}" tabindex="-1" aria-labelledby="unpublishedPostModalLabel{{ post.id }}"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="unpublishedPostModalLabel{{ post.id }}">{{ post.title }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ post.post_content | safe }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Edit Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for Unpublished Posts -->
+        <div class="modal fade" id="deleteUnpublishedModal{{ post.id }}" tabindex="-1" aria-labelledby="deleteUnpublishedModalLabel{{ post.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteUnpublishedModalLabel{{ post.id }}">Delete Post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete the post titled "{{ post.title }}"?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <form method="post" action="{% url 'post_delete' post.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </ul>
     {% else %}
@@ -109,4 +208,8 @@
     <p>No likes yet.</p>
     {% endif %}
 </div>
+
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/profile.js' %}"></script>
 {% endblock %}

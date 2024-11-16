@@ -157,16 +157,39 @@ def post_delete(request, post_id):
     """
     view to delete post
     """
-    queryset = Post.objects.filter(status=0)
     post = get_object_or_404(Post, pk=post_id)
 
-    if post.author == request.user:
-        post.delete()
-        messages.add_message(request, messages.SUCCESS, 'Post deleted!')
-    else:
+    if post.author != request.user:
         messages.add_message(request, messages.ERROR, 'You can only delete your own posts!')
+        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
 
-    return HttpResponseRedirect(reverse('drafts'))
+    if request.method == 'POST':
+        post.delete()
+        messages.add_message(request, messages.SUCCESS, 'Post deleted successfully!')
+        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+
+
+def post_edit(request, post_id):
+    """
+    view to edit post
+    """
+    post = get_object_or_404(Post, pk=post_id)
+    if post.author != request.user:
+        messages.add_message(request, messages.ERROR,
+        'You can only edit your own posts!')
+        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Post updated successfully!')
+            return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+           
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'edit_post.html', {'form': form, 'post': post})
+
 
 def user_profile(request, username):
     user = get_object_or_404(User, username=username)
