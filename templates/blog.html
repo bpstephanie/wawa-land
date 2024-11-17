@@ -9,7 +9,9 @@
             {% if user.is_authenticated %}
             <a class="text-decoration-none dark-text mt-2 text-sm btn btn-wawa" href="{% url 'add_post' %}">Add new post</a>
             {% else %}
-            <p class="playfair">Please log in to write a post</p>
+            <p class="playfair">Please 
+                <a class="text-decoration-none dark-text playfair" href="{{ login_url }}">log in</a>
+                to write a post</p>
             {% endif %}
         </div>
     </div>
