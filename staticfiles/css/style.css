@@ -38,6 +38,10 @@ body {
     color: rgb(245, 239, 255);
 }
 
+.dark-text {
+    color: rgb(94, 74, 196);
+}
+
 /* Nav bar -------------------------------------------------- */
 
 .wawa-brand {
@@ -62,6 +66,18 @@ body {
     font-weight: 500;
 }
 
+/* Django Messages -------------------------------------------------- */
+.alert-success {
+    background-color: rgb(212, 237, 218);
+    color: rgb(21, 87, 36);
+    border: 2px solid rgb(21, 87, 36);
+}
+
+.alert-error {
+    background-color: rgb(236, 202, 202);
+    color: rgb(87, 21, 21);
+    border: 2px solid rgb(87, 21, 21);
+}
 
 /* Footer -------------------------------------------------- */
 footer .brand > i {
@@ -157,91 +173,50 @@ footer .brand > i {
     background: #e80707;
 }
 
-/*
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
+.btn-wawa {
+    border: 1px solid rgb(127, 108, 219);
     background-color: #fff;
-    color: #23BBBB;
 }
 
-.link {
-    color: #23BBBB;
-    text-decoration: none;
+.btn-wawa:hover {
+    background-color: rgb(127, 108, 219);
+    color:#fff;
 }
 
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
+.like-container {
+    margin-left: 6%;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
+.num-of-likes,
+.comment-count,
+#likesForm {
+    padding-left: 1%;
+    font-size: 200%;
+    color: rgb(127, 108, 219);
 }
 
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+/* Sign up page -------------------------------------------------- */
+.signup ul {
+    list-style-type: none;
 }
 
-*/
+/* Summernote -------------------------------------------------- */
+.note-editor .text-editor {
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+}
+
+@media (max-width: 768px) { 
+    .note-editor{
+        width: 100%; 
+    }
+}
+
+@media (min-width: 769px) { 
+    .card { 
+        width: 75%;
+    }
+}

@@ -12,7 +12,7 @@ AGES = (
     (7, "All ages")
 )
 
-# Create your models here.
+# Event Model
 class Event(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -22,7 +22,6 @@ class Event(models.Model):
     event_date = models.DateField()
     event_time = models.TimeField()
     event_price = models.DecimalField(max_digits=6, decimal_places=2)
-    excerpt = models.TextField(blank=True)
 
     class Meta:
         ordering = ["-event_date"]
@@ -30,12 +29,11 @@ class Event(models.Model):
     def __str__(self):
         return self.title
 
+# Review Model
 class Review(models.Model):
-    event = models.ForeignKey(
-        Event, on_delete=models.CASCADE, related_name="reviews")
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="reviews")
     title = models.CharField(max_length=200, default="my_review")
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="reviewer")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
