@@ -66,7 +66,7 @@ body {
     font-weight: 500;
 }
 
-/* Global styles -------------------------------------------------- */
+/* Django Messages -------------------------------------------------- */
 .alert-success {
     background-color: rgb(212, 237, 218);
     color: rgb(21, 87, 36);
@@ -199,12 +199,24 @@ footer .brand > i {
 .signup ul {
     list-style-type: none;
 }
-/*
 
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-*/
+/* Summernote -------------------------------------------------- */
+.note-editor .text-editor {
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+}
+
+@media (max-width: 768px) { 
+    .note-editor{
+        width: 100%; 
+    }
+}
+
+@media (min-width: 769px) { 
+    .card { 
+        width: 75%;
+    }
+}
