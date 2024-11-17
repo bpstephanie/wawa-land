@@ -71,9 +71,9 @@
 <!-- Displaying Comments -->
 <div class="container px-2">
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3  border-0">
+        <div class="col-md-8 card mb-4 mt-3 border-0">
             <h3>Comments:</h3>
-            <div>
+            <div class="card-body">
                 {% for comment in comments %}
                 <div
                     class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
