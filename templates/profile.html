@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>{{ profile_user.username }}'s Profile</h1>
+<div class="container text-center">
+    <h1 class="text center playfair display-4">{{ profile_user.username }}'s Profile</h1>
+</div>
 <div class="container flex-auto mx-auto py-5 my-5 box-shadow">
     <div class="grid grid-cols-12 gap-7 lg:mx-4">
         <div class="p-6 mt-4">
