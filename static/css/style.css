@@ -182,6 +182,11 @@ footer .brand > i {
     font-size: 200%;
     color: rgb(127, 108, 219);
 }
+
+/* Sign up page -------------------------------------------------- */
+.signup ul {
+    list-style-type: none;
+}
 /*
 
 .image-flash {
