@@ -66,6 +66,18 @@ body {
     font-weight: 500;
 }
 
+/* Global styles -------------------------------------------------- */
+.alert-success {
+    background-color: rgb(212, 237, 218);
+    color: rgb(21, 87, 36);
+    border: 2px solid rgb(21, 87, 36);
+}
+
+.alert-error {
+    background-color: rgb(236, 202, 202);
+    color: rgb(87, 21, 21);
+    border: 2px solid rgb(87, 21, 21);
+}
 
 /* Footer -------------------------------------------------- */
 footer .brand > i {
