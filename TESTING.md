@@ -15,6 +15,7 @@ HTML
 | Blog Post - logged in   |![Blog - Logged In](static/images/screenshots/html-)                 | PASS     |
 | Event List              |![Event](static/images/screenshots/html-event-list.png)                 | PASS     |
 | Event Listing           |![Event](static/images/screenshots/html-event-listing.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.   |
+| Blog - logged out       |![Blog - Logged Out](static/images/screenshots/html-blog-loggedout.png)                 | PASS     |
 
 
 The HTML W3C Validator Results:
