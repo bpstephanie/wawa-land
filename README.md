@@ -355,3 +355,27 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   - # Email Notifications
     Whenever a user saves an event they would recieve an email letting them know the event is coming up.
+
+    [Back To Top](<#contents>)
+
+# Technologies Used
+
+* [Python3 + Django](https://www.python.org/)
+* [HTML5](https://html.spec.whatwg.org/)
+* [CSS](https://www.w3.org/Style/CSS/specs.en.html)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Cloudinary](https://cloudinary.com/) - used for online storage of static files.
+* [Gitpod](https://www.gitpod.io/#get-started) - used for writing code, committing and pushing to [Github](https://github.com/).
+* [Github](https://github.com/) - used for storing the repository and for version control.
+* [Heroku](https://dashboard.heroku.com/) - used to deploy and host the project.
+* [Lucid](https://dashboard.heroku.com/) - used to create the ERD model for Wawa Land.
+* [CloudConvert](https://cloudconvert.com/png-to-webp) - used to convert images to  webp.
+* [TinyPNG](https://tinypng.com/) - used to optimize images.
+* [PEP8](https://peps.python.org/pep-0008/) - used to validate python code.
+
+
+[Back To Top](<#contents>)
+
+
+    
