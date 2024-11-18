@@ -48,12 +48,12 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   * [Known Bugs](<#known-bugs>)
     * [Unresolved Bugs](<#unresolved-bugs>)
 * [**Deployment**](<#deployment>)
+  * [**Cloudinary**](<#cloudinary>)
+  * [**PostgreSQL**](<#postgresql>)
   * [**To Deploy on Heroku**](<#to-deploy-on-heroku>)
   * [**To Deploy Locally on GitHub**](<#to-deploy-locally-on-github>)
   * [**To Fork the Project**](<#to-fork-the-project>)
   * [**To Clone the Project**](<#to-clone-the-project>)
-  * [**Cloudinary**](<#cloudinary>)
-  * [**PostgreSQL**](<#postgresql>)
 * [**Credits**](<#credits>)
   * [**Content**](<#content>)
 * [**Acknowledgements**](<#acknowledgements>)
@@ -461,6 +461,18 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Deployment
 
+  ## Cloudinary API
+  Cloudinary is used to store media assets online. This is particularly beneficial because Heroku does not preserve this type of data.
+
+  - ### Steps to Obtain Your Cloudinary API Key:
+    1. Register and log in to Cloudinary.
+    2. Indicate Programmable Media for image and video API as your Primary interest.
+    3. Copy your API Environment Variable from the Cloudinary Dashboard.
+    4. Remove CLOUDINARY_URL = from the API value; this acts as the key.
+
+  ## PostgreSQL
+
+  
   ## To Deploy on Heroku
   The site was developed using [Gitpod](https://www.gitpod.io/#get-started). All commit messages were pushed to [Github](https://github.com/) using the GitPod terminal. The finished project was deployed in [Heroku](https://dashboard.heroku.com/).
 
@@ -559,7 +571,20 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   <details><summary>Heroku Step 12 - Deploy</summary>
   
-  ![Heroku Step 12 - Deploy](assets/images/heroku_seven.png)
+  ![Heroku Step 12 - Deploy](static/images/screenshots/heroku_seven.png)
+
+  </details>
+
+
+  13. If you are using [Cloudinary](https://cloudinary.com/), go back to the 'Settings' tab on heroku, reveal config vars and add a new KEY, VALUE pair:
+    - KEY = "CLOUDINARY_URL", VALUE = "your cloudinary api"
+
+  14. For final deployment, or once static files have been added to your project, you need to remove the following KEY, VALUE pair:
+    - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1"
+
+  <details><summary>Heroku Step 14 - Final Deployment</summary>
+  
+  ![Heroku Step 12 - Final Deployment](static/images/screenshots/heroku_14.png)
 
   </details>
 
@@ -603,10 +628,15 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   </details>
 
-  
-  The live link can be found here - <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
+  After cloning or forking the project, follow these steps to run it locally:
+
+  1. Run the Server by typing the following in the terminal: python3 manage.py runserver
+  2. Stop the app once it is loaded by pressing CTRL+C (Windows/Linux) or ⌘+C (Mac).
+  3. Make migrations by typing: python3 manage.py makemigrations
+  4. Migrate the data by typing: python3 manage.py migrate
+  5. Create a superuser by typing: python3 manage.py createsuperuser
 
   [Back To Top](<#contents>)
-  ## Cloudinary
-  ## PostgreSQL
+
+  
     
