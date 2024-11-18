@@ -58,6 +58,10 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   * [**Content**](<#content>)
 * [**Acknowledgements**](<#acknowledgements>)
 
+# User Experience UX
+  ## Agile Methodology
+  
+
 # Features
   ## Existing Features
 
@@ -468,6 +472,10 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   5. Check your email.
   6. You now have a URL you can use to connect your app to your database.
 
+  [Back To Top](<#contents>)
+# Testing
+  Please refer [**_here_**](TESTING.md) for more information about testing on Wawa Land.
+
 # Deployment
 
   ## Cloudinary API
@@ -478,6 +486,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     2. Indicate Programmable Media for image and video API as your Primary interest.
     3. Copy your API Environment Variable from the Cloudinary Dashboard.
     4. Remove CLOUDINARY_URL = from the API value; this acts as the key.
+
+  [Back To Top](<#contents>)
 
   ## To Deploy on Heroku
   The site was developed using [Gitpod](https://www.gitpod.io/#get-started). All commit messages were pushed to [Github](https://github.com/) using the GitPod terminal. The finished project was deployed in [Heroku](https://dashboard.heroku.com/).
@@ -490,44 +500,44 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   1. Log into [Heroku](https://dashboard.heroku.com/) (or create an account).
 
-  <details><summary>Heroku Step 1</summary>
-  
-  ![Heroku Step 1](static/images/screenshots/heroku_one.png)
+    <details><summary>Heroku Step 1</summary>
+    
+    ![Heroku Step 1](static/images/screenshots/heroku_one.png)
 
-  </details>
+    </details>
 
   2. In the top right hand corner there is a button 'New' that releases a dropdown menu, where you need to click 'Create a new app'.
 
-  <details><summary>Heroku Step 2</summary>
-  
-  ![Heroku Step 2](static/images/screenshots/heroku_two.png)
+    <details><summary>Heroku Step 2</summary>
+    
+    ![Heroku Step 2](static/images/screenshots/heroku_two.png)
 
-  </details>
+    </details>
 
   3. On the next page, you will need to add a name for your app and input what region you are in. Bear in mind that each app name is unique therefore you may need to try some different options out. Once you have decided on an app name and selected which region you are in. Click 'Create app'
 
-  <details><summary>Heroku Step 3</summary>
-  
-  ![Heroku Step 3](static/images/screenshots/heroku_three.png)
+    <details><summary>Heroku Step 3</summary>
+    
+    ![Heroku Step 3](static/images/screenshots/heroku_three.png)
 
-  </details>
+    </details>
 
   4. On the next page, click the 'Settings' tab. Once you have clicked on the settings tab, click 'Reveal Config Vars' in the 'Config Vars' section. Next you will need to add values. For Wawa Land, three key value pairs were added:
       - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1" Once the key and value input fields have been filled you have to click 'Add'.
       - KEY = "DATABASE_URL", the value is the url that was emailed to you when creating the databse. Then click 'Add'
       - KEY = "SECRET_KEY", the value is any random secret key containing numbers, letters and characters. You can use [Random Keygen](https://randomkeygen.com/) or invent your own. Then click 'Add'.
 
-  <details><summary>Heroku Step 4 - Settings Tab</summary>
-  
-  ![Heroku Step 4 - Settings Tab](static/images/screenshots/heroku_four_settings.png)
+    <details><summary>Heroku Step 4 - Settings Tab</summary>
+    
+    ![Heroku Step 4 - Settings Tab](static/images/screenshots/heroku_four_settings.png)
 
-  </details>
+    </details>
 
-   <details><summary>Heroku Step 4 - Config Vars Section</summary>
-  
-  ![Heroku Step 4 - Config Vars Section](static/images/screenshots/heroku_four_config.png)
+    <details><summary>Heroku Step 4 - Config Vars Section</summary>
+    
+    ![Heroku Step 4 - Config Vars Section](static/images/screenshots/heroku_four_config.png)
 
-  </details>
+    </details>
 
   5. In your IDE terminal, you need to type the following code to install the project requirements:
     - pip3 install gunicorn~=20.1
@@ -535,8 +545,9 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - pip3 freeze --local > requirements.txt
 
   6. Next, create an env.py file at the root level directory, which must containe the following:
-    - import os
 
+    - import os
+    - 
     - os.environ.setdefault("DATABASE_URL", "CI database URL")
     - os.environ.setdefault("SECRET_KEY", " Your secret key")
 
@@ -544,6 +555,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     -  web: gunicorn my_project.wsgi
 
   8. Next, in your settings.py file, set DEBUG = FALSE
+
     **YOU SHOULD ALWAYS SET DEBUG TO FALSE BEFORE DEPLOYING FOR SECURITY**
 
   9. Add ",'.herokuapp.com' " (without the double quotes) to the ALLOWED_HOSTS list in settings.py
@@ -552,34 +564,34 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   11. Next, on [Heroku](https://dashboard.heroku.com/), you need to go to the 'Deploy' tab. For 'Deployment Method', click 'GitHub'. Search for the repository name you want to deploy and then click connect.
 
-  <details><summary>Heroku Step 11 - Deploy Tab</summary>
+    <details><summary>Heroku Step 11 - Deploy Tab</summary>
+    
+    ![Heroku Step 11 - Deploy Tab](static/images//screenshots/heroku_six.png)
+
+    </details>
+
+    <details><summary>Heroku Step 11 - Deployment Method</summary>
+    
+    ![Heroku Step 11 - Deployment Method](static/images/screenshots/heroku_six_deployment_meth.png)
+
+    </details>
+
+    <details><summary>Heroku Step 11 - Connect to GitHub</summary>
+
+      Wawa Land has already been connected to Heroku so mine will look a little different from yours. However, where you can see 'App Connected to GitHub' on the image, you will see 'Connect to GitHub, next to that you'll be able to search for the repository you want to connect.
+
+    ![Heroku Step 11 - Connect to Github](static/images/screenshots/heroku_six_connect.png)
   
-  ![Heroku Step 11 - Deploy Tab](static/images//screenshots/heroku_six.png)
-
-  </details>
-
-  <details><summary>Heroku Step 11 - Deployment Method</summary>
-  
-  ![Heroku Step 11 - Deployment Method](static/images/screenshots/heroku_six_deployment_meth.png)
-
-  </details>
-
-  <details><summary>Heroku Step 11 - Connect to GitHub</summary>
-
-    Wawa Land has already been connected to Heroku so mine will look a little different from yours. However, where you can see 'App Connected to GitHub' on the image, you will see 'Connect to GitHub, next to that you'll be able to search for the repository you want to connect.
-
-  ![Heroku Step 11 - Connect to Github](static/images/screenshots/heroku_six_connect.png)
-  
-  </details>
+    </details>
 
 
   12. Scroll down to the sections below, called 'Automatic Deploys' and 'Manual Deploy'. Here you need to choose which option best suits your project. Once selected, click 'Deploy Branch'.
 
-  <details><summary>Heroku Step 12 - Deploy</summary>
-  
-  ![Heroku Step 12 - Deploy](static/images/screenshots/heroku_seven.png)
+    <details><summary>Heroku Step 12 - Deploy</summary>
+    
+    ![Heroku Step 12 - Deploy](static/images/screenshots/heroku_seven.png)
 
-  </details>
+    </details>
 
 
   13. If you are using [Cloudinary](https://cloudinary.com/), go back to the 'Settings' tab on heroku, reveal config vars and add a new KEY, VALUE pair:
@@ -588,18 +600,16 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   14. For final deployment, or once static files have been added to your project, you need to remove the following KEY, VALUE pair:
     - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1"
 
-  <details><summary>Heroku Step 14 - Final Deployment</summary>
-  
-  ![Heroku Step 12 - Final Deployment](static/images/screenshots/heroku_14.png)
+    <details><summary>Heroku Step 14 - Final Deployment</summary>
+    
+    ![Heroku Step 12 - Final Deployment](static/images/screenshots/heroku_14.png)
 
-  </details>
+    </details>
 
   The live link can be found here - <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 
   [Back To Top](<#contents>)
-
-
 
 
   ## To Deploy Locally on GitHub
@@ -610,11 +620,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   2. On the right hand side of the page, in line with the repository name, is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
 
-  <details><summary>How to Fork</summary>
-  
-  ![How To Fork](static/images/screenshots/fork.png)
+    <details><summary>How to Fork</summary>
+    
+    ![How To Fork](static/images/screenshots/fork.png)
 
-  </details>
+    </details>
 
   [Back To Top](<#contents>)
 
@@ -628,11 +638,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   5. Type 'git clone' then paste the URL copied from GitHub.
   6. Upon pressing enter, the local clone will be created.
 
-  <details><summary>How to Clone</summary>
+    <details><summary>How to Clone</summary>
 
-  ![How To Clone](static/images/screenshots/clone.png)
+    ![How To Clone](static/images/screenshots/clone.png)
 
-  </details>
+    </details>
 
   After cloning or forking the project, follow these steps to run it locally:
 
@@ -646,6 +656,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Credits
 - I used the "I Think Therefore I Blog" walkthrough from the course content as a foundation to understand Django. I customized the models, views, and templates to develop Wawa Land.
+
+[Back To Top](<#contents>)
 
 ## Acknowledgements
 
