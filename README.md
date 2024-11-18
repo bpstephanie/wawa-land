@@ -267,6 +267,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
         - #### Edit Blog Post
+          The user is taken to this edit blog post page from the profile page. The title and body sections are pre-populated with the content of the post they want to edit. The user can use summernote features such as using 'bold' or 'italics' to name but a few. Once they have updated the post the user is redirected to the profile page.
+
+          <details><summary>Edit Blog Post</summary>
+          ![Edit Blog Post](static/images/screenshots/edit-blog-post.png)
+          </details>
 
     - ### Register
     [Back To Top](<#contents>)
