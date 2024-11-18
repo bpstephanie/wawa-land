@@ -195,6 +195,13 @@ footer .brand > i {
     color: rgb(127, 108, 219);
 }
 
+/* Add new post page -------------------------------------------------- */
+.errorlist {
+    list-style-type: none;
+    color: red;
+    text-align: left;
+}
+
 /* Sign up page -------------------------------------------------- */
 .signup ul {
     list-style-type: none;

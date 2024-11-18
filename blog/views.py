@@ -126,13 +126,11 @@ def comment_delete(request, slug, comment_id):
 
 def add_post(request):
     """
-    view to add new post
+    View to add new post
     """
     if request.method == 'POST':
-        
         post_form = PostForm(data=request.POST, files=request.FILES)
         if post_form.is_valid():
-            
             new_post = post_form.save(commit=False)
             new_post.author = request.user
             new_post.slug = slugify(new_post.title)
@@ -140,8 +138,8 @@ def add_post(request):
             messages.add_message(request, messages.SUCCESS, 'Thank you for your post! Please wait for it to be approved to see it on our community blog.')
             return HttpResponsePermanentRedirect(reverse('blog'))
         else:
-           messages.add_message(request, messages.ERROR, 'Error: Please fill in all the required fields.') 
-
+            messages.add_message(request, messages.ERROR, 'Error: Please fill in all the required fields.')
+            return render(request, 'add_post.html', {'post_form': post_form})
     else:
         post_form = PostForm()
         return render(request, 'add_post.html', {'post_form': post_form})

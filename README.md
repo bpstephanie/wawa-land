@@ -23,10 +23,10 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     * [Messages](<#messages>)
     * [Home Page](<#home-page>)
     * [Blog](<#blog>)
+      * [Add New Blog Post](<#add-new-blog-post>)
       * [Blog Post](<#blog-post>)
         * [Likes](<#likes>)
         * [Comments](<#comments>)
-      * [Add New Blog Post](<#add-new-blog-post>)
     * [Events Page](<#add-new-expense>)
       * [Event Detail](<#event-detail>)
         * [Reviews](<#reviews>)
@@ -144,7 +144,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   - ### Blog
     When a user clicks the 'Blog' in the navbar they are taken to the blog list page. At the top of the page there is a prompt for the user to add their own post. The button to take them to write their own post only appears to users who are logged in, if they are not they will be prompted to log in.
     
-    Below, the user can see all the posts that are available to read on the site. The blog posts can be from any user and are displayed here once they have been approved by the Wawa Land administration. They are ordered with the newest appearing first. Only 6 posts will appear per page, users will be able to navigate through the pages of the blog to see all the content available.
+    Below, the user can see all the posts that are available to read on the site. The blog posts can be from any user and are displayed here once they have been approved by the Wawa Land administration. They are ordered with the newest appearing first. Users of the site (logged in or not) can click on a blog post title to be taken to read the full article. Only 6 posts will appear per page, users will be able to navigate through the pages of the blog to see all the content available.
 
     <details><summary>Add Post Prompt</summary>
 
@@ -159,8 +159,38 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
     [Back To Top](<#contents>)
 
-  - ### Events Page 
-  [Back To Top](<#contents>)
+    - #### Add New Blog Post
+      To reach this page, a user needs to have clicked on 'Add Post' on the blog page. The user is prompted to add their own blog post by a form. They must give their post a title and a body. If a user attempts to submit a post without a title or a body an error message appears at the top as well as visual feedback that the fields are required.
+
+    <details><summary>Add New Post Form</summary>
+
+    ![Desktop](static/images/screenshots/desktop-add-post.png)
+    ![Mobile](static/images/screenshots/mobile-add-post.png)
+    </details>
+
+    <details><summary>Visual Feedback for Invalid Form</summary>
+
+    ![Invalid Title](static/images/screenshots/invalid-title.png)
+    ![Invalid Feedback](static/images/screenshots/addpost-error-message.png)
+    ![Invalid Feedback](static/images/screenshots/field-required.png)
+    </details>
+    [Back To Top](<#contents>)
+
+
+
+    - #### Blog Post
+      - ##### Likes
+      - ##### Comments
+
+  - ### Events Page
+    The events page show all events endorsed by Wawa Land. From the event list page users can see the name of the event, the age range it is suitable for and the date of the event. The events are in descending order where upcoming events are listed first. Users can click on the name of an event to be taken to the event detail page to read more about it.
+
+    <details><summary>Events List</summary>
+
+    ![Events List](static/images/screenshots/event-list.png)
+    </details>
+
+    [Back To Top](<#contents>)
 
   - ### Profile
   [Back To Top](<#contents>)
