@@ -14,7 +14,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
   * [Design Choices](<#design-choices>)
     * [Typography](<#typography>)
     * [Colour Scheme](<#colour-scheme>)
-    * [Wireframs](<#wireframes>)
+    * [Wireframes](<#wireframes>)
 * [**Features**](<#features>)
   * [Existing Features](<#existing-features>)
     * [Navigation Bar](<#navigation-bar>)
@@ -58,3 +58,27 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
 * [**Credits**](<#credits>)
   * [**Content**](<#content>)
 * [**Acknowledgements**](<#acknowledgements>)
+
+# Features
+  ## Existing Features
+
+  - ### Navigation Bar
+    Featured on all pages, the fully responsive navigation bar includes links to the Home page, Blog page, Events page, Log in and Register pages when the user is not logged in. Once the user logs in the Log in and Register links change to Sign Out and a user Profile page is made available. The nav bar allows the user to easily navigate to the main pages across the site.
+
+    A decision was made to not put the Add Post page into the navigation bar as I wanted to make it clear that the Add Post function was only available for the blog.
+  
+    <details><summary>Navigation Bar whilst user is logged out:</summary>
+    
+    ![Desktop view](static/images/screenshots/desktop-nav.png)
+    ![Mobile view](static/images/screenshots/mobile-nav.png)
+    
+    </details>
+
+    <details><summary>Navigation Bar whilst user is logged in:</summary>
+    
+    ![Desktop view](static/images/screenshots/navbar-logged-in.png)
+    ![Mobile view](static/images/screenshots/mobile-navbar-logged-in.png)
+    
+    </details>
+
+    [Back To Top](<#contents>)

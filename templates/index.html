@@ -16,13 +16,16 @@
                 <h1 class="card-title wawa-brand text-center">Welcome to Wawa Land</h1>
                 <div class="row">
                     <div class="col-md">
-                        <p class="card-text display-7 text-center mt-4">Your helping hand when you need to know everything to do with the world of
+                        <p class="card-text display-7 text-center mt-4">Your helping hand when you need to know
+                            everything to do with the world of
                             babies, toddlers, children and parenting.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md text-center">
-                        <a href="{% url 'account_signup' %}" class="{% if request.path == signup_url %}active{% endif %} btn btn-lg btn-wawa my-5">Sign Up</a>
+                        <a href="{% url 'account_signup' %}"
+                            class="{% if request.path == signup_url %}active{% endif %} btn btn-lg btn-wawa my-5">Sign
+                            Up</a>
                     </div>
                 </div>
             </div>
@@ -30,69 +33,63 @@
     </div>
 </div>
 <!-- Content section 1-->
-
-
-<!-- Content section 1-->
-<section id="scroll">
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle"
-                        src="../static/images/close-up-two-dads-baby-min.webp" alt="..." /></div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <a href="{% url 'blog' %}" class="text-decoration-none"><span>
-                        <h2 class="display-6 playfair wawa-title-large">Read our blog articles...</h2>
+<div class="container px-5" id="scroll">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle"
+                    src="../static/images/close-up-two-dads-baby-min.webp" alt="Two dads with their baby."></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <a href="{% url 'blog' %}" class="text-decoration-none"><span
+                        class="display-6 playfair wawa-title-large">
+                        Read our blog articles...
                     </span>
-                    </a>
-                    <p>We have a wealth of knowledge and many answers to those questions you have about all things
-                        parenting. Not only do we have articles for parents, but also for aunties, uncles, grandparents,
-                        godparents.. You name it! And if we don't then why not write a post of your own to help those
-                        who can't find the right answers.</p>
-                </div>
+                </a>
+                <p>We have a wealth of knowledge and many answers to those questions you have about all things
+                    parenting. Not only do we have articles for parents, but also for aunties, uncles, grandparents,
+                    godparents.. You name it! And if we don't then why not write a post of your own to help those
+                    who can't find the right answers.</p>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <!-- Content section 2-->
-<section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle"
-                        src="../static/images/children-group-sofa-min.webp" alt="..." /></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <a href="{% url 'event' %}" class="text-decoration-none"><span>
-                        <h2 class="display-6 playfair wawa-title-large">View and attend our events...</h2>
+<div class="container px-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="../static/images/children-group-sofa-min.webp"
+                    alt="A group of children sitting on a sofa."></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="p-5">
+                <a href="{% url 'event' %}" class="text-decoration-none"><span
+                        class="display-6 playfair wawa-title-large">
+                        View and attend our events...
                     </span>
-                    </a>
-                    <p>We are always adding new events for babies, toddlers, parents, families. Get to know other kind
-                        people whilst doing fun activites with your young ones. </p>
-                </div>
+                </a>
+                <p>We are always adding new events for babies, toddlers, parents, families. Get to know other kind
+                    people whilst doing fun activites with your young ones. </p>
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- Content section 3-->
-<section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="../static/images/coming-soon.jpg"
-                        alt="..." /></div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-6 playfair wawa-title-large">Products coming soon...</h2>
-                    <p>Our new products section will be ready early next year! We've listened to everything you've said.
-                        We will only be listing products that are tried and tested by us or our users. We know it can be
-                        difficult when you enter the world of babies and children.</p>
-                </div>
+<div class="container px-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="../static/images/coming-soon.jpg"
+                    alt="An image saying coming soon."></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <h2 class="display-6 playfair wawa-title-large">Products coming soon...</h2>
+                <p>Our new products section will be ready early next year! We've listened to everything you've said.
+                    We will only be listing products that are tried and tested by us or our users. We know it can be
+                    difficult when you enter the world of babies and children.</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}

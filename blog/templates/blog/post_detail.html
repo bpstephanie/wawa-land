@@ -41,7 +41,7 @@
 </div>
 <!-- Displaying likes and comment count -->
 <div class="like-container px-2 mt-3 py-3 d-flex">
-    <form action="" method="POST" id="likesForm">
+    <form action="{% url 'post_detail' post.slug %}" method="POST" id="likesForm">
         {% csrf_token %}
         {{ like_form.as_p }}
         <button type="submit" name="like_button" class="border-0 bg-transparent">
@@ -74,14 +74,10 @@
         <div class="col-md-8 mb-4 mt-3 border-0">
             <h3>Comments:</h3>
             {% for comment in comments %}
-            <div
-                class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                <p class="font-weight-bold"></p>
-                {{ comment.author }}
-                <span class="font-weight-normal">
-                    {{ comment.created_on }}
-                </span> wrote:
-                </p>
+            <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                <span class="font-weight-normal"><small>{{ comment.created_on }}</small>
+                </span>
+                <span class="font-weight-bold"><small><span class="author">{{ comment.author }}</span> wrote:</small></span>
                 <div id="comment{{ comment.id }}">
                     {{ comment.body | linebreaks }}
                 </div>
@@ -116,8 +112,6 @@
             </div>
         </div>
     </div>
-</div>
-
 </div>
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
