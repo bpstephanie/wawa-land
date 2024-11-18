@@ -97,8 +97,21 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
   [Back To Top](<#contents>)
 
   - ### Messages
-    - #### Success Messages
-    - #### Error Messages
+    Messages have been utilized to give users instant feedback for action they take. Success messages and error messages are distinguishable by their colour; green has been used for success and red for error messages.
+
+    <details><summary>Success Messages</summary>
+    
+    ![Desktop view](static/images/screenshots/desktop-success-message.png)
+    ![Mobile view](static/images/screenshots/mobile-success-message.png)
+    
+    </details>
+
+    <details><summary>Error Messages</summary>
+    
+    ![Desktop view](static/images/screenshots/desktop-error-message.png)
+    ![Mobile view](static/images/screenshots/mobile-error-message.png)
+    
+    </details>
   [Back To Top](<#contents>)
 
   - ### Home Page
