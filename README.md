@@ -82,3 +82,48 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
     </details>
 
     [Back To Top](<#contents>)
+
+  - ### Footer
+    The footer section has 4 sections which include 'About', which explains a bit about the site, 'Social Media', with links to the relevant social media sites for WawaLand, 'Contact Us', which includes a link to send us an email and the 'Copyright' section.
+
+    <details><summary>Footer</summary>
+    
+    ![Desktop view](static/images/screenshots/desktop-footer.png)
+    ![Mobile view](static/images/screenshots/mobile-footer.png)
+    
+    </details>
+
+    
+  [Back To Top](<#contents>)
+
+  - ### Messages
+    - #### Success Messages
+    - #### Error Messages
+  [Back To Top](<#contents>)
+
+  - ### Home Page
+  [Back To Top](<#contents>)
+
+  - ### Blog
+  [Back To Top](<#contents>)
+
+  - ### Events Page 
+  [Back To Top](<#contents>)
+
+  - ### Profile
+  [Back To Top](<#contents>)
+
+  - ### Register
+  [Back To Top](<#contents>)
+
+  - ### Log In
+  [Back To Top](<#contents>)
+
+  - ### Sign Out
+  [Back To Top](<#contents>)
+
+  - ### Error Pages
+  [Back To Top](<#contents>)
+
+  - ### Admin Panel
+  [Back To Top](<#contents>)
