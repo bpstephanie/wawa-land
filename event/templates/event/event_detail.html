@@ -70,7 +70,7 @@
                 <form id="reviewForm" method="post" style="margin-top: 1.3em;">
                     {{ review_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn btn-wawa btn-lg">Submit</button>
                 </form>
                 {% else %}
                 <p><a class="text-decoration-none dark-text" href="{{ login_url }}">Log in</a> to leave a review</p>
