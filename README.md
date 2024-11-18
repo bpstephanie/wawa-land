@@ -644,5 +644,19 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   [Back To Top](<#contents>)
 
+# Credits
+- I used the "I Think Therefore I Blog" walkthrough from the course content as a foundation to understand Django. I customized the models, views, and templates to develop Wawa Land.
+
+## Acknowledgements
+
+Wawa Land has been completed as a Portfolio 4 Project, part of the Full Stack Software Developer Diploma at Code Institute. I would like to thank my Code Institute mentor,  Precious Ijege for his advice and support, the Slack community, and everyone at Code Institute for their feedback and guidance. I would also like to thank Emma Lamont, who I met at a hackathon, for her help and advice on this project.
+
+Stephanie Bell 2024.
+
+ [Back To Top](<#contents>)
+
+
+
+
   
     
