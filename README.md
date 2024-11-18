@@ -63,6 +63,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 # Features
   ## Existing Features
 
+  ### Site Wide Features
+
   - ### Navigation Bar
     Featured on all pages, the fully responsive navigation bar includes links to the Home page, Blog page, Events page, Log in and Register pages when the user is not logged in. Once the user logs in the Log in and Register links change to Sign Out and a user Profile page is made available. The nav bar allows the user to easily navigate to the main pages across the site.
 
@@ -127,6 +129,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
     [Back To Top](<#contents>)
 
+  ### Pages
+
   - ### Home Page
     The homepage is the first page a user sees when coming to Wawa Land. The hero section includes a welcome message and a call to action to sign up. Below the hero section, the user can find out what to use Wawa Land for with navigable links to the Blog and the Event page. The cursor style changes when a user hovers over the respective sections, letting them know they are both links.
 
@@ -179,9 +183,25 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 
     - #### Blog Post
+      Each blog post is rendered on it's own page. All posts have the same format of an image, placeholder or user uploaded, the title, the author and date and time the post was written or updated. Underneath the blog post the user can 'like' or 'unlike' the post. Below the likes section and comment counter, the user can leave their own comment.
 
       - ##### Likes
+        Only logged-in users can 'like' or 'unlike' posts. For a successful 'like' a green success error message is shown at the top of the page. If a user 'unlikes' a post a red error message is shown. A red error message for 'unliking' was chosen as it may have been a mistake that the user clicked on the heart again, therefore I wanted to make the user aware the action they have taken. The likes show without the need for the page to be refreshed.
+
       - ##### Comments
+        Only logged-in users can comment on a post. If the user is not logged-in, they are prompted to log in to leave a comment. The 'log in' is a link to take the user to the log in page.
+
+        Once a user is logged in, they can view all users comments as well as their own unapproved comments. There are 'Edit' and 'Delete' buttons under the user's own comments. If they choose to edit their comment, the 'Leave Comment' section is populated with the user's comment they wish to change. Once the user clicks update, the comment is shown on the left side. If the user chooses to update a comment that was already approved, it will need to be approved again by the Wawa Land admin. The 'Delete' button will bring up a modal message confirming if the user would liek to delete it. This is a precaution as the user may have accidentally clicked the delete button. If this is the case the user can close the delete confirmation message and nothing will happen. If the user chooses to delete the comment, it will be deleted from the database. This action cannot be undone.
+
+        <details><summary>Comments Section</summary>
+        ![Comments](static/images/screenshots/comments.png)
+        </details>
+        <details><summary>Edit Comment</summary>
+        ![Delete Comment](static/images/screenshots/update-comment.png)
+        </details>
+        <details><summary>Delete Comment Modal</summary>
+        ![Delete Comment](static/images/screenshots/delete-comment.png)
+        </details>
 
   - ### Events Page
     The events page show all events endorsed by Wawa Land. From the event list page users can see the name of the event, the age range it is suitable for and the date of the event. The events are in descending order where upcoming events are listed first. Users can click on the name of an event to be taken to the event detail page to read more about it.
@@ -193,8 +213,26 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
     [Back To Top](<#contents>)
 
+    - #### Event Detail Page
+
+      - ##### Reviews
+
   - ### Profile
-  [Back To Top](<#contents>)
+    The profile page is where the user can see all the posts they have written, published or unpublished, all their comments on posts, approved or awating approval and all their likes. It is from the profile page that a user can edit a post, update a comment or delete either.
+
+    <details><summary>Profile Page - Posts Section</summary>
+    ![Profile Page](static/images/screenshots/profile.png)
+    </details>
+    <details><summary>Profile Page - Comments Section</summary>
+    ![Profile Page - Comments Section](static/images/screenshots/profile-2.png)
+    </details>
+    <details><summary>Profile Page - Likes Section</summary>
+    ![Profile Page - Likes Section](static/images/screenshots/profile-likes.png)
+    </details>
+
+    [Back To Top](<#contents>)
+
+      - #### Edit Blog Post
 
   - ### Register
   [Back To Top](<#contents>)
