@@ -39,8 +39,6 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     * [Admin Panel](<#admin-panel>)
   * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
-  * [Languages](<#languages>)
-  * [Frameworks, Libraries and Packages](<#frameworks-libraries-and-packages>)
 * [**Database**](<#database>)
 * [**Testing**](<#testing>)
   * [Testing User Stories](<#testing-user-stories>)
@@ -223,7 +221,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
         <details><summary>Individual Blog Post</summary>
 
         ![Individual Blog Post](static/images/screenshots/post-detail.png)
-        
+
         </details>
         
         [Back To Top](<#contents>)
@@ -455,5 +453,18 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 [Back To Top](<#contents>)
 
+# Database
+- I used Code Institute's PostgreSQL database for Wawa Land.
+- I created an Entity Relationshop Diagram (ERD) using [Lucid](https://dashboard.heroku.com/) to plan my database.
 
+![Entity Relationship Model for Wawa Land](static/images/screenshots/erd-model.png)
+
+# Deployment
+
+  ## To Deploy on Heroku
+  ## To Deploy Locally on GitHub
+  ## To Fork the Project
+  ## To Clone the Project
+  ## Cloudinary
+  ## PostgreSQL
     
