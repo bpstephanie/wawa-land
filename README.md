@@ -185,8 +185,22 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - #### Blog Post
       Each blog post is rendered on it's own page. All posts have the same format of an image, placeholder or user uploaded, the title, the author and date and time the post was written or updated. Underneath the blog post the user can 'like' or 'unlike' the post. Below the likes section and comment counter, the user can leave their own comment.
 
+      <details><summary>Individual Blog Post</summary>
+      ![Individual Blog Post](static/images/screenshots/post-detail.png)
+      </details>
+       
+      [Back To Top](<#contents>)
+
       - ##### Likes
         Only logged-in users can 'like' or 'unlike' posts. For a successful 'like' a green success error message is shown at the top of the page. If a user 'unlikes' a post a red error message is shown. A red error message for 'unliking' was chosen as it may have been a mistake that the user clicked on the heart again, therefore I wanted to make the user aware the action they have taken. The likes show without the need for the page to be refreshed.
+
+        Within the likes section, there is also a comment counter. The number of approved comments is shown.
+
+        <details><summary>Likes and Comment Counter Section</summary>
+        ![Likes and Comment Count Section](static/images/screenshots/likes-and-comment-count.png)
+        </details>
+        
+        [Back To Top](<#contents>)
 
       - ##### Comments
         Only logged-in users can comment on a post. If the user is not logged-in, they are prompted to log in to leave a comment. The 'log in' is a link to take the user to the log in page.
@@ -202,6 +216,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
         <details><summary>Delete Comment Modal</summary>
         ![Delete Comment](static/images/screenshots/delete-comment.png)
         </details>
+
+        [Back To Top](<#contents>)
 
   - ### Events Page
     The events page show all events endorsed by Wawa Land. From the event list page users can see the name of the event, the age range it is suitable for and the date of the event. The events are in descending order where upcoming events are listed first. Users can click on the name of an event to be taken to the event detail page to read more about it.
