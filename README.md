@@ -329,3 +329,29 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       </details>
 
       [Back To Top](<#contents>)
+
+  ## Future Features
+  There are many more feature that I wanted to include in this project for ease of users.
+  - # Social Login
+    Enhance the user sign-up experience by integrating social login options for example; Google and Facebook. This not only would decrease the sign up time but also boosts the chances of users completing their registration.
+
+  - # Search Bar
+    This would most likely be the next functionality to add. Currently users have to click through the pages to asee all posts and events, however adding a search field would allow users to look for specific posts and/or events.
+
+  - # Tags 
+    Adding category tags to events and posts would allow users to search for a category and see everything relating to that category.
+
+  - # Calendar View
+    The events page would benefit fom having a calendar, whereby users would be able to select a date and be shown all the events happening on that day.
+  
+  - # Saved Events / Saved Posts
+    It would be benefical for users to be able to save posts they are interested in or want to read at a later date in their profile. It would also be beneficial for users to be able to save events to their profile. If these capabilities were added to Wawa Land, other users would also be able to see how many saves each post or event had which would indicate popularity.
+
+  - # Thumbs Up / Thumbs Down
+    Similar to the like functionality on the blog posts, Wawa Land could have a 'thumbs up', 'thumbs down' rating system where users can let Wawa Land know what sorts of events they like more than others. This will help Wawa Land in the future to list more events the users of the site are interested in.
+
+  - # Tickets
+    On each event, users would be able to click a link to buy a ticket on their respective site. The events that are listed by Wawa Land are a mixture of their own events and events in the local area they trust, therefore tickets to certain events need to be purchased elsewhere but by having a link on the event detail page, users would easily be able to purchase tickets.
+
+  - # Email Notifications
+    Whenever a user saves an event they would recieve an email letting them know the event is coming up.
