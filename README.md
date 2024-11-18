@@ -40,6 +40,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Database**](<#database>)
+  * [**PostgreSQL**](<#postgresql>)
 * [**Testing**](<#testing>)
   * [Testing User Stories](<#testing-user-stories>)
     * [Site Owner](<#site-owner>) 
@@ -49,7 +50,6 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     * [Unresolved Bugs](<#unresolved-bugs>)
 * [**Deployment**](<#deployment>)
   * [**Cloudinary**](<#cloudinary>)
-  * [**PostgreSQL**](<#postgresql>)
   * [**To Deploy on Heroku**](<#to-deploy-on-heroku>)
   * [**To Deploy Locally on GitHub**](<#to-deploy-locally-on-github>)
   * [**To Fork the Project**](<#to-fork-the-project>)
@@ -459,6 +459,15 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 ![Entity Relationship Model for Wawa Land](static/images/screenshots/erd-model.png)
 
+  ## PostgreSQL
+
+  1. Navigate to [PostgreSQL](https://www.postgresql.org/) from Code Institute.
+  2. Enter your student email address in the input field provided.
+  3. Click Submit.
+  4. Wait while the database is created.
+  5. Check your email.
+  6. You now have a URL you can use to connect your app to your database.
+
 # Deployment
 
   ## Cloudinary API
@@ -470,9 +479,6 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     3. Copy your API Environment Variable from the Cloudinary Dashboard.
     4. Remove CLOUDINARY_URL = from the API value; this acts as the key.
 
-  ## PostgreSQL
-
-  
   ## To Deploy on Heroku
   The site was developed using [Gitpod](https://www.gitpod.io/#get-started). All commit messages were pushed to [Github](https://github.com/) using the GitPod terminal. The finished project was deployed in [Heroku](https://dashboard.heroku.com/).
 
