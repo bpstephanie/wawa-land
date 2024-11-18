@@ -1,10 +1,10 @@
-# WawaLand
+# Wawa Land
 
-WawaLand is a community blog and events page for families with babies and children. Users can review events and leave comments on blog posts. Not only that, but users can also add their own blog posts to the site and are visible once they have been approved by the WawaLand administration.
+Wawa Land is a community blog and events page for families with babies and children. Users can review events and leave comments on blog posts. Not only that, but users can also add their own blog posts to the site and are visible once they have been approved by the Wawa Land administration.
 
-The inspiration of the name 'WawaLand' is from the Quechua language word for 'child', 'baby', or 'infant'.
+The inspiration of the name 'Wawa Land' is from the Quechua language word for 'child', 'baby', or 'infant'.
 
-Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
+Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 ## Contents
 * [**User Experience UX**](<#user-experience-ux>)
@@ -84,7 +84,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
     [Back To Top](<#contents>)
 
   - ### Footer
-    The footer section has 4 sections which include 'About', which explains a bit about the site, 'Social Media', with links to the relevant social media sites for WawaLand, 'Contact Us', which includes a link to send us an email and the 'Copyright' section.
+    The footer section has 4 sections which include 'About', which explains a bit about the site, 'Social Media', with links to the relevant social media sites for Wawa Land, 'Contact Us', which includes a link to send us an email and the 'Copyright' section. The footer can be seen across all pages and is fully responsive.
 
     <details><summary>Footer</summary>
     
@@ -112,10 +112,22 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">WawaLand</a>
     ![Mobile view](static/images/screenshots/mobile-error-message.png)
     
     </details>
-  [Back To Top](<#contents>)
+
+    [Back To Top](<#contents>)
 
   - ### Home Page
-  [Back To Top](<#contents>)
+    The homepage is the first page a user sees when coming to Wawa Land. The hero section includes a welcome message and a call to action to sign up. Below the hero section, the user can find out what to use Wawa Land for with navigable links to the Blog and the Event page. The cursor style changes when a user hovers over the respective sections, letting them know they are both links.
+
+    <details><summary>Home page</summary>
+
+    ![Desktop view](static/images/screenshots/homepage-hero.png)
+    ![Desktop view](static/images/screenshots/desktop-homepage.png)
+    ![Mobile view](static/images/screenshots/mobile-homepage-hero.png)
+    ![Mobile view](static/images/screenshots/mobile-homepage.png)
+    
+    </details>
+
+    [Back To Top](<#contents>)
 
   - ### Blog
   [Back To Top](<#contents>)
