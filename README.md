@@ -273,17 +273,37 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
           ![Edit Blog Post](static/images/screenshots/edit-blog-post.png)
           </details>
 
+          [Back To Top](<#contents>)
+
     - ### Register
-    [Back To Top](<#contents>)
+      On the Register page the user can create an account, optionally inputting their email address. If the user already has an account and visits this page they can navigate to the login page via a link.
+
+      <details><summary>Register Page</summary>
+      ![Register Page](static/images/screenshots/sign-up.png)
+      </details>
+
+      [Back To Top](<#contents>)
 
     - ### Log In
-    [Back To Top](<#contents>)
+      On this page, users who have already created an account can log in. They can toggle to have their details remembered to avoid having to enter the information again.
+
+      <details><summary>Login Page</summary>
+      ![Login Page](static/images/screenshots/login.png)
+      </details>
+
+      [Back To Top](<#contents>)
 
     - ### Sign Out
-    [Back To Top](<#contents>)
+      When a user clicks the log out in the navigation bar , the user is taken to this page where they can confirm they want to log out.
+
+      <details><summary>Logout Page</summary>
+      ![Login Page](static/images/screenshots/logout.png)
+      </details>
+
+      [Back To Top](<#contents>)
 
     - ### Error Pages
-    [Back To Top](<#contents>)
+      [Back To Top](<#contents>)
 
     - ### Admin Panel
-    [Back To Top](<#contents>)
+      [Back To Top](<#contents>)

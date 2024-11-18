@@ -14,6 +14,28 @@ body {
     min-height: 100vh;
 }
 
+.wawa-brand {
+    padding: 1%;
+    padding-left: 2%;
+    font-size: 250%;
+    font-family: 'Atma', sans-serif;
+    font-weight: 500;
+}
+
+.playfair {
+    font-family: 'Playfair', sans-serif;
+    font-weight: 700;
+    color:rgb(0, 0, 0)
+}
+
+.wawa-title-med {
+    font-size: 150%;
+}
+
+.wawa-title-large {
+    font-size: 300%;
+}
+
 .padding-l {
     padding-left: 0;
 }
@@ -42,15 +64,21 @@ body {
     color: rgb(94, 74, 196);
 }
 
-/* Nav bar -------------------------------------------------- */
-
-.wawa-brand {
-    padding: 1%;
-    padding-left: 2%;
-    font-size: 250%;
-    font-family: 'Atma', sans-serif;
-    font-weight: 500;
+.btn-wawa {
+    border: 1px solid rgb(127, 108, 219);
+    background-color: #fff;
 }
+
+.btn-wawa:hover {
+    background-color: rgb(127, 108, 219);
+    color:#fff;
+}
+
+.card {
+    width: 100%;
+}
+
+/* Nav bar -------------------------------------------------- */
 
 .brand > i {
     padding-left: 2%;
@@ -100,20 +128,6 @@ footer .brand > i {
 }
 
 /* Blog Posts -------------------------------------------------- */
-.playfair {
-    font-family: 'Playfair', sans-serif;
-    font-weight: 700;
-    color:rgb(0, 0, 0)
-}
-
-.wawa-title-med {
-    font-size: 150%;
-}
-
-.wawa-title-large {
-    font-size: 300%;
-}
-
 .image-container img {
     height: 100%;
     width: 100%;
@@ -142,14 +156,6 @@ footer .brand > i {
     border-radius: 15px;
 }
 
-.white-border {
-    border: 2px solid #fff;
-}
-
-.black-border {
-    border: 2px solid #fff !important;
-}
-
 .faded {
     color: rgb(172, 175, 175);
 }
@@ -171,16 +177,6 @@ footer .brand > i {
 .btn-delete {
     color: #fff;
     background: #e80707;
-}
-
-.btn-wawa {
-    border: 1px solid rgb(127, 108, 219);
-    background-color: #fff;
-}
-
-.btn-wawa:hover {
-    background-color: rgb(127, 108, 219);
-    color:#fff;
 }
 
 .like-container {
@@ -210,10 +206,6 @@ footer .brand > i {
 /* Summernote -------------------------------------------------- */
 .note-editor .text-editor {
     flex-wrap: wrap;
-}
-
-.card {
-    width: 100%;
 }
 
 @media (max-width: 768px) { 
