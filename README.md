@@ -462,6 +462,112 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 # Deployment
 
   ## To Deploy on Heroku
+  The site was developed using [Gitpod](https://www.gitpod.io/#get-started). All commit messages were pushed to [Github](https://github.com/) using the GitPod terminal. The finished project was deployed in [Heroku](https://dashboard.heroku.com/).
+
+  Before starting the process on [Heroku](https://dashboard.heroku.com/), you first need to enter 'pip3 freeze > requirements.txt' in the terminal in your IDE. This adds a list of dependencies to your requirements.txt file needed for deployment. Commit these changes and push to GitHub before you deploy.
+
+  -  You can also update your 'requirements.txt' file once you have already deployed to Heroku, by entering 'pip freeze > requirements.txt'. Don't forget to commit your changes and push to GitHub.
+
+  The process of deploying to [Heroku](https://dashboard.heroku.com/) is as follows:
+
+  1. Log into [Heroku](https://dashboard.heroku.com/) (or create an account).
+
+  <details><summary>Heroku Step 1</summary>
+  
+  ![Heroku Step 1](static/images/screenshots/heroku_one.png)
+
+  </details>
+
+  2. In the top right hand corner there is a button 'New' that releases a dropdown menu, where you need to click 'Create a new app'.
+
+  <details><summary>Heroku Step 2</summary>
+  
+  ![Heroku Step 2](static/images/screenshots/heroku_two.png)
+
+  </details>
+
+  3. On the next page, you will need to add a name for your app and input what region you are in. Bear in mind that each app name is unique therefore you may need to try some different options out. Once you have decided on an app name and selected which region you are in. Click 'Create app'
+
+  <details><summary>Heroku Step 3</summary>
+  
+  ![Heroku Step 3](static/images/screenshots/heroku_three.png)
+
+  </details>
+
+  4. On the next page, click the 'Settings' tab. Once you have clicked on the settings tab, click 'Reveal Config Vars' in the 'Config Vars' section. Next you will need to add values. For Wawa Land, three key value pairs were added:
+      - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1" Once the key and value input fields have been filled you have to click 'Add'.
+      - KEY = "DATABASE_URL", the value is the url that was emailed to you when creating the databse. Then click 'Add'
+      - KEY = "SECRET_KEY", the value is any random secret key containing numbers, letters and characters. You can use [Random Keygen](https://randomkeygen.com/) or invent your own. Then click 'Add'.
+
+  <details><summary>Heroku Step 4 - Settings Tab</summary>
+  
+  ![Heroku Step 4 - Settings Tab](static/images/screenshots/heroku_four_settings.png)
+
+  </details>
+
+   <details><summary>Heroku Step 4 - Config Vars Section</summary>
+  
+  ![Heroku Step 4 - Config Vars Section](static/images/screenshots/heroku_four_config.png)
+
+  </details>
+
+  5. In your IDE terminal, you need to type the following code to install the project requirements:
+    - pip3 install gunicorn~=20.1
+    - pip3 install -r requirements.txt
+    - pip3 freeze --local > requirements.txt
+
+  6. Next, create an env.py file at the root level directory, which must containe the following:
+    - import os
+
+    - os.environ.setdefault("DATABASE_URL", "CI database URL")
+    - os.environ.setdefault("SECRET_KEY", " Your secret key")
+
+  7. Next, create a file at the root level directory called Procfile. In this file enter:
+    -  web: gunicorn my_project.wsgi
+
+  8. Next, in your settings.py file, set DEBUG = FALSE
+    **YOU SHOULD ALWAYS SET DEBUG TO FALSE BEFORE DEPLOYING FOR SECURITY**
+
+  9. Add ",'.herokuapp.com' " (without the double quotes) to the ALLOWED_HOSTS list in settings.py
+
+  10. Next, add commit and push your code to [Github](https://github.com/).
+
+  11. Next, on [Heroku](https://dashboard.heroku.com/), you need to go to the 'Deploy' tab. For 'Deployment Method', click 'GitHub'. Search for the repository name you want to deploy and then click connect.
+
+  <details><summary>Heroku Step 11 - Deploy Tab</summary>
+  
+  ![Heroku Step 11 - Deploy Tab](static/images//screenshots/heroku_six.png)
+
+  </details>
+
+  <details><summary>Heroku Step 11 - Deployment Method</summary>
+  
+  ![Heroku Step 11 - Deployment Method](static/images/screenshots/heroku_six_deployment_meth.png)
+
+  </details>
+
+  <details><summary>Heroku Step 11 - Connect to GitHub</summary>
+
+    Wawa Land has already been connected to Heroku so mine will look a little different from yours. However, where you can see 'App Connected to GitHub' on the image, you will see 'Connect to GitHub, next to that you'll be able to search for the repository you want to connect.
+
+  ![Heroku Step 11 - Connect to Github](static/images/screenshots/heroku_six_connect.png)
+  
+  </details>
+
+
+  12. Scroll down to the sections below, called 'Automatic Deploys' and 'Manual Deploy'. Here you need to choose which option best suits your project. Once selected, click 'Deploy Branch'.
+
+  <details><summary>Heroku Step 12 - Deploy</summary>
+  
+  ![Heroku Step 12 - Deploy](assets/images/heroku_seven.png)
+
+  </details>
+
+  [Back To Top](<#contents>)
+
+
+
+
   ## To Deploy Locally on GitHub
   ## To Fork the Project
   ## To Clone the Project
