@@ -563,6 +563,9 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   </details>
 
+  The live link can be found here - <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
+
+
   [Back To Top](<#contents>)
 
 
@@ -570,7 +573,40 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   ## To Deploy Locally on GitHub
   ## To Fork the Project
+  A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. The steps to fork the repository are as follows:
+
+  1. Log in to GitHub and locate the repository.
+
+  2. On the right hand side of the page, in line with the repository name, is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
+
+  <details><summary>How to Fork</summary>
+  
+  ![How To Fork](static/images/screenshots/fork.png)
+
+  </details>
+
+  [Back To Top](<#contents>)
+
   ## To Clone the Project
+  The steps to clone a project from GitHub are as follows:
+
+  1. Under the repository’s name, click on the code tab.
+  2. Copy the URL under the Clone with HTTPS section.
+  3. In an IDE of your choice, open Git Bash.
+  4. Change the current working directory to the location of where the cloned directory will be made.
+  5. Type 'git clone' then paste the URL copied from GitHub.
+  6. Upon pressing enter, the local clone will be created.
+
+  <details><summary>How to Clone</summary>
+
+  ![How To Clone](static/images/screenshots/clone.png)
+
+  </details>
+
+  
+  The live link can be found here - <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
+
+  [Back To Top](<#contents>)
   ## Cloudinary
   ## PostgreSQL
     
