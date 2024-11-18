@@ -297,13 +297,35 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       When a user clicks the log out in the navigation bar , the user is taken to this page where they can confirm they want to log out.
 
       <details><summary>Logout Page</summary>
-      ![Login Page](static/images/screenshots/logout.png)
+      ![Logout Page](static/images/screenshots/logout.png)
       </details>
 
       [Back To Top](<#contents>)
 
     - ### Error Pages
+      If a page is not found, the user will be shown this page.
+
+      <details><summary>404 Error Page</summary>
+      ![404 Error Page](static/images/screenshots/404-error.png)
+      </details>
+
       [Back To Top](<#contents>)
 
     - ### Admin Panel
+      The admin panel can be accessed by the superuser. Here in the admin panel, the superuser can view all users, blog posts, comments, events and reviews. It is via the admin panel that the Wawa Land team can approve comments and reviews and publish blog posts.
+
+      The posts can be ordered by title, slug, status or created on date. The events can be ordered by title, slug or age-range.
+
+      <details><summary>Admin Page</summary>
+      ![Admin Page](static/images/screenshots/admin-page.png)
+      </details>
+
+      <details><summary>Admin - Posts Page</summary>
+      ![Posts Page](static/images/screenshots/admin-posts.png)
+      </details>
+
+      <details><summary>Admin - Events Page</summary>
+      ![Events Page](static/images/screenshots/admin-events.png)
+      </details>
+
       [Back To Top](<#contents>)

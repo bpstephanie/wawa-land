@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<section class="error-page-container col-12">
-    <div class="error-page-content">
+<div class="container col-12 box-shadow bg-light mt-3 py-3">
+    <div class="text-center">
         <h2>403 Forbidden</h2>
         <p>Sorry you do not have permission to view this page.</p>
-        <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+        <a href="{% url 'home' %}" class="btn btn-wawa">Home</a>
     </div>
-</section>
+</div>
 {% endblock %}
