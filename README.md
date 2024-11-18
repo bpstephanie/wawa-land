@@ -162,23 +162,24 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - #### Add New Blog Post
       To reach this page, a user needs to have clicked on 'Add Post' on the blog page. The user is prompted to add their own blog post by a form. They must give their post a title and a body. If a user attempts to submit a post without a title or a body an error message appears at the top as well as visual feedback that the fields are required.
 
-    <details><summary>Add New Post Form</summary>
+      <details><summary>Add New Post Form</summary>
 
-    ![Desktop](static/images/screenshots/desktop-add-post.png)
-    ![Mobile](static/images/screenshots/mobile-add-post.png)
-    </details>
+      ![Desktop](static/images/screenshots/desktop-add-post.png)
+      ![Mobile](static/images/screenshots/mobile-add-post.png)
+      </details>
 
-    <details><summary>Visual Feedback for Invalid Form</summary>
+      <details><summary>Visual Feedback for Invalid Form</summary>
 
-    ![Invalid Title](static/images/screenshots/invalid-title.png)
-    ![Invalid Feedback](static/images/screenshots/addpost-error-message.png)
-    ![Invalid Feedback](static/images/screenshots/field-required.png)
-    </details>
-    [Back To Top](<#contents>)
-
+      ![Invalid Title](static/images/screenshots/invalid-title.png)
+      ![Invalid Feedback](static/images/screenshots/addpost-error-message.png)
+      ![Invalid Feedback](static/images/screenshots/field-required.png)
+      </details>
+      
+      [Back To Top](<#contents>)
 
 
     - #### Blog Post
+
       - ##### Likes
       - ##### Comments
 
