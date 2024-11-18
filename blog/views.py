@@ -20,12 +20,6 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-class DraftList(generic.ListView):
-    queryset = Post.objects.filter(status=0)
-    template_name = "drafts.html"
-    paginate_by = 6
-
-
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.

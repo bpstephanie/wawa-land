@@ -18,6 +18,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 * [**Features**](<#features>)
   * [Existing Features](<#existing-features>)
     * [Navigation Bar](<#navigation-bar>)
+    * [Logged In Banner](<#logged-in-banner>)
     * [Footer](<#footer>)
     * [Messages](<#messages>)
     * [Home Page](<#home-page>)
@@ -82,6 +83,18 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     </details>
 
     [Back To Top](<#contents>)
+  
+  - ### Logged In Banner
+    Once a user has logged in, there is visual feedback in the form of a message stating their logged in status in a banner that is a slightly light shade than the navbar.
+
+    <details><summary>Logged In Banner</summary>
+    
+    ![Desktop view](static/images/screenshots/loggedin-banner.png)
+    ![Mobile view](static/images/screenshots/mobile-loggedin-banner.png)
+    
+    </details>
+
+    [Back To Top](<#contents>)
 
   - ### Footer
     The footer section has 4 sections which include 'About', which explains a bit about the site, 'Social Media', with links to the relevant social media sites for Wawa Land, 'Contact Us', which includes a link to send us an email and the 'Copyright' section. The footer can be seen across all pages and is fully responsive.
@@ -93,8 +106,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     
     </details>
 
-    
-  [Back To Top](<#contents>)
+    [Back To Top](<#contents>)
 
   - ### Messages
     Messages have been utilized to give users instant feedback for action they take. Success messages and error messages are distinguishable by their colour; green has been used for success and red for error messages.
@@ -130,7 +142,22 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     [Back To Top](<#contents>)
 
   - ### Blog
-  [Back To Top](<#contents>)
+    When a user clicks the 'Blog' in the navbar they are taken to the blog list page. At the top of the page there is a prompt for the user to add their own post. The button to take them to write their own post only appears to users who are logged in, if they are not they will be prompted to log in.
+    
+    Below, the user can see all the posts that are available to read on the site. The blog posts can be from any user and are displayed here once they have been approved by the Wawa Land administration. They are ordered with the newest appearing first. Only 6 posts will appear per page, users will be able to navigate through the pages of the blog to see all the content available.
+
+    <details><summary>Add Post Prompt</summary>
+
+    ![Logged in](static/images/screenshots/add-new-post.png)
+    ![Logged out](static/images/screenshots/add-new-post-logged-out.png)
+    </details>
+
+    <details><summary>Blog Article List</summary>
+
+    ![Blog Article List](static/images/screenshots/blog-posts.png)
+    </details>
+
+    [Back To Top](<#contents>)
 
   - ### Events Page 
   [Back To Top](<#contents>)
