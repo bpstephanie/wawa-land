@@ -33,7 +33,7 @@ The CI Python Linter Validator
 | File                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
 | Blog - Admin            |![Blog-Admin](static/images/screenshots/blog-admin.png)                                 | PASS     |
-| Blog - Apps             |![Blog-Apps](static/images/screenshots/blog-apps.png)                                   | PASS     |
+| Blog - Apps             |![Blog-Apps](static/images/screenshots/blog-app.png)                                   | PASS     |
 | Blog - Forms            |![Blog-Forms](static/images/screenshots/blog-forms.png)                                 | PASS     |
 | Blog - Models           |![Blog-Models](static/images/screenshots/blog-models.png)                               | PASS     |
 | Blog - Urls             |![Blog-Urls](static/images/screenshots/blog-urls.png)                                   | PASS     |
@@ -54,42 +54,42 @@ The JSHINT Validator
 | File                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
 | comments.js             |![comments.js](static/images/screenshots/comments-jshint.png)                           | PASS     |
-| posts.js                |![posts.js](static/images/screenshots/bposts-jshint.png)                                | PASS     |
+| posts.js                |![posts.js](static/images/screenshots/posts-jshint.png)                                | PASS     |
 | profile.js              |![profile.js](static/images/screenshots/profile-jshint.png)                             | PASS     |
 | reviews.js              |![reviews.js](static/images/screenshots/reviews-jshint.png)                             | PASS     |
 
 
 - ### Lighthouse
-| Page                      | Device          | Screenshot                                                                    |
-|---------------------------|-----------------|-------------------------------------------------------------------------------|
-| Home                      | Desktop         | Screenshot                                                                    |
-| Home                      | Mobile          | Screenshot                                                                    |
-| Blog - Logged In          | Desktop         | Screenshot                                                                    |
-| Blog - Logged In          | Mobile          | Screenshot                                                                    |
-| Blog - Logged Out         | Desktop         | Screenshot                                                                    |
-| Blog - Logged Out         | Mobile          | Screenshot                                                                    |
-| Blog Post - Logged In     | Desktop         | Screenshot                                                                    |
-| Blog Post - Logged In     | Mobile          | Screenshot                                                                    |
-| Blog Post - Logged Out    | Desktop         | Screenshot                                                                    |
-| Blog Post - Logged Out    | Mobile          | Screenshot                                                                    |
-| Event Page                | Desktop         | Screenshot                                                                    |
-| Event Page                | Mobile          | Screenshot                                                                    |
-| Event Listing - Logged In | Desktop         | Screenshot                                                                    |
-| Event Listing - Logged In | Mobile          | Screenshot                                                                    |
-| Event Listing - Logged Out| Desktop         | Screenshot                                                                    |
-| Event Listing - Logged Out| Mobile          | Screenshot                                                                    |
-| Add New Post              | Desktop         | Screenshot                                                                    |
-| Add New Post              | Mobile          | Screenshot                                                                    |
-| Edit Post                 | Desktop         | Screenshot                                                                    |
-| Edit Post                 | Mobile          | Screenshot                                                                    |
-| Profile                   | Desktop         | Screenshot                                                                    |
-| Profile                   | Mobile          | Screenshot                                                                    |
-| Register                  | Desktop         | Screenshot                                                                    |
-| Register                  | Mobile          | Screenshot                                                                    |
-| Log In                    | Desktop         | Screenshot                                                                    |
-| Log In                    | Mobile          | Screenshot                                                                    |
-| Log Out                   | Desktop         | Screenshot                                                                    |
-| Log Out                   | Mobile          | Screenshot                                                                    |
+| Page                      | Device     | Screenshot                                                                       |
+|---------------------------|------------|----------------------------------------------------------------------------------|
+| Home                      | Desktop    | ![Home Desktop](static/images/screenshots/home-desktop.png)                      |
+| Home                      | Mobile     | ![Home Mobile](static/images/screenshots/home-mobile.png)                        |
+| Blog - Logged In          | Desktop    | ![Blog Desktop](static/images/screenshots/blog-li-desktop.png)                   |
+| Blog - Logged In          | Mobile     | ![Blog Mobile](static/images/screenshots/blog-li-mobile.png)                     |
+| Blog - Logged Out         | Desktop    | ![Blog Desktop](static/images/screenshots/blog-logout-desktop.png)               |
+| Blog - Logged Out         | Mobile     | ![Blog Mobile](static/images/screenshots/blog-logout-mobile.png)                 |
+| Blog Post - Logged In     | Desktop    | ![Blog Post Desktop](static/images/screenshots/blog-post-li-desktop.png)         |
+| Blog Post - Logged In     | Mobile     | ![Blog Post Mobile](static/images/screenshots/blog-post-li-mobile.png)           |
+| Blog Post - Logged Out    | Desktop    | ![Blog Post Desktop](static/images/screenshots/blog-post-logout-desktop.png)     |
+| Blog Post - Logged Out    | Mobile     | ![Blog Post Mobile](static/images/screenshots/blog-post-lo-mobile.png)           |
+| Event Page                | Desktop    | ![Event Desktop](static/images/screenshots/event-desktop.png)                    |
+| Event Page                | Mobile     | ![Event Mobile](static/images/screenshots/event-mobile.png)                      |
+| Event Listing - Logged In | Desktop    | ![Event Listing Desktop](static/images/screenshots/event-listing-li-desktop.png) |
+| Event Listing - Logged In | Mobile     | ![Event Listing Mobile](static/images/screenshots/event-listing-li-mobile.png)   |
+| Event Listing - Logged Out| Desktop    | ![Event Listing Desktop](static/images/screenshots/event-listing-lo-desktop.png) |
+| Event Listing - Logged Out| Mobile     | ![Event Listing Mobile](static/images/screenshots/event-listing-lo-mobile.png)   |
+| Add New Post              | Desktop    | ![Add Post Desktop](static/images/screenshots/add-post-desktop.png)              |
+| Add New Post              | Mobile     | ![Add Post Mobile](static/images/screenshots/add-post-mobile.png)                |
+| Edit Post                 | Desktop    | ![Edit Post Desktop](static/images/screenshots/edit-post-desktop.png)            |
+| Edit Post                 | Mobile     | ![Edit Post Mobile](static/images/screenshots/edit-post-mobile.png)              |
+| Profile                   | Desktop    | ![Profile Desktop](static/images/screenshots/profile-desktop.png)                |
+| Profile                   | Mobile     | ![Profile Mobile](static/images/screenshots/profile-mobile.png)                  |
+| Register                  | Desktop    | ![Register Desktop](static/images/screenshots/register-desktop.png)              |
+| Register                  | Mobile     | ![Register Mobile](static/images/screenshots/register-mobile.png)                |
+| Log In                    | Desktop    | ![Login Desktop](static/images/screenshots/login-desktop.png)                    |
+| Log In                    | Mobile     | ![Login Mobile](static/images/screenshots/login-mobile.png)                      |
+| Log Out                   | Desktop    | ![Log Out Desktop](static/images/screenshots/logout-desktop.png)                 |
+| Log Out                   | Mobile     | ![Log Out Mobile](static/images/screenshots/logout-mobile.png)                   |
 
 
 
