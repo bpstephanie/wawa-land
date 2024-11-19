@@ -830,6 +830,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   3. Make migrations by typing: python3 manage.py makemigrations
   4. Migrate the data by typing: python3 manage.py migrate
   5. Create a superuser by typing: python3 manage.py createsuperuser
+  6. Create a file name "env.py" in the projects root directory to set environment variables.
 
   [Back To Top](<#contents>)
 
