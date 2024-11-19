@@ -588,6 +588,13 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   ## Future Features
   There are many more features that I wanted to include in this project for ease of users.
+
+  - Profile Page Reviews
+    This is a feature that was in the user stories. Due to the profile being in the blog app it was not possible to add approved reviews and reviews awaiting approval to the profile page. This would be the first thing to be implemented in the future as it is important for users to see everything they have interacted with on the site in one place.
+
+  - Profile Page Likes
+    Currently users can see their likes on the profile page but the post title is not a link. This will be implemented in the future to aid navigation of the site.
+
   - Social Login
     Enhance the user sign up experience by integrating social login options for example; Google and Facebook. This not only would decrease the sign up time but also boosts the chances of users completing their registration.
 
@@ -838,7 +845,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   5. Create a superuser by typing:
   
     - python3 manage.py createsuperuser
-    
+
   6. Create a file name "env.py" in the projects root directory to set environment variables.
 
   [Back To Top](<#contents>)
