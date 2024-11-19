@@ -22,15 +22,15 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let reviewId = e.target.getAttribute("review_id");
-    let reviewLabel = document.getElementById(`review${reviewId}`).innerText;
-    let reviewContent = document.getElementById(`review${reviewId}`).innerText;
-    reviewTitle.value = reviewLabel;
-    reviewText.value = reviewContent;
+    let reviewElement = document.getElementById(`review${reviewId}`);
+    let reviewTitleContent = reviewElement.querySelector('.review-title').innerText.trim();
+    let reviewBodyContent = reviewElement.querySelector('.review-body').innerText.trim();
+    reviewTitle.value = reviewTitleContent;
+    reviewText.value = reviewBodyContent;
     submitButton.innerText = "Update";
     reviewForm.setAttribute("action", `edit_review/${reviewId}`);
   });
 }
-console.log("HELLLLOOO")
 /**
 * Initializes deletion functionality for the provided delete buttons.
 * 

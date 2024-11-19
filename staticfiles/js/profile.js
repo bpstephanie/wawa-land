@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const deleteButtons = document.getElementsByClassName("btn-delete");
     const deleteConfirm = document.getElementById("deleteConfirm");
 
-    console.log("1");
 
     for (let button of deleteButtons) {
         button.addEventListener("click", (e) => {
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    console.log("1");
 
     const postTitleElements = document.querySelectorAll('[data-bs-toggle="modal"]');
 
