@@ -140,7 +140,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - A signed-in user can post a comment on a post.
     - When a user comment is approved, all users can see the comment.
 
-    13. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
+    13. As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**
 
     Approval Criteria
     - A signed-in user can leave a review on an event.

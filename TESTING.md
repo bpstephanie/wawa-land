@@ -162,6 +162,25 @@ The JSHINT Validator
 
 
 ## User Story Testing
+| User Story                                                                                                       | Pass/Fail|
+|------------------------------------------------------------------------------------------------------------------|----------|
+| As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.** | PASS     |
+| As a **user** I can **sign up to the site** so that I can **view the content available to users.**               | PASS     |
+| As a **user** I can **login to my account** so that I can **view the content available to users.**               | PASS     |
+| As a **user** I can **click on blog** so that I can **see all the blog posts.**                                  | PASS     |
+| As a **user** I can **click on any blog post snippet** so that I can **read all the content.**                   | PASS     |
+| As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**    | PASS     |
+| As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.** | PASS     |
+| As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**| PASS     |
+| As a **user** I can **click on events** so that I can **see all the events listed.**                             | PASS     |
+| As a **user** I can **click on any event listing** so that I can **read all the details.**                       | PASS     |
+| As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**| PASS     |
+| As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**         | PASS     |
+| As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**        | PASS     |
+| As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**            | PASS     |
+| As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**| PASS     |
+| As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**| PASS     |
+
 
 ## Bugs
 
