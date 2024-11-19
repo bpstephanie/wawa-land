@@ -854,6 +854,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   * The code to create the Like model was inspired by [this youtube tutorial](https://www.youtube.com/watch?v=ZUiTiUj-tZw).
   * The code to make the Summernote field in the add and edit blog posts wqas inspired from a fellow student on [Slack](https://slack.com/intl/en-gb). The screenshot of the [solution](static/images/screenshots/summernote-solution.png).
   * Displaying the choices fields in a human readable format in my models was inspired by [this Stack Overflow post](https://stackoverflow.com/questions/22366536/displaying-the-choices-field-in-human-readable-format).
+  * The code to check if a string is a JSON string in Javascript was inspired by [Geeks for Geeks](https://www.geeksforgeeks.org/javascript-check-if-a-string-is-a-valid-json-string/).
 
   
 

@@ -8,6 +8,9 @@ from .forms import ReviewForm
 
 
 class EventList(generic.ListView):
+    """
+    Display a list of events to the user
+    """
     queryset = Event.objects.all()
     template_name = "event_list.html"
     paginate_by = 12

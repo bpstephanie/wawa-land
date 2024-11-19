@@ -12,10 +12,16 @@ from .forms import CommentForm, LikeForm, PostForm
 
 # Create your views here.
 class Home(TemplateView):
+    """
+    Display home page to user
+    """
     template_name = 'index.html'
 
 
 class PostList(generic.ListView):
+    """
+    Display all blog posts to users
+    """
     queryset = Post.objects.filter(status=1)
     template_name = "blog.html"
     paginate_by = 6
@@ -199,13 +205,14 @@ def post_edit(request, post_id):
 
 
 def user_profile(request, username):
+    """
+    view to see all posts, comments and likes on profile
+    """
     user = get_object_or_404(User, username=username)
     published_posts = user.blog_posts.filter(status=1)
     unpublished_posts = user.blog_posts.filter(status=0)
     published_comments = user.commenter.filter(approved=True)
     unpublished_comments = user.commenter.filter(approved=False)
-    published_reviews = Review.objects.filter(author=user, approved=True)
-    unpublished_reviews = user.reviewer.filter(approved=False)
     likes = user.liked_posts.all()
 
     context = {
@@ -214,8 +221,6 @@ def user_profile(request, username):
         'unpublished_posts': unpublished_posts,
         'published_comments': published_comments,
         'unpublished_comments': unpublished_comments,
-        'published_reviews': published_reviews,
-        'unpublished_reviews': unpublished_reviews,
         'likes': likes,
     }
 

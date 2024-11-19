@@ -30,8 +30,6 @@
     <div class="row">
         <div class="col card mb-4  mt-3 border-0">
             <div>
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
                     {{ post.post_content | safe }}
                 </p>
@@ -91,7 +89,6 @@
                 <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                 {% endif %}
             </div>
-            <!-- Our for loop ends here -->
             {% endfor %}
         </div>
         <!-- Creating New Comments -->
@@ -127,8 +124,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
+                <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
