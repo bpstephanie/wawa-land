@@ -4,7 +4,7 @@
 
 Wawa Land has be thoroughly tested. All the code has been run through the [W3C html Validator](https://validator.w3.org/), the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [JSHint JavaScript Validator](https://jshint.com/). 
 
-HTML
+- ### HTML
 
 | Page                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
@@ -24,13 +24,13 @@ HTML
 | Sign Out        |![Sign Out](static/images/screenshots/html-sign-out.png)                                  | PASS     |
 
 
-
+- ### CSS
 The CSS Validator Results:
 ![CSS Validator](static/images/screenshots/css.png)
 
-
+- ### Python and Django
 The CI Python Linter Validator
-| Page                    | Screenshot                                                                             | Notes    |
+| File                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
 | Blog - Admin            |![Blog-Admin](static/images/screenshots/blog-admin.png)                                 | PASS     |
 | Blog - Apps             |![Blog-Apps](static/images/screenshots/blog-apps.png)                                   | PASS     |
@@ -44,18 +44,52 @@ The CI Python Linter Validator
 | Event - Models          |![Event-Models](static/images/screenshots/event-models.png)                             | PASS     |
 | Event - Urls            |![Event-Urls](static/images/screenshots/event-urls.png)                                 | PASS     |
 | Event - Views           |![Event-Views](static/images/screenshots/event-views.png)                               | PASS     |
-| Wawaland - Settings     |![EWawaland - Settings](static/images/screenshots/wawaland-settings.png)                | PASS     |
-| Wawaland - Urls         |![EWawaland - Urls](static/images/screenshots/wawaland-urls.png)                        | PASS     |
+| Wawaland - Settings     |![Wawaland - Settings](static/images/screenshots/wawaland-settings.png)                 | PASS     |
+| Wawaland - Urls         |![Wawaland - Urls](static/images/screenshots/wawaland-urls.png)                         | PASS     |
+| Wawaland - Wsgi         |![Wawaland - Wsgi](static/images/screenshots/wawaland-wsgi.png)                         | PASS     |
 
 
-
+- ### JavaScript
 The JSHINT Validator
-| Page                    | Screenshot                                                                             | Notes    |
+| File                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
 | comments.js             |![comments.js](static/images/screenshots/comments-jshint.png)                           | PASS     |
 | posts.js                |![posts.js](static/images/screenshots/bposts-jshint.png)                                | PASS     |
 | profile.js              |![profile.js](static/images/screenshots/profile-jshint.png)                             | PASS     |
 | reviews.js              |![reviews.js](static/images/screenshots/reviews-jshint.png)                             | PASS     |
+
+
+- ### Lighthouse
+| Page                      | Device          | Screenshot                                                                    |
+|---------------------------|-----------------|-------------------------------------------------------------------------------|
+| Home                      | Desktop         | Screenshot                                                                    |
+| Home                      | Mobile          | Screenshot                                                                    |
+| Blog - Logged In          | Desktop         | Screenshot                                                                    |
+| Blog - Logged In          | Mobile          | Screenshot                                                                    |
+| Blog - Logged Out         | Desktop         | Screenshot                                                                    |
+| Blog - Logged Out         | Mobile          | Screenshot                                                                    |
+| Blog Post - Logged In     | Desktop         | Screenshot                                                                    |
+| Blog Post - Logged In     | Mobile          | Screenshot                                                                    |
+| Blog Post - Logged Out    | Desktop         | Screenshot                                                                    |
+| Blog Post - Logged Out    | Mobile          | Screenshot                                                                    |
+| Event Page                | Desktop         | Screenshot                                                                    |
+| Event Page                | Mobile          | Screenshot                                                                    |
+| Event Listing - Logged In | Desktop         | Screenshot                                                                    |
+| Event Listing - Logged In | Mobile          | Screenshot                                                                    |
+| Event Listing - Logged Out| Desktop         | Screenshot                                                                    |
+| Event Listing - Logged Out| Mobile          | Screenshot                                                                    |
+| Add New Post              | Desktop         | Screenshot                                                                    |
+| Add New Post              | Mobile          | Screenshot                                                                    |
+| Edit Post                 | Desktop         | Screenshot                                                                    |
+| Edit Post                 | Mobile          | Screenshot                                                                    |
+| Profile                   | Desktop         | Screenshot                                                                    |
+| Profile                   | Mobile          | Screenshot                                                                    |
+| Register                  | Desktop         | Screenshot                                                                    |
+| Register                  | Mobile          | Screenshot                                                                    |
+| Log In                    | Desktop         | Screenshot                                                                    |
+| Log In                    | Mobile          | Screenshot                                                                    |
+| Log Out                   | Desktop         | Screenshot                                                                    |
+| Log Out                   | Mobile          | Screenshot                                                                    |
 
 
 
