@@ -28,14 +28,14 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       * [Blog Post](<#blog-post>)
         * [Likes](<#likes>)
         * [Comments](<#comments>)
-    * [Events Page](<#add-new-expense>)
+    * [Events Page](<#events-page>)
       * [Event Detail](<#event-detail>)
         * [Reviews](<#reviews>)
     * [Profile](<#profile>)
       * [Edit Blog Post](<#edit-blog-post>)
     * [Register](<#register>)
-    * [Log In](<#log-in>)
-    * [Sign Out](<#sign-out>)
+    * [Login](<#login>)
+    * [Logout](<#logout>)
     * [Error Pages](<#error-pages>)
     * [Admin Panel](<#admin-panel>)
   * [**Future Features**](<#future-features>)
@@ -43,12 +43,6 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 * [**Database**](<#database>)
   * [**PostgreSQL**](<#postgresql>)
 * [**Testing**](<#testing>)
-  * [Testing User Stories](<#testing-user-stories>)
-    * [Site Owner](<#site-owner>) 
-  * [Validation](<#validation>)
-  * [Additional Testing](<#additional-testing>)
-  * [Known Bugs](<#known-bugs>)
-    * [Unresolved Bugs](<#unresolved-bugs>)
 * [**Deployment**](<#deployment>)
   * [**Cloudinary**](<#cloudinary>)
   * [**To Deploy on Heroku**](<#to-deploy-on-heroku>)
@@ -68,14 +62,14 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   [Back To Top](<#contents>)
 
   ## User Stories
-    1. As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.**
+    * As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.**
 
     Acceptance Criteria
     - Develop a wireframe that clearly shows the elements on the pages.
     - Ensure the wireframe creates an intuitive flow for navigation through the site.
 
 
-    2. As a **user** I can **sign up to the site** so that I can **view the content available to users.**
+    * As a **user** I can **sign up to the site** so that I can **view the content available to users.**
 
     Acceptance Criteria
     - I can use my email address to create an account.
@@ -83,26 +77,26 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - When signed up, I can view the blog and events pages.
 
 
-    3. As a **user** I can **login to my account** so that I can **view the content available to users.**
+    * As a **user** I can **login to my account** so that I can **view the content available to users.**
 
     Acceptance Criteria
     - I can use my email address and password I set when signing up.
     - When logged in, I can view the blog and events pages.
 
 
-    4. As a **user** I can **click on blog** so that I can **see all the blog posts.**
+    * As a **user** I can **click on blog** so that I can **see all the blog posts.**
 
     Acceptance Criteria
     - When blog is clicked on, a page is rendered with snippets of all blog posts.
 
 
-    5. As a **user** I can **click on any blog post snippet** so that I can **read all the content.**
+    * As a **user** I can **click on any blog post snippet** so that I can **read all the content.**
 
     Acceptance Criteria
     - When a blog post snippet is clicked, the user is taken to a new page with the full content.
 
 
-    6. As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**
+    * As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**
 
     Acceptance Criteria
     - When a user is logged in, they can create a blog post.
@@ -111,7 +105,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - When a user is logged in, they can delete a blog post.
 
 
-    7. As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.**
+    * As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.**
 
     Acceptance Criteria
     - When a user is logged in, they can create an event.
@@ -120,59 +114,59 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - When a user is logged in, they can delete an event.
 
 
-    8. As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**
+    * As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**
 
     Acceptance Criteria
     - Create a Django project and create the necessary directories and files.
     - Deploy the Django project to Heroku and make sure it runs successfully.
 
 
-    9. As a **user** I can **click on events** so that I can **see all the events listed.**
+    * As a **user** I can **click on events** so that I can **see all the events listed.**
 
     Acceptance Criteria
     - When events are clicked on, a page is rendered with a list of all events.
 
 
-    10. As a **user** I can **click on any event listing** so that I can **read all the details.**
+    * As a **user** I can **click on any event listing** so that I can **read all the details.**
 
     Acceptance Criteria
     - When an event is clicked on the main events page, the user is taken to a new page with the full content.
 
 
-    11. As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**
+    * As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**
 
     Acceptance Criteria
     - On a specific event page, the user can see all approved reviews left by other users.
 
 
-    12. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
+    * As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
 
     Approval Criteria
     - A signed-in user can post a comment on a post.
     - When a user comment is approved, all users can see the comment.
 
 
-    13. As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**
+    * As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**
 
     Approval Criteria
     - A signed-in user can leave a review on an event.
     - When a user review is approved, all users can see the review.
 
 
-    14. As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**
+    * As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**
 
     Acceptance Criteria
     - Signed in user can add a post to the database.
     - When the administrators of the site publish the post, all users can view the post.
 
 
-    15. As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**
+    * As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**
 
     Acceptance Criteria
     - Given a logged in user, they can delete their unpublished post
 
 
-    16. As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**
+    * As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**
 
     Acceptance Criteria
     - A logged in user can view their profile page.
@@ -193,15 +187,16 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       - Roboto was chosen for larger bodies of text.
       ![Roboto Font](static/images/screenshots/roboto.png)
 
+      [Back To Top](<#contents>)
 
     - ### Colour Schemes
       The colours for Wawa Land were all tones of purple. Purple is a versatile, historically significant colour that appeals to a broad audience due to its lack of strong gender-specific connotations. Modern trends also favour purple for its cultural neutrality and wide range of shades, ensuring it resonates with diverse groups. I believe this is important for a site that targets children of all genders and promotes inclusivity.
 
-      - Iris: rgb(94, 74, 196)
-      - Medium Slate Blue: rgb(127, 108, 219)
-      - Periwinkle: rgb(213, 194, 243)
-      - Pale Purple: rgb(229, 217, 242)
-      - Magnolia: rgb(245, 239, 255)
+      * Iris: rgb(94, 74, 196)
+      * Medium Slate Blue: rgb(127, 108, 219)
+      * Periwinkle: rgb(213, 194, 243)
+      * Pale Purple: rgb(229, 217, 242)
+      * Magnolia: rgb(245, 239, 255)
 
 
       ![Wawa Land Colour Scheme](static/images/screenshots/wl-colour-scheme.png)
@@ -456,7 +451,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
       [Back To Top](<#contents>)
 
-      - #### Event Detail Page
+      - #### Event Detail
         Each event listing is rendered on its own page. All events have the same format of an image, the name, more information about the event, the price, the time and the date of the event. Currently all events can only be added by the Wawa Land administration. This is due to security, as events are for babies and children, it was decided that user-added events could pose a risk. Underneath the event listing the user can leave a review for the event.
 
         <details><summary>Events Listing</summary>
@@ -487,6 +482,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
           ![Delete Comment](static/images/screenshots/delete-review.png)
 
           </details>
+
+          [Back To Top](<#contents>)
 
     - ### Profile
       The profile page is where the user can see all the posts they have written, published or unpublished, all their comments on posts, approved or awaiting approval and all their likes. It is from the profile page that a user can edit a post, update a comment or delete either.
@@ -542,7 +539,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
       [Back To Top](<#contents>)
 
-    - ### Sign Out
+    - ### Logout
       When a user clicks the logout in the navigation bar , the user is taken to this page where they can confirm they want to logout.
 
       <details><summary>Logout Page</summary>
@@ -638,9 +635,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Database
 - I used Code Institute's PostgreSQL database for Wawa Land.
-- I created an Entity Relationship Diagram (ERD) using [Lucid](https://dashboard.heroku.com/) to plan my database.
+- I created an Entity Relationship Diagram (ERD) using [Lucid](https://lucid.app/) to plan my database.
 
 ![Entity Relationship Model for Wawa Land](static/images/screenshots/erd-model.png)
+
+[Back To Top](<#contents>)
 
   ## PostgreSQL
 
@@ -657,7 +656,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Deployment
 
-  ## Cloudinary API
+  ## Cloudinary
   Cloudinary is used to store media assets online. This is particularly beneficial because Heroku does not preserve this type of data.
 
   - ### Steps to Obtain Your Cloudinary API Key:
@@ -679,46 +678,47 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   1. Login to [Heroku](https://dashboard.heroku.com/) (or create an account).
 
-    <details><summary>Heroku Step 1</summary>
-    
-    ![Heroku Step 1](static/images/screenshots/heroku_one.png)
+      <details><summary>Heroku Step 1</summary>
+      
+      ![Heroku Step 1](static/images/screenshots/heroku_one.png)
 
-    </details>
+      </details>
 
-  2. In the top right hand corner there is a button 'New' that releases a dropdown menu, where you need to click 'Create a new app'.
+  2. In the top right hand corner there is a button 'New' that releases a dropdown menu, where you need to click 'Create a new  app'.
 
-    <details><summary>Heroku Step 2</summary>
-    
-    ![Heroku Step 2](static/images/screenshots/heroku_two.png)
+      <details><summary>Heroku Step 2</summary>
+      
+      ![Heroku Step 2](static/images/screenshots/heroku_two.png)
 
-    </details>
+      </details>
 
   3. On the next page, you will need to add a name for your app and input what region you are in. Bear in mind that each app name is unique therefore you may need to try some different options out. Once you have decided on an app name and selected which region you are in. Click 'Create app'
 
-    <details><summary>Heroku Step 3</summary>
-    
-    ![Heroku Step 3](static/images/screenshots/heroku_three.png)
+      <details><summary>Heroku Step 3</summary>
+      
+      ![Heroku Step 3](static/images/screenshots/heroku_three.png)
 
-    </details>
+      </details>
 
   4. On the next page, click the 'Settings' tab. Once you have clicked on the settings tab, click 'Reveal Config Vars' in the 'Config Vars' section. Next you will need to add values. For Wawa Land, three key value pairs were added:
       - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1" Once the key and value input fields have been filled you have to click 'Add'.
       - KEY = "DATABASE_URL", the value is the url that was emailed to you when creating the database. Then click 'Add'
       - KEY = "SECRET_KEY", the value is any random secret key containing numbers, letters and characters. You can use [Random Keygen](https://randomkeygen.com/) or invent your own. Then click 'Add'.
 
-    <details><summary>Heroku Step 4 - Settings Tab</summary>
+      <details><summary>Heroku Step 4 - Settings Tab</summary>
+      
+      ![Heroku Step 4 - Settings Tab](static/images/screenshots/heroku_four_settings.png)
+
+      </details>
+
+      <details><summary>Heroku Step 4 - Config Vars Section</summary>
     
-    ![Heroku Step 4 - Settings Tab](static/images/screenshots/heroku_four_settings.png)
+      ![Heroku Step 4 - Config Vars Section](static/images/screenshots/heroku_four_config.png)
 
-    </details>
-
-    <details><summary>Heroku Step 4 - Config Vars Section</summary>
-    
-    ![Heroku Step 4 - Config Vars Section](static/images/screenshots/heroku_four_config.png)
-
-    </details>
+      </details>
 
   5. In your IDE terminal, you need to type the following code to install the project requirements:
+
     - pip3 install gunicorn~=20.1
     - pip3 install -r requirements.txt
     - pip3 freeze --local > requirements.txt
@@ -743,34 +743,34 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   11. Next, on [Heroku](https://dashboard.heroku.com/), you need to go to the 'Deploy' tab. For 'Deployment Method', click 'GitHub'. Search for the repository name you want to deploy and then click connect.
 
-    <details><summary>Heroku Step 11 - Deploy Tab</summary>
+      <details><summary>Heroku Step 11 - Deploy Tab</summary>
+      
+      ![Heroku Step 11 - Deploy Tab](static/images//screenshots/heroku_six.png)
+
+      </details>
+
+      <details><summary>Heroku Step 11 - Deployment Method</summary>
+      
+      ![Heroku Step 11 - Deployment Method](static/images/screenshots/heroku_six_deployment_meth.png)
+
+      </details>
+
+      <details><summary>Heroku Step 11 - Connect to GitHub</summary>
+
+        Wawa Land has already been connected to Heroku so mine will look a little different from yours. However, where you can see 'App Connected to GitHub' on the image, you will see 'Connect to GitHub, next to that you'll be able to search for the repository you want to connect.
+
+      ![Heroku Step 11 - Connect to Github](static/images/screenshots/heroku_six_connect.png)
     
-    ![Heroku Step 11 - Deploy Tab](static/images//screenshots/heroku_six.png)
-
-    </details>
-
-    <details><summary>Heroku Step 11 - Deployment Method</summary>
-    
-    ![Heroku Step 11 - Deployment Method](static/images/screenshots/heroku_six_deployment_meth.png)
-
-    </details>
-
-    <details><summary>Heroku Step 11 - Connect to GitHub</summary>
-
-      Wawa Land has already been connected to Heroku so mine will look a little different from yours. However, where you can see 'App Connected to GitHub' on the image, you will see 'Connect to GitHub, next to that you'll be able to search for the repository you want to connect.
-
-    ![Heroku Step 11 - Connect to Github](static/images/screenshots/heroku_six_connect.png)
-  
-    </details>
+      </details>
 
 
   12. Scroll down to the sections below, called 'Automatic Deploys' and 'Manual Deploy'. Here you need to choose which option best suits your project. Once selected, click 'Deploy Branch'.
 
-    <details><summary>Heroku Step 12 - Deploy</summary>
-    
-    ![Heroku Step 12 - Deploy](static/images/screenshots/heroku_seven.png)
+      <details><summary>Heroku Step 12 - Deploy</summary>
+      
+      ![Heroku Step 12 - Deploy](static/images/screenshots/heroku_seven.png)
 
-    </details>
+      </details>
 
 
   13. If you are using [Cloudinary](https://cloudinary.com/), go back to the 'Settings' tab on Heroku, reveal config vars and add a new KEY, VALUE pair:
@@ -779,11 +779,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   14. For final deployment, or once static files have been added to your project, you need to remove the following KEY, VALUE pair:
     - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1"
 
-    <details><summary>Heroku Step 14 - Final Deployment</summary>
-    
-    ![Heroku Step 12 - Final Deployment](static/images/screenshots/heroku_14.png)
+      <details><summary>Heroku Step 14 - Final Deployment</summary>
+      
+      ![Heroku Step 12 - Final Deployment](static/images/screenshots/heroku_14.png)
 
-    </details>
+      </details>
 
   The live link can be found here - <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
@@ -799,11 +799,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   2. On the right hand side of the page, in line with the repository name, is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
 
-    <details><summary>How to Fork</summary>
-    
-    ![How To Fork](static/images/screenshots/fork.png)
+      <details><summary>How to Fork</summary>
+      
+      ![How To Fork](static/images/screenshots/fork.png)
 
-    </details>
+      </details>
 
   [Back To Top](<#contents>)
 
@@ -817,11 +817,11 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   5. Type 'git clone' then paste the URL copied from GitHub.
   6. Upon pressing enter, the local clone will be created.
 
-    <details><summary>How to Clone</summary>
+      <details><summary>How to Clone</summary>
 
-    ![How To Clone](static/images/screenshots/clone.png)
+      ![How To Clone](static/images/screenshots/clone.png)
 
-    </details>
+      </details>
 
   After cloning or forking the project, follow these steps to run it locally:
 
