@@ -11,18 +11,19 @@ Wawa Land has been thoroughly tested. All the code has been run through the [W3C
 | Home                    |![Home Page](static/images/screenshots/html-index.png)                                  | PASS     |
 | Blog - Logged out       |![Blog - Logged Out](static/images/screenshots/html-blog-loggedout.png)                 | PASS     |
 | Blog - Logged in        |![Blog - Logged In](static/images/screenshots/html-blog-loggedin.png)                 | PASS     |
-| Blog Post - Logged out  |![Blog - Logged Out](static/images/screenshots/html-blog-post-loggedout.png)          | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The '<p>' tag cannot be deleted by me.     |
-| Blog Post - Logged in   |![Blog - Logged In](static/images/screenshots/html-blog-post-loggedin.png)                 | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.     |
+| Blog Post - Logged out  |![Blog - Logged Out](static/images/screenshots/html-blog-post-loggedout.png)          | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The 'p' tag cannot be deleted by me.     |
+| Blog Post - Logged in   |![Blog - Logged In](static/images/screenshots/html-blog-post-loggedin.png)                 | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The 'p' tag cannot be deleted by me.     |
 | Event List             |![Event](static/images/screenshots/html-event-list.png)                 | PASS     |
-| Event Listing - Logged out          |![Event](static/images/screenshots/html-event-listing.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The '<p>' tag cannot be deleted by me.   |
-| Event Listing - Logged in          |![Event](static/images/screenshots/html-event-listing-loggedout.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The '<p>' tag cannot be deleted by me.   |
+| Event Listing - Logged out          |![Event](static/images/screenshots/html-event-listing.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The 'p' tag cannot be deleted by me.   |
+| Event Listing - Logged in          |![Event](static/images/screenshots/html-event-listing-loggedout.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The 'p' tag cannot be deleted by me.   |
 | Add Post      |![Add Post](static/images/screenshots/html-add-post.png)                | PASS      |
-| Profile       |![Profile](static/images/screenshots/html-profile.png)                 | The code the validator is referring to is code which has been integrated by Django for the posts and comments functionality and not written by me. The '<p>' tag cannot be deleted by me.     |
+| Profile       |![Profile](static/images/screenshots/html-profile.png)                 | The code the validator is referring to is code which has been integrated by Django for the posts and comments functionality and not written by me. The 'p' tag cannot be deleted by me.     |
 | Edit Post       |![Edit Post](static/images/screenshots/html-edit-post-1.png) ![Edit Post](static/images/screenshots/html-edit-post-2.png)               | The code validator is referring to errors in code that have been integrated by Django that add Summernote to the body field. I cannot amend this code.     |
 | Login          |![Login](static/images/screenshots/html-log-in.png)                                  | PASS     |
 | Register        |![Register](static/images/screenshots/html-register.png)                                  | The code the validator is referring to is integrated by Django and not written by me.     |
 | Sign Out        |![Sign Out](static/images/screenshots/html-sign-out.png)                                  | PASS     |
 
+The HTML Validator errors that are showing up all refer to code that is integrated from Django. I have tried to correct these errors but have not been able to up until now.
 
 - ### CSS
 The CSS Validator Results:
@@ -220,6 +221,8 @@ The responsive design tests were carried out by [Responsive Test Tool](https://r
 
 ### Known Bugs
 On the register page, when a user's password does not comply with the criteria, the error message is not centered. The same bug occurs on the login page, the error message when a user's credentials don't match those on the system is not centered.
+
+The HTML errors that were seen in the validator testing will need to be fixed, however I have searched and researched how to fix these but have not yet come up with a solution.
 
 [Go Back To README.md](README.md)
 
