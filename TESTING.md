@@ -2,24 +2,24 @@
 
 ## Validator Testing
 
-Wawa Land has be thoroughly tested. All the code has been run through the [W3C html Validator](https://validator.w3.org/), the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [JSHint JavaScript Validator](https://jshint.com/). 
+Wawa Land has been thoroughly tested. All the code has been run through the [W3C HTML Validator](https://validator.w3.org/), the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [JSHint JavaScript Validator](https://jshint.com/). 
 
 - ### HTML
 
 | Page                    | Screenshot                                                                             | Notes    |
 |-------------------------|----------------------------------------------------------------------------------------|----------|
 | Home                    |![Home Page](static/images/screenshots/html-index.png)                                  | PASS     |
-| Blog - logged out       |![Blog - Logged Out](static/images/screenshots/html-blog-loggedout.png)                 | PASS     |
-| Blog - logged in        |![Blog - Logged In](static/images/screenshots/html-blog-loggedin.png)                 | PASS     |
-| Blog Post - logged out  |![Blog - Logged Out](static/images/screenshots/html-blog-post-loggedout.png)          | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The '<p>' tag cannot be deleted by me.     |
-| Blog Post - logged in   |![Blog - Logged In](static/images/screenshots/html-blog-post-logged-in.png)                 | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.     |
+| Blog - Logged out       |![Blog - Logged Out](static/images/screenshots/html-blog-loggedout.png)                 | PASS     |
+| Blog - Logged in        |![Blog - Logged In](static/images/screenshots/html-blog-loggedin.png)                 | PASS     |
+| Blog Post - Logged out  |![Blog - Logged Out](static/images/screenshots/html-blog-post-loggedout.png)          | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The '<p>' tag cannot be deleted by me.     |
+| Blog Post - Logged in   |![Blog - Logged In](static/images/screenshots/html-blog-post-logged-in.png)                 | The code the validator is referring to is code which has been integrated by Django for the comment functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.     |
 | Event List             |![Event](static/images/screenshots/html-event-list.png)                 | PASS     |
-| Event Listing - logged out          |![Event](static/images/screenshots/html-event-listing.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.   |
-| Event Listing - logged in          |![Event](static/images/screenshots/html-event-listing-loggedout.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The '<p>' tag cannot be deleted by me.   |
-| Add Post      |![Add Post](static/images/screenshots/add-post-1.png) ![Add Post](static/images/screenshots/add-post-2.png)                | The code validator is referring to errors in code with have been integrated by Django that add summernote to the body field. I cannot amend this code.      |
+| Event Listing - Logged out          |![Event](static/images/screenshots/html-event-listing.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The id is specific to each review and the '<p>' tag cannot be deleted by me.   |
+| Event Listing - Logged in          |![Event](static/images/screenshots/html-event-listing-loggedout.png)                 | The code the validator is referring to is code which has been integrated by Django for the review functionality and not written by me. The '<p>' tag cannot be deleted by me.   |
+| Add Post      |![Add Post](static/images/screenshots/add-post-1.png) ![Add Post](static/images/screenshots/add-post-2.png)                | The code validator is referring to errors in code that have been integrated by Django that add Summernote to the body field. I cannot amend this code.      |
 | Profile       |![Profile](static/images/screenshots/html-profile.png)                 | The code the validator is referring to is code which has been integrated by Django for the posts and comments functionality and not written by me. The '<p>' tag cannot be deleted by me.     |
-| Edit Post       |![Edit Post](static/images/screenshots/html-edit-post-1.png) ![Edit Post](static/images/screenshots/html-edit-post-2.png)               | The code validator is referring to errors in code with have been integrated by Django that add summernote to the body field. I cannot amend this code.     |
-| Log In          |![Log In](static/images/screenshots/html-log-in.png)                                  | PASS     |
+| Edit Post       |![Edit Post](static/images/screenshots/html-edit-post-1.png) ![Edit Post](static/images/screenshots/html-edit-post-2.png)               | The code validator is referring to errors in code that have been integrated by Django that add Summernote to the body field. I cannot amend this code.     |
+| Login          |![Login](static/images/screenshots/html-log-in.png)                                  | PASS     |
 | Register        |![Register](static/images/screenshots/html-register.png)                                  | The code the validator is referring to is integrated by Django and not written by me.     |
 | Sign Out        |![Sign Out](static/images/screenshots/html-sign-out.png)                                  | PASS     |
 
@@ -86,10 +86,10 @@ The JSHINT Validator
 | Profile                   | Mobile     | ![Profile Mobile](static/images/screenshots/profile-mobile.png)                  |
 | Register                  | Desktop    | ![Register Desktop](static/images/screenshots/register-desktop.png)              |
 | Register                  | Mobile     | ![Register Mobile](static/images/screenshots/register-mobile.png)                |
-| Log In                    | Desktop    | ![Login Desktop](static/images/screenshots/login-desktop.png)                    |
-| Log In                    | Mobile     | ![Login Mobile](static/images/screenshots/login-mobile.png)                      |
-| Log Out                   | Desktop    | ![Log Out Desktop](static/images/screenshots/logout-desktop.png)                 |
-| Log Out                   | Mobile     | ![Log Out Mobile](static/images/screenshots/logout-mobile.png)                   |
+| Login                    | Desktop    | ![Login Desktop](static/images/screenshots/login-desktop.png)                    |
+| Login                    | Mobile     | ![Login Mobile](static/images/screenshots/login-mobile.png)                      |
+| Logout                   | Desktop    | ![Logout Desktop](static/images/screenshots/logout-desktop.png)                 |
+| Logout                   | Mobile     | ![Logout Mobile](static/images/screenshots/logout-mobile.png)                   |
 
 
 #### Future Improvements for Lighthouse Testing
@@ -106,34 +106,34 @@ The JSHINT Validator
 | Header       | Blog button                          | Takes user to blog                               |  PASS    |
 | Header       | Events button                        | Takes user to events page                        |  PASS    |
 | Header       | Register button                      | Takes user to sign up page                       |  PASS    |
-| Header       | Login button                         | Takes user to log in page                        |  PASS    |
-| Header       | Log out button (for logged in users) | Takes user to log out page                       |  PASS    |
+| Header       | Login button                         | Takes user to login page                        |  PASS    |
+| Header       | Logout button (for logged in users) | Takes user to logout page                       |  PASS    |
 | Header       | Profile button (for logged in users) | Takes user to profile page                       |  PASS    |
 | Home page    | Hero section - sign up link (for logged out users)         | Takes user to sign up page                       |  PASS    |
 | Home page    | Read our blogs (link)..              | Takes user to blog page                          |  PASS    |
 | Home page    | Attend our events (link)..           | Takes user to events page                        |  PASS    |
-| Blog page    | Log in to write a post (for logged out users)          | Takes user to log in page                        |  PASS    |
+| Blog page    | Log in to write a post (for logged out users)          | Takes user to login page                        |  PASS    |
 | Blog page    | Add post button                      | Takes user to add post page                      |  PASS    |
 | Blog page    | Post listings                        | When a post title is clicked it takes user to individual blog post page                        |  PASS    |
 | Blog page    | Next button                        | If there are more than 6 posts then a 'next' button will appear for users to click through different post pages                        |  PASS    |
 | Blog page    | Prev button                        | If there are more than 6 posts, on page 2 and onwards a 'prev' button will appear for users to click through different post pages                        |  PASS    |
 | Blog Detail page    | Like button                      | When clicked, a like is registered and success message is shown to user                      |  PASS    |
-| Blog Detail page    | Like button                      | If the user has previously liked, When clicked again, a like removal is registered and error message is shown to user                      |  PASS    |
-| Blog Detail page    | Comment counter                      | When any users comment has been approved, the comment counter increases by one                      |  PASS    |
+| Blog Detail page    | Like button                      | If the user has previously liked, When clicked again, a like removal is registered and error message is shown to the user                      |  PASS    |
+| Blog Detail page    | Comment counter                      | When any user's comment has been approved, the comment counter increases by one                      |  PASS    |
 | Blog Detail page    | Leave comment field empty                    | If the user leaves an empty comment but clicks the submit button, the user is prompted to fill in the comment                      |  PASS    |
 | Blog Detail page    | Leave comment                      | When the user leaves a comment, the comment can be seen in the comments section on the left                      |  PASS    |
 | Blog Detail page    | Unapproved comments                      | The user can see their unapproved comments faded out                      |  PASS    |
 | Blog Detail page    | Approved comments                      | All users can see their approved comments from all users                      |  PASS    |
 | Blog Detail page    | Edit button on comments                      | When clicked, the user can update their own comments and see the reflected change instantly                      |  PASS    |
-| Blog Detail page    | Delete button Modal on comments                      | When clicked, a delete confirmation modal is shown to the user confirming whether or not they would like to delete their comment                      |  PASS    |
+| Blog Detail page    | Delete button modal on comments                      | When clicked, a delete confirmation modal is shown to the user confirming whether or not they would like to delete their comment                      |  PASS    |
 | Blog Detail page    | Delete button in modal                     | When clicked, the users' comment is permanently deleted from the database                      |  PASS    |
 | Add Post page    | Leave title field empty                     | If the user leaves an empty title but clicks the submit button, the user is prompted to fill in the title                     |  PASS    |
 | Add Post page    | Leave body field empty                     | If the user fills in the title field but leaves an empty body and clicks the submit button, the user is shown an error message at the top and 'This field is required' appears on the form                     |  PASS    |
 | Add Post page    | Add image                     | If the user adds their own image to the post, it is shown on the blog post when the post has been approved by the administration                     |  PASS    |
 | Events page      | Event listings                    | When an event name is clicked it takes user to individual event listing page                     |  PASS    |
-| Events page    | Next button                        | If there are more than 9 event listing then a 'next' button will appear for users to click through different event pages                        |  PASS    |
+| Events page    | Next button                        | If there are more than 9 event listings then a 'next' button will appear for users to click through different event pages                        |  PASS    |
 | Events page    | Prev button                        | If there are more than 9 event listings, on page 2 and onwards a 'prev' button will appear for users to click through different event pages                        |  PASS    |
-| Event Detail page    | Review counter                      | When any users' review has been approved, the review counter increases by one                      |  PASS    |
+| Event Detail page    | Review counter                      | When any user's review has been approved, the review counter increases by one                      |  PASS    |
 | Event Detail page    | Leave review                      | When the user leaves a review, the review can be seen in the reviews section on the left                      |  PASS    |
 | Event Detail page    | Unapproved reviews                      | The user can see their unapproved reviews faded out                      |  PASS    |
 | Event Detail page    | Approved reviews                      | All users can see their approved reviews from all users                      |  PASS    |
@@ -158,7 +158,7 @@ The JSHINT Validator
 | Register page    | Sign up button                    | If the user clicks the sign up button with an unknown/wrong username or password, the user will be prompted to enter a correct username/password combination                     |  PASS    |
 | Register page    | Sign up button                    | If the user enters a username which doesn't comply with the criteria they will not be registered and will be prompted to enter a password which does comply                    |  PASS    |
 | Register page    | Sign up button                    | If the user enters a username and password which complies with the criteria they will be registered                    |  PASS    |
-| Log Out page    | Log out button                    | If the user clicks the log out button they will be logged out registered                    |  PASS    |
+| Logout page    | Logout button                    | If the user clicks the logout button they will be logged out                    |  PASS    |
 
 
 ## User Story Testing
