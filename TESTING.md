@@ -123,10 +123,38 @@ The JSHINT Validator
 | Blog Detail page    | Unapproved comments                      | The user can see their unapproved comments faded out                      |  PASS    |
 | Blog Detail page    | Approved comments                      | All users can see their approved comments from all users                      |  PASS    |
 | Blog Detail page    | Edit button on comments                      | When clicked, the user can update their own comments and see the reflected change instantly                      |  PASS    |
-| Blog Detail page    | Delete button Modal on comments                      | When clicked, a delete confirmation modal is shown to the user cconfirming whether or not they would like to delete their comment                      |  PASS    |
+| Blog Detail page    | Delete button Modal on comments                      | When clicked, a delete confirmation modal is shown to the user confirming whether or not they would like to delete their comment                      |  PASS    |
 | Blog Detail page    | Delete button in modal                     | When clicked, the users' comment is permanently deleted from the database                      |  PASS    |
 | Add Post page    | Leave title field empty                     | If the user leaves an empty title but clicks the submit button, the user is prompted to fill in the title                     |  PASS    |
 | Add Post page    | Leave body field empty                     | If the user fills in the title field but leaves an empty body and clicks the submit button, the user is shown an error message at the top and 'This field is required' appears on the form                     |  PASS    |
 | Add Post page    | Add image                     | If the user adds their own image to the post, it is shown on the blog post when the post has been approved by the administration                     |  PASS    |
+| Events page      | Event listings                    | When an event name is clicked it takes user to individual event listing page                     |  PASS    |
+| Event Detail page    | Review counter                      | When any users' review has been approved, the review counter increases by one                      |  PASS    |
+| Event Detail page    | Leave review                      | When the user leaves a review, the review can be seen in the reviews section on the left                      |  PASS    |
+| Event Detail page    | Unapproved reviews                      | The user can see their unapproved reviews faded out                      |  PASS    |
+| Event Detail page    | Approved reviews                      | All users can see their approved reviews from all users                      |  PASS    |
+| Event Detail page    | Edit button on reviews                      | When clicked, the user can update their own reviews and see the reflected change instantly                      |  PASS    |
+| Event Detail page    | Delete button Modal on reviews                      | When clicked, a delete confirmation modal is shown to the user confirming whether or not they would like to delete their review                      |  PASS    |
+| Event Detail page    | Delete button in modal                     | When clicked, the users' review is permanently deleted from the database                      |  PASS    |
+| Profile page    | Published posts section                     | All the users' published posts are listed in this section                      |  PASS    |
+| Profile page    | Unpublished posts section                     | All the users' unpublished posts are listed in this section                      |  PASS    |
+| Profile page    | Approved comments section                     | All the users' approved comments are listed in this section                      |  PASS    |
+| Profile page    | Comments awaiting approval section                   | All the users' comments awaiting approval are listed in this section                      |  PASS    |
+| Profile page    | Likes section                 | All the users' likes on posts are listed in this section                      |  PASS    |
+| Profile page    | Post edit button                 | When clicked, the user is taken to the edit post page                      |  PASS    |
+| Profile page    | Post delete button                 | When clicked, the delete confirmation modal is opened and the user can confirm permanent deletion of the post                      |  PASS    |
+| Profile page    | Comment edit button                 | When clicked, the edit comment modal is opened and the user can update their comment                      |  PASS    |
+| Profile page    | Edit comment modal save changes button                 | When clicked, the user is taken to the post the comment was made on                      |  PASS    |
+| Profile page    | Comment delete button                 | When clicked, the delete confirmation modal is opened and the user can confirm permanent deletion of the comment and is then taken to the post the comment was made on                     |  PASS    |
+| Edit Post page    | Empty title field                     | If the user leaves an empty title but clicks the submit button, the user is prompted to fill in the title                     |  PASS    |
+| Edit Post page    | Empty body field                     | If the user fills in the title field but leaves an empty body and clicks the submit button, the user is shown an error message at the top and 'This field is required' appears on the form                     |  PASS    |
+| Edit Post page    | Add image                     | If the user adds their own image to the post, it is shown on the blog post when the post has been approved by the administration                     |  PASS    |
+| Login page    | Sign in button                    | If the user clicks the sign in button with an unknown/wrong username or password, the user will be prompted to enter a correct username/password combination                     |  PASS    |
+| Login page    | Sign in button                    | If the user clicks the sign in button with an known username and password, the user will be signed in                    |  PASS    |
+| Register page    | Sign up button                    | If the user clicks the sign up button with an unknown/wrong username or password, the user will be prompted to enter a correct username/password combination                     |  PASS    |
+| Register page    | Sign up button                    | If the user enters a username which doesn't comply with the criteria they will not be registered and will be prompted to enter a password which does comply                    |  PASS    |
+| Register page    | Sign up button                    | If the user enters a username and password which complies with the criteria they will be registered                    |  PASS    |
+| Log Out page    | Log out button                    | If the user clicks the log out button they will be logged out registered                    |  PASS    |
+
 
 
