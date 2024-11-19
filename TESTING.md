@@ -187,6 +187,8 @@ The JSHINT Validator
 ### Fixed Bugs
 - When a user wanted to edit their review on an event, both the title and body fields content were being populated in both fields. This was due to an error in my JavaScript code where both elements were under the same variable meaning they were indistinguishable. That has been fixed now and is no longer a problem.
 
+- The Summernote field on the Add Post/Edit Post pages was not responsive on smaller screens. Code was added to the setting.py file to make this field responsive.
+
 ### Known Bugs
 On the register page, when a user's password does not comply with the criteria, the error message is not centered. The same bug occurs on the login page, the error message when a user's credentials don't match those on the system is not centered.
 
