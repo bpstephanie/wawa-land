@@ -33,8 +33,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-bpstephanie-wawaland-e0ke2fxahyz.ws.codeinstitute-ide.net',
-    '.herokuapp.com'
-    ]
+    '.herokuapp.com']
 
 
 # Application definition

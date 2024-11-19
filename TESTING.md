@@ -92,18 +92,41 @@ The JSHINT Validator
 | Log Out                   | Mobile     | ![Log Out Mobile](static/images/screenshots/logout-mobile.png)                   |
 
 
+#### Future Improvements for Lighthouse Testing
+
+
 
 
 ## Manual Testing
 - Manual testing was carried out on local and deployed sites.
 
-| Location     | Feature         | Expected Outcome                               | Pass/Fail| Notes                   |
-|--------------|--------------   |------------------------------------------------|----------|-------------------------|
-| Header       | Home button     | Takes user to home                             |  PASS    |
-| Header       | Log-in button   | Takes user to log-in page on click             |  PASS    | If user is not logged in, the register and log-in buttons will be displayed, but if they are logged in, only the log-out button will appear |
-| Header       | Register button  | Takes user to registration page on click                                       | PASS      |                                                                                                           |
-| Header       | Logout button    | Takes user to log-out page on click                                            | PASS      |                                                                                                           |
-| Log-in page  | Log-in function  | When user enters an unknown username, the user will not be logged in           | PASS      |                                                                                                           |
-| Log-in page  | Log-in function  | When user enters an unknown password, the user will not be logged in           | PASS      |                                                                                                           |
-| Log-in page  | Log-in function  | When user enters a known username AND password, the user will be logged in     | PASS      |                                                                                                           |
+| Location     | Feature                              | Expected Outcome                                 | Pass/Fail|
+|--------------|--------------------------------------|--------------------------------------------------|----------|
+| Header       | Home button                          | Takes user to home                               |  PASS    |
+| Header       | Blog button                          | Takes user to blog                               |  PASS    |
+| Header       | Events button                        | Takes user to events page                        |  PASS    |
+| Header       | Register button                      | Takes user to sign up page                       |  PASS    |
+| Header       | Login button                         | Takes user to log in page                        |  PASS    |
+| Header       | Log out button (for logged in users) | Takes user to log out page                       |  PASS    |
+| Header       | Profile button (for logged in users) | Takes user to profile page                       |  PASS    |
+| Home page    | Hero section - sign up link (for logged out users)         | Takes user to sign up page                       |  PASS    |
+| Home page    | Read our blogs (link)..              | Takes user to blog page                          |  PASS    |
+| Home page    | Attend our events (link)..           | Takes user to events page                        |  PASS    |
+| Blog page    | Log in to write a post (for logged out users)          | Takes user to log in page                        |  PASS    |
+| Blog page    | Add post button                      | Takes user to add post page                      |  PASS    |
+| Blog page    | Post listings                        | When a post title is clicked it takes user to individual blog post page                        |  PASS    |
+| Blog Detail page    | Like button                      | When clicked, a like is registered and success message is shown to user                      |  PASS    |
+| Blog Detail page    | Like button                      | If the user has previously liked, When clicked again, a like removal is registered and error message is shown to user                      |  PASS    |
+| Blog Detail page    | Comment counter                      | When any users comment has been approved, the comment counter increases by one                      |  PASS    |
+| Blog Detail page    | Leave comment field empty                    | If the user leaves an empty comment but clicks the submit button, the user is prompted to fill in the comment                      |  PASS    |
+| Blog Detail page    | Leave comment                      | When the user leaves a comment, the comment can be seen in the comments section on the left                      |  PASS    |
+| Blog Detail page    | Unapproved comments                      | The user can see their unapproved comments faded out                      |  PASS    |
+| Blog Detail page    | Approved comments                      | All users can see their approved comments from all users                      |  PASS    |
+| Blog Detail page    | Edit button on comments                      | When clicked, the user can update their own comments and see the reflected change instantly                      |  PASS    |
+| Blog Detail page    | Delete button Modal on comments                      | When clicked, a delete confirmation modal is shown to the user cconfirming whether or not they would like to delete their comment                      |  PASS    |
+| Blog Detail page    | Delete button in modal                     | When clicked, the users' comment is permanently deleted from the database                      |  PASS    |
+| Add Post page    | Leave title field empty                     | If the user leaves an empty title but clicks the submit button, the user is prompted to fill in the title                     |  PASS    |
+| Add Post page    | Leave body field empty                     | If the user fills in the title field but leaves an empty body and clicks the submit button, the user is shown an error message at the top and 'This field is required' appears on the form                     |  PASS    |
+| Add Post page    | Add image                     | If the user adds their own image to the post, it is shown on the blog post when the post has been approved by the administration                     |  PASS    |
+
 
