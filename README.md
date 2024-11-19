@@ -10,7 +10,6 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 * [**User Experience UX**](<#user-experience-ux>)
   * [Agile Methodology](<#agile-methodology>)
   * [User Stories](<#user-stories>)
-  * [Site Structure](<#site-structure>)
   * [Design Choices](<#design-choices>)
     * [Typography](<#typography>)
     * [Colour Scheme](<#colour-scheme>)
@@ -62,102 +61,169 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   ## Agile Methodology
   Agile methodology is an approach to project management and software development that emphasizes flexibility, collaboration, and customer satisfaction. Agile prioritizes human interaction and collaboration over rigid processes, and emphasizes delivering functional software over comprehensive documentation.
 
+  The kanban board for Wawa Land can be found [here](https://github.com/users/bpstephanie/projects/6/views/1).
+
   [Back To Top](<#contents>)
 
   ## User Stories
-  1. As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.**
+    1. As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.**
 
-  ### Acceptance Criteria
-  - Develop a wireframe that clearly shows the elements on the pages.
-  - Ensure the wireframe creates an intuitive flow for navigation through the site.
+    Acceptance Criteria
+    - Develop a wireframe that clearly shows the elements on the pages.
+    - Ensure the wireframe creates an intuitive flow for navigation through the site.
 
-  2. As a **user** I can **sign-up to the site** so that I can **view the content available to users.**
+    2. As a **user** I can **sign-up to the site** so that I can **view the content available to users.**
 
-  ### Acceptance Criteria
-  - I can use my email address to create an account.
-  - I can create up a password.
-  - When signed up, I can view the blog and events pages.
+    Acceptance Criteria
+    - I can use my email address to create an account.
+    - I can create up a password.
+    - When signed up, I can view the blog and events pages.
 
-  3. As a **user** I can **login to my account** so that I can **view the content available to users.**
+    3. As a **user** I can **login to my account** so that I can **view the content available to users.**
 
-  ### Acceptance Criteria
-  - I can use my email address and password i set when signing up.
-  - When logged in, I can view the blog and events pages.
+    Acceptance Criteria
+    - I can use my email address and password i set when signing up.
+    - When logged in, I can view the blog and events pages.
 
-  4. As a **user** I can **click on blog** so that I can **see all the blog posts.**
+    4. As a **user** I can **click on blog** so that I can **see all the blog posts.**
 
-  ### Acceptance Criteria
-  - When blog is clicked on, a page is rendered with snippets of all blog posts.
+    Acceptance Criteria
+    - When blog is clicked on, a page is rendered with snippets of all blog posts.
 
-  5. As a **user** I can **click on any blog post snippet** so that I can **read all the content.**
+    5. As a **user** I can **click on any blog post snippet** so that I can **read all the content.**
 
-  ### Acceptance Criteria
-  - When a blog post snippet is clicked, the user is taken to a new page with the full content.
+    Acceptance Criteria
+    - When a blog post snippet is clicked, the user is taken to a new page with the full content.
 
-  6. As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**
+    6. As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**
 
-  ### Acceptance Criteria
-  - When a user is logged in, they can create a blog post.
-  - When a user is logged in, they can read a blog post.
-  - When a user is logged in, they can update a blog post.
-  - When a user is logged in, they can delete a blog post.
+    Acceptance Criteria
+    - When a user is logged in, they can create a blog post.
+    - When a user is logged in, they can read a blog post.
+    - When a user is logged in, they can update a blog post.
+    - When a user is logged in, they can delete a blog post.
 
-  7. As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.**
+    7. As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.**
 
-  ### Acceptance Criteria
-  - When a user is logged in, they can create an event.
-  - When a user is logged in, they can read an event.
-  - When a user is logged in, they can update an event.
-  - When a user is logged in, they can delete an event.
+    Acceptance Criteria
+    - When a user is logged in, they can create an event.
+    - When a user is logged in, they can read an event.
+    - When a user is logged in, they can update an event.
+    - When a user is logged in, they can delete an event.
 
-  8. As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**
+    8. As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**
 
-  ### Acceptance Criteria
-  - Create a Django project and create the necessary directories and files.
-  - Deploy the Django project to Heroku and make sure it runs successfully.
+    Acceptance Criteria
+    - Create a Django project and create the necessary directories and files.
+    - Deploy the Django project to Heroku and make sure it runs successfully.
 
-  9. As a **user** I can **click on events** so that I can **see all the events listed.**
+    9. As a **user** I can **click on events** so that I can **see all the events listed.**
 
-  ### Acceptance Criteria
-  - When events is clicked on, a page is rendered with a list of all events.
+    Acceptance Criteria
+    - When events is clicked on, a page is rendered with a list of all events.
 
-  10. As a **user** I can **click on any event listing** so that I can **read all the details.**
+    10. As a **user** I can **click on any event listing** so that I can **read all the details.**
 
-  ### Acceptance Criteria
-  - When an event is clicked on the main events page, the user is taken to a new page with the full content.
+    Acceptance Criteria
+    - When an event is clicked on the main events page, the user is taken to a new page with the full content.
 
-  11. As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**
+    11. As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**
 
-  ### Acceptance Criteria
-  - On a specific event page, the user can see all approved reviews left by other users.
+    Acceptance Criteria
+    - On a specific event page, the user can see all approved reviews left by other users.
 
-  12. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
+    12. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
 
-  ### Approval Criteria
-  - A signed-in user can post a comment on a post.
-  - When a user comment is approved, all users can see the comment.
+    Approval Criteria
+    - A signed-in user can post a comment on a post.
+    - When a user comment is approved, all users can see the comment.
 
-  13. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
+    13. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
 
-  ### Approval Criteria
-  - A signed-in user can leave a review on an event.
-  - When a user review is approved, all users can see the review.
+    Approval Criteria
+    - A signed-in user can leave a review on an event.
+    - When a user review is approved, all users can see the review.
 
-  14. As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**
+    14. As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**
 
-  ### Acceptance Criteria
-  - Signed in user can add a post to the database.
-  - When the administrators of the site publish the post, all users can view the post.
+    Acceptance Criteria
+    - Signed in user can add a post to the database.
+    - When the administrators of the site publish the post, all users can view the post.
 
-  15. As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**
+    15. As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**
 
-  ### Acceptance Criteria
-  - Given a logged in user, they can delete their unpublished post
+    Acceptance Criteria
+    - Given a logged in user, they can delete their unpublished post
 
-  16. As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**
+    16. As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**
 
-  ### Acceptance Criteria
-  - A logged in user can view their profile page.
+    Acceptance Criteria
+    - A logged in user can view their profile page.
+
+  [Back To Top](<#contents>)
+
+  - ## Design Choices
+
+    - ### Typography
+      - Google fonts were used for Wawa Land.
+      - For the site logo, Atma was used. This font was chosen for it's fun nature which conveys a friendly and aproachable feel.
+      ![Atma Font](static/images/screenshots/atma.png)
+
+      - Playfair was chosen for it's contrast between thick and thin strokes which enhances readability. Therfore, it is used for the blog post titles, event names and general titles  was chosen.
+
+      ![Playfair Font](static/images/screenshots/playfair.png)
+
+      - Roboto was chosen for larger bodies of text.
+      ![Roboto Font](static/images/screenshots/roboto.png)
+
+
+    - ### Colour Schemes
+      The colours for Wawa Land were all tones of purple. Purple is a versatile, historically significant colour that appeals to a broad audience due to its lack of strong gender-specific connotations. Modern trends also favour purple for its cultural neutrality and wide range of shades, ensuring it resonates with diverse groups. I believe this is important for a site that targets children of all genders and promotes inclusivity.
+
+      - Iris: rgb(94, 74, 196)
+      - Medium Slate Blue: rgb(127, 108, 219)
+      - Periwinke: rgb(213, 194, 243)
+      - Pale Purple: rgb(229, 217, 242)
+      - Magnolia: rgb(245, 239, 255)
+
+
+      ![Wawa Land Colour Scheme](static/images/screenshots/wl-colour-scheme.png)
+
+      [Back To Top](<#contents>)
+
+    - ### Wireframes
+      I used Balsamiq to create the wireframes for this project.
+
+      <details><summary>Wireframe - Home Page</summary>
+
+      ![Desktop view](static/images/screenshots/wf-homepage.png)
+
+      </details>
+      <details><summary>Wireframe - Blog</summary>
+
+      ![Mobile view](static/images/screenshots/wf-blog.png)
+
+      </details>
+
+      <details><summary>Wireframe - Blog Post</summary>
+
+      ![Desktop view](static/images/screenshots/wf-post-detail.png)
+
+      </details>
+      <details><summary>Wireframe - Events List</summary>
+
+      ![Mobile view](static/images/screenshots/wf-event-list.png)
+
+      </details>
+      <details><summary>Wireframe - Event Listing</summary>
+
+      ![Mobile view](static/images/screenshots/wf-event-detail.png)
+
+      </details>
+
+      [Back To Top](<#contents>)
+
+
 
 # Features
   ## Existing Features
