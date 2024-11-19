@@ -24,10 +24,10 @@ HTML
 | Sign Out        |![Sign Out](static/images/screenshots/html-sign-out.png)                                  | PASS     |
 
 
-CSS
 
 The CSS Validator Results:
 ![CSS Validator](static/images/screenshots/css.png)
+
 
 The CI Python Linter Validator
 | Page                    | Screenshot                                                                             | Notes    |
@@ -49,12 +49,15 @@ The CI Python Linter Validator
 
 
 
-The JSHINT Validator Results for Both Pages:
-- script.js:
-![JSHint Validator for script.js](media/js-script.png)
+The JSHINT Validator
+| Page                    | Screenshot                                                                             | Notes    |
+|-------------------------|----------------------------------------------------------------------------------------|----------|
+| comments.js             |![comments.js](static/images/screenshots/comments-jshint.png)                           | PASS     |
+| posts.js                |![posts.js](static/images/screenshots/bposts-jshint.png)                                | PASS     |
+| profile.js              |![profile.js](static/images/screenshots/profile-jshint.png)                             | PASS     |
+| reviews.js              |![reviews.js](static/images/screenshots/reviews-jshint.png)                             | PASS     |
 
-- quiz.js:
-![JSHint Validator for quiz.js](media/js-quiz.png)
+
 
 
 ## Manual Testing
