@@ -2,13 +2,16 @@ from django import forms
 from django_summernote.widgets import SummernoteWidget
 from .models import Post, Comment
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
 
+
 class LikeForm(forms.Form):
     pass
+
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -22,5 +25,6 @@ class PostForm(forms.ModelForm):
                     'placeholder': 'Enter post text here...'
                 }
             ),
-            'featured_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'featured_image': forms.ClearableFileInput(
+                attrs={'class': 'form-control'}),
             }

@@ -6,10 +6,12 @@ from django.http import HttpResponseRedirect
 from .models import Event, Review
 from .forms import ReviewForm
 
+
 class EventList(generic.ListView):
     queryset = Event.objects.all()
     template_name = "event_list.html"
     paginate_by = 12
+
 
 def event_detail(request, slug):
     """
@@ -37,11 +39,10 @@ def event_detail(request, slug):
             review.event = event
             review.save()
             messages.add_message(
-            request, messages.SUCCESS,
-            'Review submitted and awaiting approval'
-        )
+                request, messages.SUCCESS,
+                'Review submitted and awaiting approval')
 
-    review_form=ReviewForm()
+    review_form = ReviewForm()
 
     return render(
         request,
@@ -71,9 +72,11 @@ def review_edit(request, slug, review_id):
             review.event = event
             review.approved = False
             review.save()
-            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+            messages.add_message(
+                request, messages.SUCCESS, 'Review Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating review!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating review!')
 
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))
 
@@ -90,6 +93,7 @@ def review_delete(request, slug, review_id):
         review.delete()
         messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))

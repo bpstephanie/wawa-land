@@ -9,6 +9,7 @@ from .models import Post, Comment, Like
 from event.models import Review
 from .forms import CommentForm, LikeForm, PostForm
 
+
 # Create your views here.
 class Home(TemplateView):
     template_name = 'index.html'
@@ -54,7 +55,7 @@ def post_detail(request, slug):
                         'You just liked this post'
                     )
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-        
+
         elif 'comment_button' in request.POST:
             comment_form = CommentForm(request.POST)
             if comment_form.is_valid():
@@ -83,8 +84,6 @@ def post_detail(request, slug):
     )
 
 
-
-
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -103,7 +102,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -118,11 +118,14 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(
+            request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 def add_post(request):
     """
@@ -135,10 +138,15 @@ def add_post(request):
             new_post.author = request.user
             new_post.slug = slugify(new_post.title)
             new_post.save()
-            messages.add_message(request, messages.SUCCESS, 'Thank you for your post! Please wait for it to be approved to see it on our community blog.')
+            messages.add_message(
+                request, messages.SUCCESS, '''Thank you for your post!
+                Please wait for it to be approved to see it
+                on our community blog.''')
             return HttpResponsePermanentRedirect(reverse('blog'))
         else:
-            messages.add_message(request, messages.ERROR, 'Error: Please fill in all the required fields.')
+            messages.add_message(
+                request, messages.ERROR, '''Error: Please
+                fill in all the required fields.''')
             return render(request, 'add_post.html', {'post_form': post_form})
     else:
         post_form = PostForm()
@@ -152,13 +160,17 @@ def post_delete(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
 
     if post.author != request.user:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own posts!')
-        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own posts!')
+        return HttpResponseRedirect(
+            reverse('user_profile', args=[request.user.username]))
 
     if request.method == 'POST':
         post.delete()
-        messages.add_message(request, messages.SUCCESS, 'Post deleted successfully!')
-        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+        messages.add_message(
+            request, messages.SUCCESS, 'Post deleted successfully!')
+        return HttpResponseRedirect(
+            reverse('user_profile', args=[request.user.username]))
 
 
 def post_edit(request, post_id):
@@ -167,17 +179,20 @@ def post_edit(request, post_id):
     """
     post = get_object_or_404(Post, pk=post_id)
     if post.author != request.user:
-        messages.add_message(request, messages.ERROR,
-        'You can only edit your own posts!')
-        return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
+        messages.add_message(request, messages.ERROR, '''You can only
+         edit your own posts!''')
+        return HttpResponseRedirect(
+            reverse('user_profile', args=[request.user.username]))
 
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS, 'Post updated successfully!')
-            return HttpResponseRedirect(reverse('user_profile', args=[request.user.username]))
-           
+            messages.add_message(
+                request, messages.SUCCESS, 'Post updated successfully!')
+            return HttpResponseRedirect(
+                reverse('user_profile', args=[request.user.username]))
+
     else:
         form = PostForm(instance=post)
     return render(request, 'edit_post.html', {'form': form, 'post': post})
