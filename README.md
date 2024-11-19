@@ -4,6 +4,8 @@ Wawa Land is a community blog and events page for families with babies and child
 
 The inspiration of the name 'Wawa Land' is from the Quechua language word for 'child', 'baby', or 'infant'.
 
+![Responsive Wawa Land](static/images/screenshots/wawaland-responsive.png)
+
 Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 ## Contents
@@ -72,17 +74,17 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - Develop a wireframe that clearly shows the elements on the pages.
     - Ensure the wireframe creates an intuitive flow for navigation through the site.
 
-    2. As a **user** I can **sign-up to the site** so that I can **view the content available to users.**
+    2. As a **user** I can **sign up to the site** so that I can **view the content available to users.**
 
     Acceptance Criteria
     - I can use my email address to create an account.
-    - I can create up a password.
+    - I can create a password.
     - When signed up, I can view the blog and events pages.
 
     3. As a **user** I can **login to my account** so that I can **view the content available to users.**
 
     Acceptance Criteria
-    - I can use my email address and password i set when signing up.
+    - I can use my email address and password I set when signing up.
     - When logged in, I can view the blog and events pages.
 
     4. As a **user** I can **click on blog** so that I can **see all the blog posts.**
@@ -120,7 +122,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     9. As a **user** I can **click on events** so that I can **see all the events listed.**
 
     Acceptance Criteria
-    - When events is clicked on, a page is rendered with a list of all events.
+    - When events are clicked on, a page is rendered with a list of all events.
 
     10. As a **user** I can **click on any event listing** so that I can **read all the details.**
 
@@ -166,10 +168,10 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
     - ### Typography
       - Google fonts were used for Wawa Land.
-      - For the site logo, Atma was used. This font was chosen for it's fun nature which conveys a friendly and aproachable feel.
+      - For the site logo, Atma was used. This font was chosen for its fun nature which conveys a friendly and approachable feel.
       ![Atma Font](static/images/screenshots/atma.png)
 
-      - Playfair was chosen for it's contrast between thick and thin strokes which enhances readability. Therfore, it is used for the blog post titles, event names and general titles  was chosen.
+      - Playfair was chosen for its contrast between thick and thin strokes which enhances readability. Therefore, it is used for the blog post titles, event names and general titles  was chosen.
 
       ![Playfair Font](static/images/screenshots/playfair.png)
 
@@ -182,7 +184,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
       - Iris: rgb(94, 74, 196)
       - Medium Slate Blue: rgb(127, 108, 219)
-      - Periwinke: rgb(213, 194, 243)
+      - Periwinkle: rgb(213, 194, 243)
       - Pale Purple: rgb(229, 217, 242)
       - Magnolia: rgb(245, 239, 255)
 
@@ -224,23 +226,22 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
 
-
 # Features
   ## Existing Features
 
   - ## Site Wide Features
 
     - ### Navigation Bar
-      Featured on all pages, the fully responsive navigation bar includes links to the Home page, Blog page, Events page, Log in and Register pages when the user is not logged in. Once the user logs in the Log in and Register links change to Sign Out and a user Profile page is made available. The nav bar allows the user to easily navigate to the main pages across the site.
+      Featured on all pages, the fully responsive navigation bar includes links to the Home page, Blog page, Events page, Login and Register pages when the user is not logged in. Once the user logs in the Login and Register links change to Sign out and a user Profile page is made available. The nav bar allows the user to easily navigate to the main pages across the site.
 
       A decision was made to not put the Add Post page into the navigation bar as I wanted to make it clear that the Add Post function was only available for the blog.
     
-      <details><summary>Navigation Bar whilst user is logged out - Desktop View</summary>
+      <details><summary>Navigation Bar whilst user is loggedout - Desktop View</summary>
 
       ![Desktop view](static/images/screenshots/desktop-nav.png)
 
       </details>
-      <details><summary>Navigation Bar whilst user is logged out - Mobile View</summary>
+      <details><summary>Navigation Bar whilst user is loggedout - Mobile View</summary>
 
       ![Mobile view](static/images/screenshots/mobile-nav.png)
 
@@ -292,7 +293,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
     - ### Messages
-      Messages have been utilized to give users instant feedback for action they take. Success messages and error messages are distinguishable by their colour; green has been used for success and red for error messages.
+      Messages have been utilized to give users instant feedback for actions they take. Success messages and error messages are distinguishable by their colour; green has been used for success and red for error messages.
 
       <details><summary>Success Messages - Desktop View</summary>
 
@@ -322,7 +323,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   - ## Pages
 
     - ### Home Page
-      The homepage is the first page a user sees when coming to Wawa Land. The hero section includes a welcome message and a call to action to sign up. Below the hero section, the user can find out what to use Wawa Land for with navigable links to the Blog and the Event page. The cursor style changes when a user hovers over the respective sections, letting them know they are both links.
+      The home page is the first page a user sees when coming to Wawa Land. The hero section includes a welcome message and a call to action to sign up. Below the hero section, the user can find out what to use Wawa Land for with navigable links to the Blog and the Event page. The cursor style changes when a user hovers over the respective sections, letting them know they are both links.
 
       <details><summary>Home Page - Desktop View</summary>
 
@@ -341,7 +342,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 
     - ### Blog
-      When a user clicks the 'Blog' in the navbar they are taken to the blog list page. At the top of the page there is a prompt for the user to add their own post. The button to take them to write their own post only appears to users who are logged in, if they are not they will be prompted to log in.
+      When a user clicks the 'Blog' in the navbar they are taken to the blog list page. At the top of the page there is a prompt for the user to add their own post. The button to take them to write their own post only appears to users who are logged in, if they are not they will be prompted to login.
       
       Below, the user can see all the posts that are available to read on the site. The blog posts can be from any user and are displayed here once they have been approved by the Wawa Land administration. They are ordered with the newest appearing first. Users of the site (logged in or not) can click on a blog post title to be taken to read the full article. Only 6 posts will appear per page, users will be able to navigate through the pages of the blog to see all the content available.
 
@@ -383,7 +384,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 
       - #### Blog Post
-        Each blog post is rendered on it's own page. All posts have the same format of an image, placeholder or user uploaded, the title, the author and date and time the post was written or updated. Underneath the blog post the user can 'like' or 'unlike' the post. Below the likes section and comment counter, the user can leave their own comment.
+        Each blog post is rendered on its own page. All posts have the same format of an image, placeholder or user uploaded, the title, the author and date and time the post was written or updated. Underneath the blog post the user can 'like' or 'unlike' the post. Below the likes section and comment counter, the user can leave their own comment.
 
         <details><summary>Individual Blog Post</summary>
 
@@ -407,7 +408,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
           [Back To Top](<#contents>)
 
         - ##### Comments
-          Only logged-in users can comment on a post. If the user is not logged-in, they are prompted to log in to leave a comment. The 'log in' is a link to take the user to the log in page.
+          Only logged-in users can comment on a post. If the user is not logged-in, they are prompted to login to leave a comment. The 'login' is a link to take the user to the login page.
 
           Once a user is logged in, they can view all users comments as well as their own unapproved comments. There are 'Edit' and 'Delete' buttons under the user's own comments. If they choose to edit their comment, the 'Leave Comment' section is populated with the user's comment they wish to change. Once the user clicks update, the comment is shown on the left side. If the user chooses to update a comment that was already approved, it will need to be approved again by the Wawa Land admin. The 'Delete' button will bring up a modal message confirming if the user would like to delete it. This is a precaution as the user may have accidentally clicked the delete button. If this is the case the user can close the delete confirmation message and nothing will happen. If the user chooses to delete the comment, it will be deleted from the database. This action cannot be undone.
 
@@ -441,7 +442,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
       - #### Event Detail Page
-        Each event listing is rendered on it's own page. All events have the same format of an image, the name, more information about the event, the price, the time and the date of the event. Currently all events can only be added by the Wawa Land administration. This is due to security, as events are for babies and children, it waws decided that user-added events could pose a risk. Underneath the event listing the user can leave a review for the event.
+        Each event listing is rendered on its own page. All events have the same format of an image, the name, more information about the event, the price, the time and the date of the event. Currently all events can only be added by the Wawa Land administration. This is due to security, as events are for babies and children, it was decided that user-added events could pose a risk. Underneath the event listing the user can leave a review for the event.
 
         <details><summary>Events Listing</summary>
 
@@ -452,7 +453,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
         [Back To Top](<#contents>)
 
         - ##### Reviews
-          Only logged-in users can review an event. If the user is not logged-in, they are prompted to log in to leave a review. The 'log in' is a link to take the user to the log in page.
+          Only logged-in users can review an event. If the user is not logged-in, they are prompted to login to leave a review. The 'login' is a link to take the user to the login page.
 
           Once a user is logged in, they can view all users reviews as well as their own unapproved reviews. There are 'Edit' and 'Delete' buttons under the user's own reviews. If they choose to edit their review, the 'Leave a Review' section is populated with the user's review they wish to change. Once the user clicks update, the review is shown on the left side. If the user chooses to update a review that was already approved, it will need to be approved again by the Wawa Land admin. The 'Delete' button will bring up a modal message confirming if the user would like to delete it. This is a precaution as the user may have accidentally clicked the delete button. If this is the case the user can close the delete confirmation message and nothing will happen. If the user chooses to delete the review, it will be deleted from the database. This action cannot be undone.
 
@@ -473,7 +474,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
           </details>
 
     - ### Profile
-      The profile page is where the user can see all the posts they have written, published or unpublished, all their comments on posts, approved or awating approval and all their likes. It is from the profile page that a user can edit a post, update a comment or delete either.
+      The profile page is where the user can see all the posts they have written, published or unpublished, all their comments on posts, approved or awaiting approval and all their likes. It is from the profile page that a user can edit a post, update a comment or delete either.
 
       <details><summary>Profile Page - Posts Section</summary>
 
@@ -494,7 +495,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
         - #### Edit Blog Post
-          The user is taken to this edit blog post page from the profile page. The title and body sections are pre-populated with the content of the post they want to edit. The user can use summernote features such as using 'bold' or 'italics' to name but a few. Once they have updated the post the user is redirected to the profile page.
+          The user is taken to this edit blog post page from the profile page. The title and body sections are pre-populated with the content of the post they want to edit. The user can use Summernote features such as using 'bold' or 'italics' to name but a few. Once they have updated the post the user is redirected to the profile page.
 
           <details><summary>Edit Blog Post</summary>
 
@@ -515,8 +516,8 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
       [Back To Top](<#contents>)
 
-    - ### Log In
-      On this page, users who have already created an account can log in. They can toggle to have their details remembered to avoid having to enter the information again.
+    - ### Login
+      On this page, users who have already created an account can login. They can toggle to have their details remembered to avoid having to enter the information again.
 
       <details><summary>Login Page</summary>
 
@@ -527,7 +528,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
     - ### Sign Out
-      When a user clicks the log out in the navigation bar , the user is taken to this page where they can confirm they want to log out.
+      When a user clicks the logout in the navigation bar , the user is taken to this page where they can confirm they want to logout.
 
       <details><summary>Logout Page</summary>
 
@@ -551,7 +552,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - ### Admin Panel
       The admin panel can be accessed by the superuser. Here in the admin panel, the superuser can view all users, blog posts, comments, events and reviews. It is via the admin panel that the Wawa Land team can approve comments and reviews and publish blog posts.
 
-      The posts can be ordered by title, slug, status or created on date. The events can be ordered by title, slug or age-range.
+      The posts can be ordered by title, slug, status or created on date. The events can be ordered by title, slug or age range.
 
       <details><summary>Admin Page</summary>
 
@@ -574,21 +575,21 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
       [Back To Top](<#contents>)
 
   ## Future Features
-  There are many more feature that I wanted to include in this project for ease of users.
+  There are many more features that I wanted to include in this project for ease of users.
   - Social Login
-    Enhance the user sign-up experience by integrating social login options for example; Google and Facebook. This not only would decrease the sign up time but also boosts the chances of users completing their registration.
+    Enhance the user sign up experience by integrating social login options for example; Google and Facebook. This not only would decrease the sign up time but also boosts the chances of users completing their registration.
 
   - Search Bar
-    This would most likely be the next functionality to add. Currently users have to click through the pages to asee all posts and events, however adding a search field would allow users to look for specific posts and/or events.
+    This would most likely be the next functionality to add. Currently users have to click through the pages to see all posts and events, however adding a search field would allow users to look for specific posts and/or events.
 
   - Tags 
     Adding category tags to events and posts would allow users to search for a category and see everything relating to that category.
 
   - Calendar View
-    The events page would benefit fom having a calendar, whereby users would be able to select a date and be shown all the events happening on that day.
+    The events page would benefit from having a calendar, whereby users would be able to select a date and be shown all the events happening on that day.
   
   - Saved Events / Saved Posts
-    It would be benefical for users to be able to save posts they are interested in or want to read at a later date in their profile. It would also be beneficial for users to be able to save events to their profile. If these capabilities were added to Wawa Land, other users would also be able to see how many saves each post or event had which would indicate popularity.
+    It would be beneficial for users to be able to save posts they are interested in or want to read at a later date in their profile. It would also be beneficial for users to be able to save events to their profile. If these capabilities were added to Wawa Land, other users would also be able to see how many saves each post or event had which would indicate popularity.
 
   - Thumbs Up / Thumbs Down
     Similar to the like functionality on the blog posts, Wawa Land could have a 'thumbs up', 'thumbs down' rating system where users can let Wawa Land know what sorts of events they like more than others. This will help Wawa Land in the future to list more events the users of the site are interested in.
@@ -597,7 +598,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     On each event, users would be able to click a link to buy a ticket on their respective site. The events that are listed by Wawa Land are a mixture of their own events and events in the local area they trust, therefore tickets to certain events need to be purchased elsewhere but by having a link on the event detail page, users would easily be able to purchase tickets.
 
   - Email Notifications
-    Whenever a user saves an event they would recieve an email letting them know the event is coming up.
+    Whenever a user saves an event they would receive an email letting them know the event is coming up.
 
     [Back To Top](<#contents>)
 
@@ -613,7 +614,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 * [Github](https://github.com/) - used for storing the repository and for version control.
 * [Heroku](https://dashboard.heroku.com/) - used to deploy and host the project.
 * [Lucid](https://dashboard.heroku.com/) - used to create the ERD model for Wawa Land.
-* [CloudConvert](https://cloudconvert.com/png-to-webp) - used to convert images to  webp.
+* [CloudConvert](https://cloudconvert.com/png-to-webp) - used to convert images to WebP.
 * [TinyPNG](https://tinypng.com/) - used to optimize images.
 * [PEP8](https://peps.python.org/pep-0008/) - used to validate python code.
 
@@ -622,7 +623,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Database
 - I used Code Institute's PostgreSQL database for Wawa Land.
-- I created an Entity Relationshop Diagram (ERD) using [Lucid](https://dashboard.heroku.com/) to plan my database.
+- I created an Entity Relationship Diagram (ERD) using [Lucid](https://dashboard.heroku.com/) to plan my database.
 
 ![Entity Relationship Model for Wawa Land](static/images/screenshots/erd-model.png)
 
@@ -645,7 +646,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   Cloudinary is used to store media assets online. This is particularly beneficial because Heroku does not preserve this type of data.
 
   - ### Steps to Obtain Your Cloudinary API Key:
-    1. Register and log in to Cloudinary.
+    1. Register and login to Cloudinary.
     2. Indicate Programmable Media for image and video API as your Primary interest.
     3. Copy your API Environment Variable from the Cloudinary Dashboard.
     4. Remove CLOUDINARY_URL = from the API value; this acts as the key.
@@ -661,7 +662,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   The process of deploying to [Heroku](https://dashboard.heroku.com/) is as follows:
 
-  1. Log into [Heroku](https://dashboard.heroku.com/) (or create an account).
+  1. Login to [Heroku](https://dashboard.heroku.com/) (or create an account).
 
     <details><summary>Heroku Step 1</summary>
     
@@ -687,7 +688,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
   4. On the next page, click the 'Settings' tab. Once you have clicked on the settings tab, click 'Reveal Config Vars' in the 'Config Vars' section. Next you will need to add values. For Wawa Land, three key value pairs were added:
       - KEY = "DISABLE_COLLECTSTATIC", VALUE = "1" Once the key and value input fields have been filled you have to click 'Add'.
-      - KEY = "DATABASE_URL", the value is the url that was emailed to you when creating the databse. Then click 'Add'
+      - KEY = "DATABASE_URL", the value is the url that was emailed to you when creating the database. Then click 'Add'
       - KEY = "SECRET_KEY", the value is any random secret key containing numbers, letters and characters. You can use [Random Keygen](https://randomkeygen.com/) or invent your own. Then click 'Add'.
 
     <details><summary>Heroku Step 4 - Settings Tab</summary>
@@ -707,7 +708,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - pip3 install -r requirements.txt
     - pip3 freeze --local > requirements.txt
 
-  6. Next, create an env.py file at the root level directory, which must containe the following:
+  6. Next, create an env.py file at the root level directory, which must contain the following:
 
     - import os
     - 
@@ -757,7 +758,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     </details>
 
 
-  13. If you are using [Cloudinary](https://cloudinary.com/), go back to the 'Settings' tab on heroku, reveal config vars and add a new KEY, VALUE pair:
+  13. If you are using [Cloudinary](https://cloudinary.com/), go back to the 'Settings' tab on Heroku, reveal config vars and add a new KEY, VALUE pair:
     - KEY = "CLOUDINARY_URL", VALUE = "your cloudinary api"
 
   14. For final deployment, or once static files have been added to your project, you need to remove the following KEY, VALUE pair:
@@ -779,7 +780,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
   ## To Fork the Project
   A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. The steps to fork the repository are as follows:
 
-  1. Log in to GitHub and locate the repository.
+  1. Login to GitHub and locate the repository.
 
   2. On the right hand side of the page, in line with the repository name, is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
 
@@ -819,6 +820,27 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
 
 # Credits
 - I used the "I Think Therefore I Blog" walkthrough from the course content as a foundation to understand Django. I customized the models, views, and templates to develop Wawa Land.
+
+  ## Content
+    * Wireframes: [Balsamiq](https://balsamiq.com)
+    * Favicon: [Favicon](https://favicon.io/)
+    * Fonts: [Google Fonts](https://fonts.google.com/)
+    * Icons: [Fontawesome](https://fontawesome.com/)
+    * Colour Palettes: [Coolors](https://coolors.co/)
+    * Mock-up: [Am I Responsive](https://ui.dev/amiresponsive)
+    * Chrome for Developers: [Dev Tools](https://developer.chrome.com/docs/devtools)
+    * Images: [Freepik](https://www.freepik.com/) 
+    * Styling: [Bootstrap](https://getbootstrap.com/)
+    * The Sleep Essentials Blog Post: [First Time Mums UK](https://www.firsttimemumsuk.co.uk/post/the-sleep-essentials-guide-2024-a-must-read-for-first-time-mums)
+    * Finger Foods for Baby Showers Blog Post: [Parents](https://www.parents.com/baby-shower-finger-food-8695012)
+    * Baby's First Laugh and Why It's Important Blog Post: [Wee and Charming](https://weeandcharming.com/blogs/wee-and-charming-baby/babys-first-laugh-and-why-its-important)
+    * The content of the events on the site was all created by me.
+  
+  * The code to create the Like model was inspired by [this youtube tutorial](https://www.youtube.com/watch?v=ZUiTiUj-tZw).
+  * The code to make the Summernote field in the add and edit blog posts wqas inspired from a fellow student on [Slack](https://slack.com/intl/en-gb). The screenshot of the [solution](static/images/screenshots/summernote-solution.png).
+  * Displaying the choices fields in a human readable format in my models was inspired by [this Stack Overflow post](https://stackoverflow.com/questions/22366536/displaying-the-choices-field-in-human-readable-format).
+
+  
 
 [Back To Top](<#contents>)
 
