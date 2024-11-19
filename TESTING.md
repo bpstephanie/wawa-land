@@ -188,6 +188,15 @@ The site was also tested using [Wave](https://wave.webaim.org/). There are no er
 ![Wave Details and Heading Alerts](static/images/screenshots/wave-alerts-1.png)
 ![Wave Redundant Link Alert](static/images/screenshots/wave-alerts-2.png)
 
+## Responsiveness Test
+
+The responsive design tests were carried out by [Responsive Test Tool](https://responsivetesttool.com/) and [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) manually.
+
+|              | Samsung Galaxy Note (360px) | Kindle (480px) | Tablet (768px) | 1024px | 1280px |
+| :----------- | :-------------------------: | :------------: | :------------: | :----: | :----: |
+| Images       |   PASS                      | PASS           | PASS           | PASS   | PASS   |
+| Link         |   PASS                      | PASS           | PASS           | PASS   | PASS   |
+| Rendering    |   PASS                      | PASS           | PASS           | PASS   | PASS   |
 
 
 ## Bugs
