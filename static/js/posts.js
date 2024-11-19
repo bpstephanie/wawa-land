@@ -6,7 +6,7 @@ const updateConfirm = document.getElementById("updateConfirm");
 const deletePostModal = new bootstrap.Modal(document.getElementById("deletePostModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
-console.log("1");
+
 /**
 * Initializes deletion functionality for the provided delete buttons.
 * 
@@ -32,4 +32,3 @@ for (let button of deleteButtons) {
       deletePostModal.show();
     });
   }
-console.log("1");
