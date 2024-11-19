@@ -115,6 +115,8 @@ The JSHINT Validator
 | Blog page    | Log in to write a post (for logged out users)          | Takes user to log in page                        |  PASS    |
 | Blog page    | Add post button                      | Takes user to add post page                      |  PASS    |
 | Blog page    | Post listings                        | When a post title is clicked it takes user to individual blog post page                        |  PASS    |
+| Blog page    | Next button                        | If there are more than 6 posts then a 'next' button will appear for users to click through different post pages                        |  PASS    |
+| Blog page    | Prev button                        | If there are more than 6 posts, on page 2 and onwards a 'prev' button will appear for users to click through different post pages                        |  PASS    |
 | Blog Detail page    | Like button                      | When clicked, a like is registered and success message is shown to user                      |  PASS    |
 | Blog Detail page    | Like button                      | If the user has previously liked, When clicked again, a like removal is registered and error message is shown to user                      |  PASS    |
 | Blog Detail page    | Comment counter                      | When any users comment has been approved, the comment counter increases by one                      |  PASS    |
@@ -129,6 +131,8 @@ The JSHINT Validator
 | Add Post page    | Leave body field empty                     | If the user fills in the title field but leaves an empty body and clicks the submit button, the user is shown an error message at the top and 'This field is required' appears on the form                     |  PASS    |
 | Add Post page    | Add image                     | If the user adds their own image to the post, it is shown on the blog post when the post has been approved by the administration                     |  PASS    |
 | Events page      | Event listings                    | When an event name is clicked it takes user to individual event listing page                     |  PASS    |
+| Events page    | Next button                        | If there are more than 9 event listing then a 'next' button will appear for users to click through different event pages                        |  PASS    |
+| Events page    | Prev button                        | If there are more than 9 event listings, on page 2 and onwards a 'prev' button will appear for users to click through different event pages                        |  PASS    |
 | Event Detail page    | Review counter                      | When any users' review has been approved, the review counter increases by one                      |  PASS    |
 | Event Detail page    | Leave review                      | When the user leaves a review, the review can be seen in the reviews section on the left                      |  PASS    |
 | Event Detail page    | Unapproved reviews                      | The user can see their unapproved reviews faded out                      |  PASS    |
@@ -155,6 +159,15 @@ The JSHINT Validator
 | Register page    | Sign up button                    | If the user enters a username which doesn't comply with the criteria they will not be registered and will be prompted to enter a password which does comply                    |  PASS    |
 | Register page    | Sign up button                    | If the user enters a username and password which complies with the criteria they will be registered                    |  PASS    |
 | Log Out page    | Log out button                    | If the user clicks the log out button they will be logged out registered                    |  PASS    |
+
+
+## User Story Testing
+
+## Bugs
+
+### Fixed Bugs
+
+### Known Bugs
 
 
 
