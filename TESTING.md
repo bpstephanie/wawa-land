@@ -161,24 +161,24 @@ In the future, improving the lighthouse score on mobile devices would be a prior
 
 
 ## User Story Testing
-| User Story                                                                                                       | Pass/Fail|
-|------------------------------------------------------------------------------------------------------------------|----------|
-| As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.** | PASS     |
-| As a **user** I can **sign up to the site** so that I can **view the content available to users.**               | PASS     |
-| As a **user** I can **login to my account** so that I can **view the content available to users.**               | PASS     |
-| As a **user** I can **click on blog** so that I can **see all the blog posts.**                                  | PASS     |
-| As a **user** I can **click on any blog post snippet** so that I can **read all the content.**                   | PASS     |
-| As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**    | PASS     |
-| As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.** | PASS     |
-| As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**| PASS     |
-| As a **user** I can **click on events** so that I can **see all the events listed.**                             | PASS     |
-| As a **user** I can **click on any event listing** so that I can **read all the details.**                       | PASS     |
-| As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**| PASS     |
-| As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**         | PASS     |
-| As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**        | PASS     |
-| As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**            | PASS     |
-| As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**| PASS     |
-| As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**| PASS     |
+| User Story                                                                | Pass/Fail| How User Story Has Been Achieved |
+|---------------------------------------------------------------------------|----------|----------------------------------|
+| As a **developer** I can **design wireframes** so that I can **see the project's layout and use it as a reference when designing pages.** | PASS     | I created wireframes using Balsamiq to have an idea of the site structure throughout the creation of the site. |
+| As a **user** I can **sign up to the site** so that I can **view the content available to users.**| PASS     | A user can click on 'Register' in the navigation bar, the user is taken to the sign up page where they must enter a valid username and password to sign up to the site.|
+| As a **user** I can **login to my account** so that I can **view the content available to users.**| PASS     | The user can click on login in the navigation bar, the user will then be taken to the login page where they must enter their username and password. Once the user has logged into the site, they can add posts, leave comments and reviews, like posts, edit or delete any of their added content and view their profile page.|
+| As a **user** I can **click on blog** so that I can **see all the blog posts.**| PASS     | The user can click on blog in the navigation bar and they will be taken to see a full list of all the blog posts on the site. |
+| As a **user** I can **click on any blog post snippet** so that I can **read all the content.** | PASS     | On the blog page, the user can click on any blog post title and be taken to read the full article. |
+| As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**    | PASS     | The site admin can login to the admin panel to review all users blog content. It is here where they can approve comments, publish posts and delete any content from users that they deem inappropriate for the site. |
+| As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.** | PASS     | The site admin can login to the admin panel to review all users events content. It is here where they can approve reviews from users and add events. The site admin can also delete any reviews they deem inappropriate. |
+| As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**| PASS     | I have followed the deployment steps and the site can be accessed by all internet users [here](https://wawa-land-04eebd0de719.herokuapp.com/).|
+| As a **user** I can **click on events** so that I can **see all the events listed.**     | PASS     | The user can click on events in the navigation bar and see all events, past present and future.|
+| As a **user** I can **click on any event listing** so that I can **read all the details.**   | PASS     | On the events page, the user can click the name of any event and be taken to the event detail page where they can read more about the event. |
+| As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**| PASS     | On the event detail page, the user can scroll to the bottom to read all reviews written by other users and decide if that is a type of event they would like to attend.|
+| As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.** | PASS     | The user can navigate to an individual blog post page, scroll to the bottom and leave as many comments as they wish.|
+| As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.** | PASS     | The user can navigate to the event detail page, scroll to the bottom and leave as many reviews as they wish.|
+| As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**  | PASS     | On the blog page at the top, a logged in user can click the 'Add Post' button to write their own post. When that button is clicked, the user is taken to a new page where they can add the content they wish to. For a logged out user who wants to add a post, they can navigate to the blog page and at the top they will be prompted to login before they can add a post. |
+| As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**| PASS     | The user can go to their profile page, where they can see all their unapproved blog posts, here they can edit but more importantly permanently delete any blog posts they do not want to share with the community. |
+| As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**| PASS & FAIL     | The user can navigate to their profile page, where they can view all their published and unpublished posts, approved comments and comments awaiting approval, and their likes. Currently the user cannot see their approved reviews or reviews awaiting for approval. This feature will be the first priority of Wawa Land to implement next.|
 
 ## Additional Testing
 The site was also tested using [Wave](https://wave.webaim.org/). There are no errors howvever there are 4 alerts including three possible headings in the footer and a redundant link. These have not be changed because the footer is not intended to have headings and the redundant link is an alternative home link to the logo link. The results were as follows:
