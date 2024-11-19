@@ -181,6 +181,14 @@ The JSHINT Validator
 | As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**| PASS     |
 | As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**| PASS     |
 
+## Additional Testing
+The site was also tested using [Wave](https://wave.webaim.org/). There are no errors howvever there are 4 alerts including three possible headings in the footer and a redundant link. These have not be changed because the footer is not intended to have headings and the redundant link is an alternative home link to the logo link. The results were as follows:
+
+![Wave Summary](static/images/screenshots/wave-summary.png)
+![Wave Details and Heading Alerts](static/images/screenshots/wave-alerts-1.png)
+![Wave Redundant Link Alert](static/images/screenshots/wave-alerts-2.png)
+
+
 
 ## Bugs
 
@@ -191,6 +199,8 @@ The JSHINT Validator
 
 ### Known Bugs
 On the register page, when a user's password does not comply with the criteria, the error message is not centered. The same bug occurs on the login page, the error message when a user's credentials don't match those on the system is not centered.
+
+[Go Back To README.md](README.md)
 
 
 
