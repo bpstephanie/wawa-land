@@ -74,6 +74,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - Develop a wireframe that clearly shows the elements on the pages.
     - Ensure the wireframe creates an intuitive flow for navigation through the site.
 
+
     2. As a **user** I can **sign up to the site** so that I can **view the content available to users.**
 
     Acceptance Criteria
@@ -81,21 +82,25 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - I can create a password.
     - When signed up, I can view the blog and events pages.
 
+
     3. As a **user** I can **login to my account** so that I can **view the content available to users.**
 
     Acceptance Criteria
     - I can use my email address and password I set when signing up.
     - When logged in, I can view the blog and events pages.
 
+
     4. As a **user** I can **click on blog** so that I can **see all the blog posts.**
 
     Acceptance Criteria
     - When blog is clicked on, a page is rendered with snippets of all blog posts.
 
+
     5. As a **user** I can **click on any blog post snippet** so that I can **read all the content.**
 
     Acceptance Criteria
     - When a blog post snippet is clicked, the user is taken to a new page with the full content.
+
 
     6. As a **site admin** I can **create, read, update and delete posts** so that I can **manage my blog content.**
 
@@ -105,6 +110,7 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - When a user is logged in, they can update a blog post.
     - When a user is logged in, they can delete a blog post.
 
+
     7. As a **site admin** I can **create, read, update and delete events** so that I can **manage my events content.**
 
     Acceptance Criteria
@@ -113,26 +119,31 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - When a user is logged in, they can update an event.
     - When a user is logged in, they can delete an event.
 
+
     8. As a **developer** I can **deploy my project to Heroku** so that it **can be accessed by users on the internet.**
 
     Acceptance Criteria
     - Create a Django project and create the necessary directories and files.
     - Deploy the Django project to Heroku and make sure it runs successfully.
 
+
     9. As a **user** I can **click on events** so that I can **see all the events listed.**
 
     Acceptance Criteria
     - When events are clicked on, a page is rendered with a list of all events.
+
 
     10. As a **user** I can **click on any event listing** so that I can **read all the details.**
 
     Acceptance Criteria
     - When an event is clicked on the main events page, the user is taken to a new page with the full content.
 
+
     11. As a **user** I can **see what other users' opinions of events** so that I can **judge what type of events to go to.**
 
     Acceptance Criteria
     - On a specific event page, the user can see all approved reviews left by other users.
+
 
     12. As a **site user** I can **leave comments on a post** so that I can **be involved in the conversation.**
 
@@ -140,11 +151,13 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - A signed-in user can post a comment on a post.
     - When a user comment is approved, all users can see the comment.
 
+
     13. As a **site user** I can **leave reviews on an event** so that I can **be involved in the conversation.**
 
     Approval Criteria
     - A signed-in user can leave a review on an event.
     - When a user review is approved, all users can see the review.
+
 
     14. As a **user** I can **add my own blog post** so that I can **share my knowledge with the community.**
 
@@ -152,10 +165,12 @@ Welcome to <a href="https://wawa-land-04eebd0de719.herokuapp.com/">Wawa Land</a>
     - Signed in user can add a post to the database.
     - When the administrators of the site publish the post, all users can view the post.
 
+
     15. As a **user** I can **delete my draft blog post** so that I can **remove it so it is not shared with the community.**
 
     Acceptance Criteria
     - Given a logged in user, they can delete their unpublished post
+
 
     16. As a **user** I can **see all the posts I have written, published and unpublished, all my comments, reviews and likes** so that I can **keep track of all my interactions with the site.**
 
