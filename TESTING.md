@@ -184,9 +184,21 @@ The JSHINT Validator
 ## Additional Testing
 The site was also tested using [Wave](https://wave.webaim.org/). There are no errors howvever there are 4 alerts including three possible headings in the footer and a redundant link. These have not be changed because the footer is not intended to have headings and the redundant link is an alternative home link to the logo link. The results were as follows:
 
+<detail><summary>Wave Summary</summary>
+
 ![Wave Summary](static/images/screenshots/wave-summary.png)
+
+</detail>
+<detail><summary>Wave Details and Heading Alerts</summary>
+
 ![Wave Details and Heading Alerts](static/images/screenshots/wave-alerts-1.png)
+
+</detail>
+<detail><summary>Wave Redundant Link Alert</summary>
+
 ![Wave Redundant Link Alert](static/images/screenshots/wave-alerts-2.png)
+
+</detail>
 
 ## Responsiveness Test
 
